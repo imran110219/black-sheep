@@ -14,7 +14,7 @@ import {
   sources,
   subjectResponses,
   organizations
-} from "@/data/fixtures/mock-data";
+} from "@/data";
 
 export function getPublicMockIndex() {
   return {

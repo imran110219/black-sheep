@@ -19,7 +19,7 @@ export const sourceTypeSchema = z.enum([
 
 export const sourceRecordSchema = z.object({
   id: z.string().uuid(),
-  isDemo: z.literal(true),
+  isDemo: z.boolean(),
   slug: z.string(),
   type: sourceTypeSchema,
   title: z.string(),

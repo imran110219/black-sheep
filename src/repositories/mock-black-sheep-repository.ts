@@ -10,7 +10,7 @@ import {
   people,
   sources,
   tags
-} from "@/data/fixtures/mock-data";
+} from "@/data";
 import { applyPeopleFilters, paginate, sortPeople } from "@/lib/search";
 import type { BlackSheepRepository, FilterMetadata } from "./black-sheep-repository";
 

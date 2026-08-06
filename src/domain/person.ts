@@ -27,7 +27,7 @@ export type PersonNarrative = z.infer<typeof personNarrativeSchema>;
 
 export const personProfileSchema = z.object({
   id: z.string().uuid(),
-  isDemo: z.literal(true),
+  isDemo: z.boolean(),
   slug: z.string(),
   nameBn: z.string(),
   nameEn: z.string(),
@@ -42,6 +42,7 @@ export const personProfileSchema = z.object({
   politicalAffiliation: z.string().optional(),
   publicRoles: z.array(z.string()),
   organizations: z.array(z.string()),
+  website: z.string().url().optional(),
   activePeriod: z.string(),
   primaryAreaBn: z.string(),
   primaryAreaEn: z.string(),
@@ -60,6 +61,8 @@ export const personProfileSchema = z.object({
   relationshipIds: z.array(z.string().uuid()),
   publicationStatus: publicationStatusSchema,
   isActive: z.boolean(),
+  createdBy: z.string().optional(),
+  updatedBy: z.string().optional(),
   lastVerifiedAt: z.string(),
   publishedAt: z.string(),
   updatedAt: z.string()

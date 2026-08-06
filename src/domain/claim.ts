@@ -47,6 +47,7 @@ export const influenceDomainSchema = z.enum([
   "RELIGION",
   "MEDIA",
   "ELECTIONS",
+  "VIOLENCE",
   "HUMAN_RIGHTS",
   "PATRONAGE"
 ]);

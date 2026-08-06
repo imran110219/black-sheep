@@ -14,6 +14,7 @@ const domainLabels: Record<PersonProfile["influenceDomains"][number], { bn: stri
     RELIGION: { bn: "ধর্মীয় প্রতিষ্ঠান", en: "Religion" },
     MEDIA: { bn: "মিডিয়া", en: "Media" },
     ELECTIONS: { bn: "নির্বাচন", en: "Elections" },
+    VIOLENCE: { bn: "সহিংসতা", en: "Violence" },
     HUMAN_RIGHTS: { bn: "মানবাধিকার", en: "Human rights" },
     PATRONAGE: { bn: "পৃষ্ঠপোষকতা", en: "Patronage" }
   };
