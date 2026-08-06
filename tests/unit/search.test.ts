@@ -39,7 +39,8 @@ describe("search utilities", () => {
   });
 
   it("sorts and aggregates statuses", () => {
-    expect(sortPeople(people, "alphabetical")[0].nameEn).toBe("Ershad Shikdar");
+    const sortedNames = sortPeople(people, "alphabetical").map((person) => person.nameEn);
+    expect(sortedNames).toEqual([...sortedNames].sort((a, b) => a.localeCompare(b)));
     expect(publicPerson).toBeDefined();
     expect(aggregateStatuses(publicPerson!, cases)).toEqual([]);
   });

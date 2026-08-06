@@ -1,21 +1,66 @@
 # Frontend Roadmap
 
-## Phase 1 Mock Frontend
+## Phase 1 Current Baseline
 
-Complete localized read-only frontend with fictional data, repository abstraction, documentation, and tests.
+The app is a localized, frontend-only, read-only public data product with:
 
-## Phase 2 Content Expansion
+- public profile records in `src/data/public`
+- source records for real profiles
+- repository abstraction
+- Story View and Evidence View profile layout
+- editorial discovery homepage
+- strict TypeScript, linting, formatting, tests, and production build checks
 
-Expand local data coverage, improve editorial review workflows outside the public app, and add richer fixture validation.
+Fictional fixtures remain available for development reference, but the active app data export is public-only.
 
-## Phase 3 Editorial/Admin System
+## Phase 2 Structured Evidence Expansion
 
-Build separate authenticated editorial tooling only after scope changes explicitly allow it.
+Populate source-backed public records for:
 
-## Phase 4 Search and Scaling
+- `ClaimRecord`
+- legal cases and outcomes
+- incidents and historical episodes
+- geographic associations
+- institution associations
+- impact records
+- subject responses
+- corrections
+- revision history
 
-Add indexed multilingual search, facets, caching, and stricter source lineage.
+Do this incrementally. A real person profile can exist with basic public biography and sources, but claims and cases should not be added until each record has source ids and careful status language.
 
-## Phase 5 Monitoring and Analytics
+## Phase 3 Discovery Improvements
 
-Add privacy-respecting monitoring and analytics after policy review.
+Improve browsing and filtering around:
+
+- influence domain
+- area or district
+- active period
+- institution type
+- relationship type
+- claim status
+- verification status
+- subject response availability
+- official finding availability
+
+Search should continue to match Bangla and English names, aliases, narrative text, primary areas, organizations, and influence domains.
+
+## Phase 4 Dossiers and Network Views
+
+Add curated collection pages for themes such as:
+
+- underworld and political patronage
+- urban extortion and tender manipulation
+- land and power
+- election violence
+- banking and financial influence
+
+Start with responsive grouped lists. Interactive graph views should come later, after relationships and institution associations are sufficiently populated.
+
+## Phase 5 Editorial Tooling
+
+Build authenticated editorial/admin tooling only after scope changes explicitly allow backend, authentication, and admin functionality. Until then, all work remains frontend-only and file-backed.
+
+## Phase 6 Search and Scaling
+
+Add indexed multilingual search, caching, data validation scripts, source-lineage checks, and privacy-respecting monitoring after policy review.
