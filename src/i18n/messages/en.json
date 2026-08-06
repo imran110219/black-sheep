@@ -1,0 +1,109 @@
+{
+  "brand": {
+    "name": "Black Sheep",
+    "descriptor": "A documented public-interest accountability archive"
+  },
+  "nav": {
+    "home": "Home",
+    "people": "People",
+    "corrections": "Corrections",
+    "methodology": "Methodology",
+    "policy": "Policy",
+    "about": "About",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "actions": {
+    "search": "Search",
+    "clear": "Clear all",
+    "viewProfile": "View documented profile",
+    "viewCase": "View case",
+    "copyLink": "Copy link",
+    "print": "Print",
+    "filters": "Filters",
+    "apply": "Apply",
+    "previous": "Previous",
+    "next": "Next",
+    "originalLink": "Original link",
+    "archivedLink": "Archived link"
+  },
+  "home": {
+    "heroTitle": "A documented view of power, allegations, and cases",
+    "heroCopy": "Black Sheep is a searchable archive of public-interest people, cases, public documents, news coverage, and legal statuses. Allegations are not presented as court findings.",
+    "searchPlaceholder": "Search names, aliases, organizations, or topics",
+    "disclaimer": "Being listed in a case or report does not by itself establish guilt.",
+    "stats": "Demo statistics",
+    "recentProfiles": "Recently updated profiles",
+    "recentCases": "Recently updated cases",
+    "browseCategory": "Browse by category",
+    "browseStatus": "Browse by legal status",
+    "methodologyPreview": "Each record separates sources, legal status, subject responses, and corrections.",
+    "replyCallout": "Request a correction or right of reply. Contact: editorial@blacksheep.example (demo placeholder)."
+  },
+  "people": {
+    "title": "People directory",
+    "description": "Search documented public-interest records.",
+    "query": "Search term",
+    "legalStatus": "Legal status",
+    "category": "Category",
+    "affiliation": "Political affiliation",
+    "occupation": "Occupation",
+    "organization": "Organization",
+    "country": "Country",
+    "tag": "Tag",
+    "year": "Year",
+    "sort": "Sort",
+    "all": "All",
+    "empty": "No matching records. Adjust filters and try again.",
+    "documentedRecords": "Documented records",
+    "lastVerified": "Last verified"
+  },
+  "profile": {
+    "identity": "Identity",
+    "overview": "Record overview",
+    "cases": "Cases and records",
+    "timeline": "Timeline",
+    "news": "News coverage",
+    "sources": "Sources",
+    "assets": "Asset records",
+    "relationships": "Relationships",
+    "responses": "Subject responses",
+    "corrections": "Corrections",
+    "revisions": "Revision history",
+    "reportError": "Report an error",
+    "listedNotice": "Being listed in a case or report does not by itself establish guilt."
+  },
+  "case": {
+    "caseNumber": "Case number",
+    "jurisdiction": "Jurisdiction",
+    "authority": "Authority",
+    "court": "Court",
+    "dates": "Important dates",
+    "people": "People involved and exact roles",
+    "evidence": "Evidence summary",
+    "outcome": "Outcome",
+    "primarySources": "Primary sources",
+    "secondarySources": "Secondary/news sources",
+    "relatedCases": "Related cases",
+    "categoryNotice": "A category describes the subject matter of a record; it does not independently establish liability or guilt."
+  },
+  "news": {
+    "notice": "Media coverage is not itself a judicial finding."
+  },
+  "source": {
+    "primary": "Primary source",
+    "secondary": "Secondary source",
+    "claims": "Supported claims",
+    "excerpt": "Short excerpt"
+  },
+  "common": {
+    "demoData": "Demo data",
+    "loading": "Loading",
+    "notFound": "Record not found",
+    "error": "Something went wrong",
+    "updated": "Updated",
+    "published": "Published",
+    "sourceCount": "Sources",
+    "noRawHtml": "Full copyrighted text is not reproduced."
+  }
+}
