@@ -1,5 +1,29 @@
 import { z } from "zod";
+import { influenceDomainSchema } from "./claim";
 import { publicationStatusSchema, socialLinkSchema } from "./common";
+
+export const personNarrativeSchema = z.object({
+  whyListedBn: z.string(),
+  whyListedEn: z.string(),
+  historicalOverviewBn: z.string(),
+  historicalOverviewEn: z.string(),
+  riseToPowerBn: z.string().optional(),
+  riseToPowerEn: z.string().optional(),
+  powerBaseBn: z.string().optional(),
+  powerBaseEn: z.string().optional(),
+  documentedPatternsBn: z.string().optional(),
+  documentedPatternsEn: z.string().optional(),
+  historicalImpactBn: z.string().optional(),
+  historicalImpactEn: z.string().optional(),
+  publicReputationBn: z.string().optional(),
+  publicReputationEn: z.string().optional(),
+  legacyBn: z.string().optional(),
+  legacyEn: z.string().optional(),
+  featuredClaimIds: z.array(z.string().uuid()),
+  featuredRelationshipIds: z.array(z.string().uuid()),
+  featuredIncidentIds: z.array(z.string().uuid())
+});
+export type PersonNarrative = z.infer<typeof personNarrativeSchema>;
 
 export const personProfileSchema = z.object({
   id: z.string().uuid(),
@@ -18,6 +42,13 @@ export const personProfileSchema = z.object({
   politicalAffiliation: z.string().optional(),
   publicRoles: z.array(z.string()),
   organizations: z.array(z.string()),
+  activePeriod: z.string(),
+  primaryAreaBn: z.string(),
+  primaryAreaEn: z.string(),
+  influenceDomains: z.array(influenceDomainSchema),
+  historicalIdentityBn: z.string(),
+  historicalIdentityEn: z.string(),
+  narrative: personNarrativeSchema,
   city: z.string(),
   country: z.string(),
   socialLinks: z.array(socialLinkSchema),
@@ -49,10 +80,18 @@ export type PersonCard = Pick<
   | "politicalAffiliation"
   | "publicRoles"
   | "organizations"
+  | "activePeriod"
+  | "primaryAreaBn"
+  | "primaryAreaEn"
+  | "influenceDomains"
+  | "historicalIdentityBn"
+  | "historicalIdentityEn"
+  | "narrative"
   | "city"
   | "country"
   | "tags"
   | "caseIds"
+  | "relationshipIds"
   | "lastVerifiedAt"
   | "updatedAt"
 >;

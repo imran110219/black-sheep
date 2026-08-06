@@ -2,7 +2,9 @@ import type { CaseSummary } from "@/domain/case";
 import type { PersonCard, PeopleSearchQuery } from "@/domain/person";
 import {
   cases,
+  claims,
   corrections,
+  geographicAssociations,
   newsRecords,
   organizations,
   people,
@@ -66,7 +68,23 @@ export class MockBlackSheepRepository implements BlackSheepRepository {
         nameBn: tag.nameBn,
         nameEn: tag.nameEn
       })),
-      years: Array.from(years).sort().reverse()
+      years: Array.from(
+        new Set(
+          [
+            ...Array.from(years),
+            ...claims.flatMap((claim) => [
+              claim.startDate?.slice(0, 4),
+              claim.endDate?.slice(0, 4)
+            ]),
+            ...geographicAssociations.flatMap((area) => [
+              area.startDate?.slice(0, 4),
+              area.endDate?.slice(0, 4)
+            ])
+          ].filter((value): value is string => Boolean(value))
+        )
+      )
+        .sort()
+        .reverse()
     };
   }
 
@@ -112,10 +130,18 @@ function toPersonCard(person: (typeof people)[number]): PersonCard {
     politicalAffiliation,
     publicRoles,
     organizations: orgs,
+    activePeriod,
+    primaryAreaBn,
+    primaryAreaEn,
+    influenceDomains,
+    historicalIdentityBn,
+    historicalIdentityEn,
+    narrative,
     city,
     country,
     tags: personTags,
     caseIds,
+    relationshipIds,
     lastVerifiedAt,
     updatedAt
   } = person;
@@ -132,10 +158,18 @@ function toPersonCard(person: (typeof people)[number]): PersonCard {
     politicalAffiliation,
     publicRoles,
     organizations: orgs,
+    activePeriod,
+    primaryAreaBn,
+    primaryAreaEn,
+    influenceDomains,
+    historicalIdentityBn,
+    historicalIdentityEn,
+    narrative,
     city,
     country,
     tags: personTags,
     caseIds,
+    relationshipIds,
     lastVerifiedAt,
     updatedAt
   };

@@ -15,7 +15,7 @@ describe("components", () => {
       </NextIntlClientProvider>
     );
     expect(screen.getByText("Demo Person 1")).toBeInTheDocument();
-    expect(screen.getByText(/View documented profile/i)).toBeInTheDocument();
+    expect(screen.getByText(/Explore profile/i)).toBeInTheDocument();
   });
 
   it("renders case status badges and editorial notices", () => {

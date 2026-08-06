@@ -1,7 +1,12 @@
 import {
   assets,
+  areas,
   cases,
+  claims,
   corrections,
+  geographicAssociations,
+  incidents,
+  institutionAssociations,
   newsRecords,
   people,
   relationships,
@@ -14,6 +19,11 @@ import {
 export function getPublicMockIndex() {
   return {
     people,
+    claims,
+    areas,
+    geographicAssociations,
+    institutionAssociations,
+    incidents,
     cases,
     newsRecords,
     sources,
@@ -30,11 +40,42 @@ export function getPersonContext(personId: string) {
   const person = people.find((item) => item.id === personId);
   if (!person) return null;
   const relatedCases = cases.filter((record) => person.caseIds.includes(record.id));
-  const sourceIds = new Set(relatedCases.flatMap((record) => record.sourceIds));
+  const relatedClaims = claims.filter((record) => record.personIds.includes(person.id));
+  const relatedIncidents = incidents.filter((record) =>
+    record.personLinks.some((link) => link.personId === person.id)
+  );
+  const relatedGeographicAssociations = geographicAssociations.filter(
+    (record) => record.personId === person.id
+  );
+  const relatedInstitutionAssociations = institutionAssociations.filter(
+    (record) => record.personId === person.id
+  );
+  const sourceIds = new Set([
+    ...relatedCases.flatMap((record) => record.sourceIds),
+    ...relatedClaims.flatMap((record) => record.sourceIds),
+    ...relatedIncidents.flatMap((record) => record.sourceIds),
+    ...relatedGeographicAssociations.flatMap((record) => record.sourceIds),
+    ...relatedInstitutionAssociations.flatMap((record) => record.sourceIds)
+  ]);
+  const areaIds = new Set([
+    ...relatedClaims.flatMap((record) => record.areaIds),
+    ...relatedIncidents.flatMap((record) => record.areaIds),
+    ...relatedGeographicAssociations.map((record) => record.areaId)
+  ]);
+  const organizationIds = new Set([
+    ...relatedClaims.flatMap((record) => record.organizationIds),
+    ...relatedInstitutionAssociations.map((record) => record.institutionId),
+    ...relatedIncidents.flatMap((record) => record.organizationIds)
+  ]);
   return {
     person,
+    claims: relatedClaims,
     cases: relatedCases,
     allCases: cases,
+    incidents: relatedIncidents,
+    geographicAssociations: relatedGeographicAssociations,
+    institutionAssociations: relatedInstitutionAssociations,
+    areas: areas.filter((record) => areaIds.has(record.id)),
     news: newsRecords.filter((record) => person.newsIds.includes(record.id)),
     sources: sources.filter(
       (record) => sourceIds.has(record.id) || record.relatedPersonIds.includes(person.id)
@@ -47,7 +88,9 @@ export function getPersonContext(personId: string) {
       (record) => record.entityId === person.id || person.caseIds.includes(record.entityId)
     ),
     revisions: revisions.filter((record) => record.entityId === person.id),
-    organizations: organizations.filter((record) => record.personIds.includes(person.id))
+    organizations: organizations.filter(
+      (record) => record.personIds.includes(person.id) || organizationIds.has(record.id)
+    )
   };
 }
 

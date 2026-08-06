@@ -28,6 +28,13 @@ export function personMatchesQuery(
     includes(person.aliases, query) ||
     includes(person.summaryBn, query) ||
     includes(person.summaryEn, query) ||
+    includes("narrative" in person ? person.narrative.whyListedBn : undefined, query) ||
+    includes("narrative" in person ? person.narrative.whyListedEn : undefined, query) ||
+    includes("historicalIdentityBn" in person ? person.historicalIdentityBn : undefined, query) ||
+    includes("historicalIdentityEn" in person ? person.historicalIdentityEn : undefined, query) ||
+    includes("primaryAreaBn" in person ? person.primaryAreaBn : undefined, query) ||
+    includes("primaryAreaEn" in person ? person.primaryAreaEn : undefined, query) ||
+    includes("influenceDomains" in person ? person.influenceDomains : undefined, query) ||
     includes(person.organizations, query) ||
     includes(person.publicRoles, query)
   );

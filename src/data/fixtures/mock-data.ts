@@ -1,5 +1,14 @@
 import type { AssetRecord } from "@/domain/asset";
 import type { CaseCategory, CaseRecord, LegalStatus, PersonCaseRole } from "@/domain/case";
+import type {
+  Area,
+  ClaimRecord,
+  GeographicAssociation,
+  ImpactRecord,
+  IncidentRecord,
+  InfluenceDomain,
+  InstitutionAssociation
+} from "@/domain/claim";
 import type { CorrectionRecord, SubjectResponse } from "@/domain/correction";
 import type { NewsRecord } from "@/domain/news";
 import type { Organization } from "@/domain/organization";
@@ -19,6 +28,25 @@ const tagIds = Array.from({ length: 12 }, (_, index) => id(401 + index));
 const assetIds = Array.from({ length: 10 }, (_, index) => id(501 + index));
 const relationshipIds = Array.from({ length: 12 }, (_, index) => id(601 + index));
 const responseIds = Array.from({ length: 5 }, (_, index) => id(701 + index));
+const areaIds = Array.from({ length: 10 }, (_, index) => id(1001 + index));
+const claimIds = Array.from({ length: 20 }, (_, index) => id(1101 + index));
+const incidentIds = Array.from({ length: 10 }, (_, index) => id(1201 + index));
+const impactIds = Array.from({ length: 10 }, (_, index) => id(1301 + index));
+const geographicAssociationIds = Array.from({ length: 18 }, (_, index) => id(1401 + index));
+const institutionAssociationIds = Array.from({ length: 16 }, (_, index) => id(1501 + index));
+
+const influenceDomains: InfluenceDomain[] = [
+  "POLITICS",
+  "BANKING",
+  "LAND",
+  "BUSINESS",
+  "PUBLIC_CONTRACTS",
+  "RELIGION",
+  "MEDIA",
+  "ELECTIONS",
+  "HUMAN_RIGHTS",
+  "PATRONAGE"
+];
 
 export const tags: Tag[] = [
   ["public-procurement", "সরকারি ক্রয়", "Public procurement"],
@@ -104,6 +132,88 @@ export const organizations: Organization[] = [
     personIds: [personIds[4], personIds[8], personIds[9]],
     caseIds: [caseIds[5], caseIds[10]],
     tagIds: [tagIds[7]]
+  }
+];
+
+export const areas: Area[] = [
+  {
+    id: areaIds[0],
+    slug: "bangladesh",
+    nameBn: "বাংলাদেশ",
+    nameEn: "Bangladesh",
+    type: "COUNTRY"
+  },
+  {
+    id: areaIds[1],
+    slug: "dhaka-division",
+    nameBn: "ঢাকা বিভাগ",
+    nameEn: "Dhaka Division",
+    type: "DIVISION",
+    parentId: areaIds[0]
+  },
+  {
+    id: areaIds[2],
+    slug: "dhaka-district",
+    nameBn: "ঢাকা জেলা",
+    nameEn: "Dhaka District",
+    type: "DISTRICT",
+    parentId: areaIds[1]
+  },
+  {
+    id: areaIds[3],
+    slug: "gazipur-district",
+    nameBn: "গাজীপুর জেলা",
+    nameEn: "Gazipur District",
+    type: "DISTRICT",
+    parentId: areaIds[1]
+  },
+  {
+    id: areaIds[4],
+    slug: "chattogram-division",
+    nameBn: "চট্টগ্রাম বিভাগ",
+    nameEn: "Chattogram Division",
+    type: "DIVISION",
+    parentId: areaIds[0]
+  },
+  {
+    id: areaIds[5],
+    slug: "chattogram-district",
+    nameBn: "চট্টগ্রাম জেলা",
+    nameEn: "Chattogram District",
+    type: "DISTRICT",
+    parentId: areaIds[4]
+  },
+  {
+    id: areaIds[6],
+    slug: "rajshahi-division",
+    nameBn: "রাজশাহী বিভাগ",
+    nameEn: "Rajshahi Division",
+    type: "DIVISION",
+    parentId: areaIds[0]
+  },
+  {
+    id: areaIds[7],
+    slug: "rajshahi-district",
+    nameBn: "রাজশাহী জেলা",
+    nameEn: "Rajshahi District",
+    type: "DISTRICT",
+    parentId: areaIds[6]
+  },
+  {
+    id: areaIds[8],
+    slug: "sylhet-division",
+    nameBn: "সিলেট বিভাগ",
+    nameEn: "Sylhet Division",
+    type: "DIVISION",
+    parentId: areaIds[0]
+  },
+  {
+    id: areaIds[9],
+    slug: "sylhet-district",
+    nameBn: "সিলেট জেলা",
+    nameEn: "Sylhet District",
+    type: "DISTRICT",
+    parentId: areaIds[8]
   }
 ];
 
@@ -249,6 +359,12 @@ export const people: PersonProfile[] = personIds.map((personId, index) => {
   const personCases = cases.filter((record) =>
     record.personLinks.some((link) => link.personId === personId)
   );
+  const primaryArea = areas[[2, 5, 7, 9, 3][index % 5]];
+  const domains = [
+    influenceDomains[index % influenceDomains.length],
+    influenceDomains[(index + 2) % influenceDomains.length],
+    influenceDomains[(index + 4) % influenceDomains.length]
+  ];
   return {
     id: personId,
     isDemo: true,
@@ -274,6 +390,51 @@ export const people: PersonProfile[] = personIds.map((personId, index) => {
       index % 3 === 0 ? "Demo Civic Front" : index % 3 === 1 ? "Independent" : undefined,
     publicRoles: [`Demo public role ${index + 1}`],
     organizations: [organizations[index % organizations.length].nameEn],
+    activePeriod: `${2001 + index}-202${index % 6}`,
+    primaryAreaBn: primaryArea.nameBn,
+    primaryAreaEn: primaryArea.nameEn,
+    influenceDomains: domains,
+    historicalIdentityBn:
+      "রাজনৈতিক প্রভাব, প্রতিষ্ঠানগত সম্পর্ক ও জনস্বার্থ নথিতে আলোচিত কাল্পনিক ব্যক্তি।",
+    historicalIdentityEn:
+      "A fictional figure discussed through political influence, institutional ties, and public-interest records.",
+    narrative: {
+      whyListedBn:
+        "এই ডেমো প্রোফাইলটি অন্তর্ভুক্ত কারণ সংশ্লিষ্ট ব্যক্তি, প্রতিষ্ঠান, এলাকা ও মামলার মধ্যে সম্পর্ক কীভাবে নথিভিত্তিকভাবে দেখানো যায় তা প্রদর্শন করে।",
+      whyListedEn:
+        "This demo profile is included to show how links among a person, institutions, areas, and cases can be presented with source-backed context.",
+      historicalOverviewBn:
+        "কাল্পনিক সময়রেখায় ব্যক্তি স্থানীয় প্রভাব থেকে প্রতিষ্ঠান-নির্ভর ক্ষমতার নেটওয়ার্কে যুক্ত হন। প্রোফাইলটি অভিযোগ, তদন্ত, জবাব ও ফলাফলকে আলাদা করে উপস্থাপন করে।",
+      historicalOverviewEn:
+        "In the fictional timeline, the person moves from local influence into an institution-linked power network. The profile separates allegations, inquiries, responses, and outcomes.",
+      riseToPowerBn:
+        "স্থানীয় সংগঠন, পেশাগত যোগাযোগ ও সরকারি প্রক্রিয়ার সঙ্গে সম্পর্কের মাধ্যমে প্রভাব বিস্তারের ডেমো বিবরণ।",
+      riseToPowerEn:
+        "A demo account of influence built through local organization, professional contacts, and public processes.",
+      powerBaseBn: `${primaryArea.nameBn}, সংশ্লিষ্ট প্রতিষ্ঠান ও রাজনৈতিক যোগাযোগ।`,
+      powerBaseEn: `${primaryArea.nameEn}, linked institutions, and political contacts.`,
+      documentedPatternsBn:
+        "নথিতে প্রভাব, পৃষ্ঠপোষকতা, আর্থিক বা ভূমি-সম্পর্কিত বিতর্কের মতো থিম আলাদা করে দেখানো হয়েছে।",
+      documentedPatternsEn:
+        "Records separate themes such as influence, patronage, financial links, or land-related disputes.",
+      historicalImpactBn:
+        "জনস্বার্থ, স্থানীয় প্রশাসন ও প্রতিষ্ঠানের ওপর সম্ভাব্য প্রভাব উৎসের ভিত্তিতে ব্যাখ্যা করা হয়েছে।",
+      historicalImpactEn:
+        "Potential effects on public interest, local administration, and institutions are explained from sources.",
+      publicReputationBn:
+        "প্রোফাইলের ভাষা অভিযোগ, বিতর্ক ও ফলাফলকে আদালতের সিদ্ধান্ত থেকে আলাদা রাখে।",
+      publicReputationEn:
+        "The profile language keeps allegations, controversies, and outcomes distinct from court determinations.",
+      legacyBn:
+        "ডেমো উত্তরাধিকার অংশটি দেখায় কীভাবে পরবর্তী সংশোধন, জবাব ও নতুন উৎস একই প্রোফাইলে যুক্ত হয়।",
+      legacyEn:
+        "The demo legacy section shows how later corrections, responses, and new sources attach to the same profile.",
+      featuredClaimIds: [claimIds[index * 2], claimIds[index * 2 + 1]].filter(Boolean),
+      featuredRelationshipIds: relationshipIds
+        .filter((_, relIndex) => relIndex % personIds.length === index)
+        .slice(0, 2),
+      featuredIncidentIds: [incidentIds[index % incidentIds.length]]
+    },
     city: ["Dhaka", "Chattogram", "Rajshahi", "Sylhet"][index % 4],
     country: "Bangladesh",
     socialLinks: [{ label: "Public website", url: `https://example.com/demo-person-${index + 1}` }],
@@ -293,6 +454,175 @@ export const people: PersonProfile[] = personIds.map((personId, index) => {
     updatedAt: `2026-07-${String(23 - index).padStart(2, "0")}`
   };
 });
+
+export const claims: ClaimRecord[] = claimIds.map((claimId, index) => {
+  const personId = personIds[index % personIds.length];
+  const linkedCaseId = caseIds[index % caseIds.length];
+  const linkedSourceIds = [
+    sourceIds[index % sourceIds.length],
+    sourceIds[(index + 5) % sourceIds.length]
+  ];
+  return {
+    id: claimId,
+    slug: `demo-claim-${index + 1}`,
+    personIds: [personId],
+    titleBn: `ডেমো দাবি ${index + 1}: প্রভাব ও জনস্বার্থ রেকর্ড`,
+    titleEn: `Demo Claim ${index + 1}: influence and public-interest record`,
+    summaryBn:
+      "এই কাল্পনিক দাবি আদালতের রায় নয়; এটি উৎসনির্ভর ঐতিহাসিক বা অনুসন্ধানী প্রেক্ষাপট দেখায়।",
+    summaryEn:
+      "This fictional claim is not a court finding; it presents source-backed historical or investigative context.",
+    type: [
+      "PATRONAGE",
+      "BANKING_INFLUENCE",
+      "LAND_CONTROL",
+      "PUBLIC_CONTRACTS",
+      "ELECTION_INTERFERENCE",
+      "RELIGIOUS_INFLUENCE",
+      "BUSINESS_NETWORK",
+      "HUMAN_RIGHTS_ABUSE"
+    ][index % 8] as ClaimRecord["type"],
+    status: [
+      "REPORTED",
+      "ALLEGED",
+      "OFFICIALLY_INVESTIGATED",
+      "OFFICIAL_FINDING",
+      "FORMALLY_CHARGED",
+      "DISPUTED",
+      "HISTORICAL_CONSENSUS"
+    ][index % 7] as ClaimRecord["status"],
+    verificationStatus:
+      index % 5 === 0 ? "DISPUTED" : index % 3 === 0 ? "CROSS_CHECKED" : "REVIEWED",
+    startDate: `${2008 + (index % 10)}-01-01`,
+    endDate: index % 4 === 0 ? `${2014 + (index % 8)}-12-31` : undefined,
+    areaIds: [areaIds[2 + (index % 8)]],
+    organizationIds: [organizations[index % organizations.length].id],
+    institutionIds: [organizations[(index + 1) % organizations.length].id],
+    relatedClaimIds: index > 0 ? [claimIds[index - 1]] : [],
+    caseIds: [linkedCaseId],
+    sourceIds: linkedSourceIds,
+    newsIds: [newsIds[index % newsIds.length]],
+    subjectResponseIds: index < responseIds.length ? [responseIds[index]] : [],
+    editorialContextBn: "সম্পাদকীয় নোট: দাবি, তদন্ত, ফলাফল ও জবাব আলাদা করে পড়তে হবে।",
+    editorialContextEn:
+      "Editorial note: read the claim, inquiry, outcome, and response as separate record types.",
+    isDisputed: index % 5 === 0,
+    lastVerifiedAt: `2026-07-${String(8 + (index % 18)).padStart(2, "0")}`
+  };
+});
+
+export const geographicAssociations: GeographicAssociation[] = geographicAssociationIds.map(
+  (associationId, index) => ({
+    id: associationId,
+    personId: personIds[index % personIds.length],
+    areaId: areaIds[2 + (index % 8)],
+    relationType: [
+      "CONSTITUENCY",
+      "POLITICAL_BASE",
+      "BUSINESS_BASE",
+      "LAND_INTEREST",
+      "INCIDENT_LOCATION",
+      "AREA_OF_INFLUENCE"
+    ][index % 6] as GeographicAssociation["relationType"],
+    startDate: `${2005 + (index % 12)}-01-01`,
+    endDate: index % 5 === 0 ? `${2018 + (index % 5)}-12-31` : undefined,
+    summaryBn: "এলাকার সঙ্গে সম্পর্কটি ডেমো উৎসে উল্লিখিত; এটি ব্যক্তিগত ঠিকানা প্রকাশ করে না।",
+    summaryEn:
+      "The area relationship appears in demo sources and does not publish a private address.",
+    claimIds: [claimIds[index % claimIds.length]],
+    sourceIds: [sourceIds[index % sourceIds.length]],
+    verificationStatus: index % 4 === 0 ? "CROSS_CHECKED" : "REVIEWED"
+  })
+);
+
+export const institutionAssociations: InstitutionAssociation[] = institutionAssociationIds.map(
+  (associationId, index) => ({
+    id: associationId,
+    personId: personIds[index % personIds.length],
+    institutionId: organizations[index % organizations.length].id,
+    relationshipType: [
+      "PATRON",
+      "DIRECTOR",
+      "CONTRACTOR",
+      "BORROWER",
+      "POLITICAL_CONTROLLER",
+      "ALLEGED_ASSOCIATE",
+      "RELIGIOUS_PATRON"
+    ][index % 7] as InstitutionAssociation["relationshipType"],
+    startDate: `${2006 + (index % 11)}-01-01`,
+    endDate: index % 6 === 0 ? `${2020 + (index % 4)}-12-31` : undefined,
+    summaryBn:
+      "প্রতিষ্ঠানের সঙ্গে সম্পর্কের ধরন উৎসভিত্তিকভাবে দেখানো হয়েছে; সম্পর্ক নিজে থেকে অপরাধের প্রমাণ নয়।",
+    summaryEn:
+      "The institution relationship is described from sources; a relationship is not itself proof of wrongdoing.",
+    claimIds: [claimIds[index % claimIds.length]],
+    sourceIds: [sourceIds[(index + 2) % sourceIds.length]],
+    verificationStatus: index % 5 === 0 ? "SOURCE_LOCATED" : "REVIEWED"
+  })
+);
+
+export const impactRecords: ImpactRecord[] = impactIds.map((impactId, index) => ({
+  id: impactId,
+  incidentId: incidentIds[index],
+  claimId: claimIds[index],
+  personId: personIds[index],
+  impactType: [
+    "PUBLIC_FINANCE",
+    "LAND",
+    "BANKING",
+    "LOCAL_COMMUNITY",
+    "POLITICAL_RIGHTS",
+    "HUMAN_RIGHTS",
+    "PUBLIC_INSTITUTION"
+  ][index % 7] as ImpactRecord["impactType"],
+  summaryBn:
+    "প্রভাবের এই ডেমো সারাংশটি জনস্বার্থে সম্ভাব্য ফলাফল ব্যাখ্যা করে এবং উৎস ছাড়া সংখ্যা দেখায় না।",
+  summaryEn:
+    "This demo impact summary explains possible public-interest consequences and avoids unsourced numbers.",
+  affectedAreaIds: [areaIds[2 + (index % 8)]],
+  affectedOrganizationIds: [organizations[index % organizations.length].id],
+  estimatedValue: index % 3 === 0 ? 2500000 + index * 100000 : undefined,
+  currency: index % 3 === 0 ? "BDT" : undefined,
+  sourceIds: [sourceIds[index % sourceIds.length]],
+  verificationStatus: index % 4 === 0 ? "CROSS_CHECKED" : "REVIEWED"
+}));
+
+export const incidents: IncidentRecord[] = incidentIds.map((incidentId, index) => ({
+  id: incidentId,
+  slug: `demo-incident-${index + 1}`,
+  titleBn: `ডেমো ঘটনা ${index + 1}: প্রভাব, এলাকা ও প্রতিষ্ঠান`,
+  titleEn: `Demo Incident ${index + 1}: influence, place, and institution`,
+  summaryBn: "এই কাল্পনিক ঘটনা মামলা, দাবি, এলাকা ও প্রভাব রেকর্ডকে একই গল্পে যুক্ত করার উদাহরণ।",
+  summaryEn:
+    "This fictional incident shows how cases, claims, places, and impact records can be connected in one story.",
+  incidentType: [
+    "CORRUPTION_SCANDAL",
+    "BANK_FAILURE",
+    "LAND_SEIZURE",
+    "ELECTION_INCIDENT",
+    "PUBLIC_PROTEST",
+    "HUMAN_RIGHTS_ABUSE"
+  ][index % 6] as IncidentRecord["incidentType"],
+  occurredAt: index % 2 === 0 ? `${2012 + index}-04-15` : undefined,
+  periodStart: index % 2 === 1 ? `${2010 + index}-01-01` : undefined,
+  periodEnd: index % 2 === 1 ? `${2011 + index}-12-31` : undefined,
+  areaIds: [areaIds[2 + (index % 8)]],
+  personLinks: [
+    {
+      personId: personIds[index],
+      roleBn: "নথিতে আলোচিত ব্যক্তি",
+      roleEn: "Subject discussed in records",
+      noteBn: "ভূমিকা অভিযোগ, তদন্ত বা প্রেক্ষাপট হিসেবে আলাদা করা হয়েছে।",
+      noteEn: "The role is separated as allegation, inquiry, or context."
+    }
+  ],
+  organizationIds: [organizations[index % organizations.length].id],
+  claimIds: [claimIds[index]],
+  caseIds: [caseIds[index % caseIds.length]],
+  sourceIds: [sourceIds[index % sourceIds.length], sourceIds[(index + 1) % sourceIds.length]],
+  newsIds: [newsIds[index % newsIds.length]],
+  impactRecords: [impactRecords[index]]
+}));
 
 export const sources: SourceRecord[] = sourceIds.map((sourceId, index) => ({
   id: sourceId,
