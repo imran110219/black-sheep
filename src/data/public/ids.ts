@@ -74,7 +74,11 @@ export const publicPersonIds = {
   salmaOsman: "00000000-0000-4000-8000-000000000103",
   tanvirAhmedTitu: "00000000-0000-4000-8000-000000000104",
   imtinanOsmanAyon: "00000000-0000-4000-8000-000000000105",
-  labibaJohaAngona: "00000000-0000-4000-8000-000000000106"
+  labibaJohaAngona: "00000000-0000-4000-8000-000000000106",
+  azizAhmed: "00000000-0000-4000-8000-000000000107",
+  harisAhmed: "00000000-0000-4000-8000-000000000108",
+  tofailAhmedJoseph: "00000000-0000-4000-8000-000000000109",
+  anisAhmed: "00000000-0000-4000-8000-000000000110"
 } as const;
 
 export const publicSourceIds = {
@@ -185,7 +189,14 @@ export const publicSourceIds = {
   osmanBssAccWealthCases: "00000000-0000-4000-8000-000000000576",
   osmanDhakaTribunePoliticalInfluence: "00000000-0000-4000-8000-000000000577",
   osmanBdnewsTokiAccusation: "00000000-0000-4000-8000-000000000578",
-  osmanTbsIctWitness: "00000000-0000-4000-8000-000000000579"
+  osmanTbsIctWitness: "00000000-0000-4000-8000-000000000579",
+  azizStateDeptDesignation: "00000000-0000-4000-8000-000000000580",
+  ahmedBrothersAlJazeeraInvestigation: "00000000-0000-4000-8000-000000000581",
+  azizTbsAccProbe: "00000000-0000-4000-8000-000000000582",
+  azizBssExtortionCase: "00000000-0000-4000-8000-000000000583",
+  josephDailyStarPardon: "00000000-0000-4000-8000-000000000584",
+  harisAnisProthomAloClemency: "00000000-0000-4000-8000-000000000585",
+  azizProthomAloResponse: "00000000-0000-4000-8000-000000000586"
 } as const;
 
 export const publicClaimIds = {

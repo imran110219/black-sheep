@@ -43,6 +43,7 @@ import {
 } from "./bureaucrat-corruption-2025";
 import { sheikhFamilyPurbachalSources } from "./sheikh-family-purbachal";
 import { osmanFamilyNarayanganjSources } from "./osman-family-narayanganj";
+import { ahmedBrothersSources } from "./ahmed-brothers";
 import { swedenAslamSources } from "./sweden-aslam";
 import { subrataBainSources } from "./subrata-bain";
 import { jisanAhmedSources } from "./jisan-ahmed";
@@ -98,6 +99,7 @@ export const publicSources = [
   jabedPatwaryProthomAloPoliceCorruptionSource,
   ...sheikhFamilyPurbachalSources,
   ...osmanFamilyNarayanganjSources,
+  ...ahmedBrothersSources,
   ...swedenAslamSources,
   ...subrataBainSources,
   ...jisanAhmedSources,

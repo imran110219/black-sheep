@@ -64,6 +64,10 @@ import { salmaOsman } from "./salma-osman";
 import { tanvirAhmedTitu } from "./tanvir-ahmed-titu";
 import { imtinanOsmanAyon } from "./imtinan-osman-ayon";
 import { labibaJohaAngona } from "./labiba-joha-angona";
+import { azizAhmed } from "./aziz-ahmed";
+import { harisAhmed } from "./haris-ahmed";
+import { tofailAhmedJoseph } from "./tofail-ahmed-joseph";
+import { anisAhmed } from "./anis-ahmed";
 import { swedenAslam } from "./sweden-aslam";
 import { subrataBain } from "./subrata-bain";
 import { jisanAhmed } from "./jisan-ahmed";
@@ -142,6 +146,10 @@ export const publicPeople = [
   tanvirAhmedTitu,
   imtinanOsmanAyon,
   labibaJohaAngona,
+  azizAhmed,
+  harisAhmed,
+  tofailAhmedJoseph,
+  anisAhmed,
   swedenAslam,
   subrataBain,
   jisanAhmed,
