@@ -1,5 +1,14 @@
 import type { PersonProfile } from "@/domain/person";
-import { publicPersonIds } from "../ids";
+import {
+  publicAreaIds,
+  publicAssociationIds,
+  publicCaseIds,
+  publicClaimIds,
+  publicIncidentIds,
+  publicNewsIds,
+  publicRelationshipIds,
+  publicPersonIds
+} from "../ids";
 
 export const sheikhHasina: PersonProfile = {
   id: publicPersonIds.sheikhHasina,
@@ -28,15 +37,37 @@ export const sheikhHasina: PersonProfile = {
   organizations: ["Bangladesh Awami League", "Government of Bangladesh", "Jatiya Sangsad"],
   website: "https://www.albd.org/pages/16/Sheikh-Hasina",
   activePeriod: "1981-present",
-  historicalEraIds: [],
-  primaryAreaIds: [],
-  claimIds: [],
-  incidentIds: [],
-  institutionAssociationIds: [],
-  geographicAssociationIds: [],
+  activePeriodStart: "1981-02-01",
+  activePeriodEnd: undefined,
+  historicalEraIds: ["1980s", "1990s", "2000s", "2010s", "2020s"],
+  primaryAreaIds: [publicAreaIds.bangladesh, publicAreaIds.dhaka, publicAreaIds.gopalganj3],
+  claimIds: [
+    publicClaimIds.sheikhHasinaJulyUprisingRightsFindings,
+    publicClaimIds.sheikhHasinaIctCommandResponsibility,
+    publicClaimIds.sheikhHasinaElectionControversies,
+    publicClaimIds.sheikhHasinaExecutiveCentralisation
+  ],
+  incidentIds: [publicIncidentIds.sheikhHasinaJulyAugustUprising],
+  institutionAssociationIds: [
+    publicAssociationIds.sheikhHasinaAwamiLeagueRole,
+    publicAssociationIds.sheikhHasinaGovernmentRole,
+    publicAssociationIds.sheikhHasinaIctCaseRole
+  ],
+  geographicAssociationIds: [
+    publicAssociationIds.sheikhHasinaBangladeshInfluence,
+    publicAssociationIds.sheikhHasinaGopalganjConstituency,
+    publicAssociationIds.sheikhHasinaDhakaPowerBase
+  ],
   primaryAreaBn: "বাংলাদেশ",
   primaryAreaEn: "Bangladesh",
-  influenceDomains: ["POLITICS", "ELECTIONS", "PATRONAGE", "HUMAN_RIGHTS", "VIOLENCE"],
+  influenceDomains: [
+    "POLITICS",
+    "GOVERNMENT",
+    "ELECTIONS",
+    "PATRONAGE",
+    "HUMAN_RIGHTS",
+    "SECURITY"
+  ],
   historicalIdentityBn:
     "বাংলাদেশের দীর্ঘ সময়ের প্রধানমন্ত্রী ও আওয়ামী লীগ সভাপতি হিসেবে রাষ্ট্রক্ষমতা, নির্বাচন, মানবাধিকার রেকর্ড এবং ২০২৪-পরবর্তী জবাবদিহি আলোচনায় কেন্দ্রীয় ব্যক্তি।",
   historicalIdentityEn:
@@ -74,9 +105,13 @@ export const sheikhHasina: PersonProfile = {
       "পরবর্তী পর্যায়ে আইসিটি রায়, আপিল/আত্মসমর্পণ/গ্রেপ্তার পরিস্থিতি, অন্য মামলার অগ্রগতি, খালাস, প্রত্যাহার বা সংশোধন পাওয়া গেলে পৃথক evidence record হিসেবে যুক্ত করা উচিত।",
     legacyEn:
       "Future updates should add the ICT judgment text, appeal/surrender/arrest posture, other case progress, acquittals, withdrawals, or corrections as separate evidence records when available.",
-    featuredClaimIds: [],
-    featuredRelationshipIds: [],
-    featuredIncidentIds: []
+    featuredClaimIds: [
+      publicClaimIds.sheikhHasinaJulyUprisingRightsFindings,
+      publicClaimIds.sheikhHasinaIctCommandResponsibility,
+      publicClaimIds.sheikhHasinaElectionControversies
+    ],
+    featuredRelationshipIds: [publicRelationshipIds.sheikhHasinaMamunIctCoDefendant],
+    featuredIncidentIds: [publicIncidentIds.sheikhHasinaJulyAugustUprising]
   },
   city: "Dhaka",
   country: "Bangladesh",
@@ -85,10 +120,14 @@ export const sheikhHasina: PersonProfile = {
     { label: "Public profile", url: "https://en.wikipedia.org/wiki/Sheikh_Hasina" }
   ],
   tags: [],
-  caseIds: [],
-  newsIds: [],
+  caseIds: [publicCaseIds.sheikhHasinaIctJulyUprising],
+  newsIds: [
+    publicNewsIds.sheikhHasinaBssCharges,
+    publicNewsIds.sheikhHasinaBssAppeal,
+    publicNewsIds.sheikhHasinaApReturnStatement
+  ],
   assetIds: [],
-  relationshipIds: [],
+  relationshipIds: [publicRelationshipIds.sheikhHasinaMamunIctCoDefendant],
   publicationStatus: "PUBLISHED",
   isActive: true,
   createdBy: "admin",

@@ -70,5 +70,69 @@ export const publicSourceIds = {
   sheikhHasinaBssIctJudgment: "00000000-0000-4000-8000-000000000274",
   sheikhHasinaOhchrFactFinding: "00000000-0000-4000-8000-000000000275",
   sheikhHasinaApVerdictResponse: "00000000-0000-4000-8000-000000000276",
-  sheikhHasinaDailyStarIronGrip: "00000000-0000-4000-8000-000000000277"
+  sheikhHasinaDailyStarIronGrip: "00000000-0000-4000-8000-000000000277",
+  sheikhHasinaBssIctFormalCharge: "00000000-0000-4000-8000-000000000278",
+  sheikhHasinaBssIctAppeal: "00000000-0000-4000-8000-000000000279"
+} as const;
+
+export const publicClaimIds = {
+  sheikhHasinaJulyUprisingRightsFindings: "00000000-0000-4000-8000-000000000301",
+  sheikhHasinaIctCommandResponsibility: "00000000-0000-4000-8000-000000000302",
+  sheikhHasinaElectionControversies: "00000000-0000-4000-8000-000000000303",
+  sheikhHasinaExecutiveCentralisation: "00000000-0000-4000-8000-000000000304"
+} as const;
+
+export const publicCaseIds = {
+  sheikhHasinaIctJulyUprising: "00000000-0000-4000-8000-000000000321"
+} as const;
+
+export const publicIncidentIds = {
+  sheikhHasinaJulyAugustUprising: "00000000-0000-4000-8000-000000000341"
+} as const;
+
+export const publicAreaIds = {
+  bangladesh: "00000000-0000-4000-8000-000000000361",
+  dhaka: "00000000-0000-4000-8000-000000000362",
+  gopalganj3: "00000000-0000-4000-8000-000000000363",
+  rangpur: "00000000-0000-4000-8000-000000000364",
+  ashulia: "00000000-0000-4000-8000-000000000365"
+} as const;
+
+export const publicInstitutionIds = {
+  awamiLeague: "00000000-0000-4000-8000-000000000381",
+  governmentOfBangladesh: "00000000-0000-4000-8000-000000000382",
+  internationalCrimesTribunal1: "00000000-0000-4000-8000-000000000383",
+  bangladeshPolice: "00000000-0000-4000-8000-000000000384",
+  ohchr: "00000000-0000-4000-8000-000000000385"
+} as const;
+
+export const publicAssociationIds = {
+  sheikhHasinaAwamiLeagueRole: "00000000-0000-4000-8000-000000000401",
+  sheikhHasinaGovernmentRole: "00000000-0000-4000-8000-000000000402",
+  sheikhHasinaIctCaseRole: "00000000-0000-4000-8000-000000000403",
+  sheikhHasinaBangladeshInfluence: "00000000-0000-4000-8000-000000000421",
+  sheikhHasinaGopalganjConstituency: "00000000-0000-4000-8000-000000000422",
+  sheikhHasinaDhakaPowerBase: "00000000-0000-4000-8000-000000000423"
+} as const;
+
+export const publicImpactIds = {
+  sheikhHasinaJulyUprisingHumanRights: "00000000-0000-4000-8000-000000000441"
+} as const;
+
+export const publicRelationshipIds = {
+  sheikhHasinaMamunIctCoDefendant: "00000000-0000-4000-8000-000000000461"
+} as const;
+
+export const publicNewsIds = {
+  sheikhHasinaBssCharges: "00000000-0000-4000-8000-000000000481",
+  sheikhHasinaBssAppeal: "00000000-0000-4000-8000-000000000482",
+  sheikhHasinaApReturnStatement: "00000000-0000-4000-8000-000000000483"
+} as const;
+
+export const publicCorrectionIds = {
+  sheikhHasinaStructuredEvidenceUpgrade: "00000000-0000-4000-8000-000000000501"
+} as const;
+
+export const publicRevisionIds = {
+  sheikhHasinaStoryNetworkEvidenceRevision: "00000000-0000-4000-8000-000000000521"
 } as const;

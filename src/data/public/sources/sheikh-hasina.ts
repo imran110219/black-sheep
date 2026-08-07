@@ -1,4 +1,4 @@
-import { publicPersonIds, publicSourceIds } from "../ids";
+import { publicCaseIds, publicPersonIds, publicSourceIds } from "../ids";
 import { source } from "./_source-factory";
 
 export const sheikhHasinaSources = [
@@ -21,6 +21,29 @@ export const sheikhHasinaSources = [
       "Name and Bangla name",
       "Political affiliation with Bangladesh Awami League",
       "Public role as politician and former prime minister"
+    ],
+    relatedCaseIds: [publicCaseIds.sheikhHasinaIctJulyUprising],
+    relatedPersonIds: [publicPersonIds.sheikhHasina, publicPersonIds.chowdhuryAbdullahAlMamun]
+  }),
+  source({
+    id: publicSourceIds.sheikhHasinaBssIctFormalCharge,
+    isDemo: false,
+    slug: "source-sheikh-hasina-bss-ict-formal-charge-2025",
+    type: "COURT_FILING",
+    title: "Formal charge filed against Hasina over July crimes against humanity",
+    publisher: "Bangladesh Sangbad Sangstha",
+    sourceUrl: "https://www.bssnews.net/news-flash/278877",
+    jurisdiction: "Bangladesh",
+    publicationDate: "2025-06-01",
+    accessedAt: "2026-08-07",
+    excerpt:
+      "State news report that ICT prosecutors filed formal crimes-against-humanity charges against Sheikh Hasina, Asaduzzaman Khan Kamal, and Chowdhury Abdullah Al-Mamun over the July-August Mass Uprising.",
+    verificationStatus: "REVIEWED",
+    isPrimarySource: false,
+    supportedClaims: [
+      "Formal charges were reported as filed on June 1, 2025",
+      "The case concerned crimes against humanity during the July-August Mass Uprising",
+      "The report attributed five charges to the ICT investigation agency"
     ],
     relatedCaseIds: [],
     relatedPersonIds: [publicPersonIds.sheikhHasina]
@@ -70,8 +93,31 @@ export const sheikhHasinaSources = [
       "Defence plea to dismiss charges was rejected",
       "Trial proceeded in absentia for fugitive accused after notice"
     ],
-    relatedCaseIds: [],
-    relatedPersonIds: [publicPersonIds.sheikhHasina]
+    relatedCaseIds: [publicCaseIds.sheikhHasinaIctJulyUprising],
+    relatedPersonIds: [publicPersonIds.sheikhHasina, publicPersonIds.chowdhuryAbdullahAlMamun]
+  }),
+  source({
+    id: publicSourceIds.sheikhHasinaBssIctAppeal,
+    isDemo: false,
+    slug: "source-sheikh-hasina-bss-ict-appeal-2025",
+    type: "COURT_FILING",
+    title: "ICT prosecution files appeal to enhance Hasina's sentence to death",
+    publisher: "Bangladesh Sangbad Sangstha",
+    sourceUrl: "https://www.bssnews.net/news-flash/342213",
+    jurisdiction: "Bangladesh",
+    publicationDate: "2025-12-15",
+    accessedAt: "2026-08-07",
+    excerpt:
+      "State news report describing prosecution appeal activity after the ICT-1 judgment, including reported conviction details, sentence language, and compensation/confiscation orders.",
+    verificationStatus: "REVIEWED",
+    isPrimarySource: false,
+    supportedClaims: [
+      "Appeal-related filing was reported on December 15, 2025",
+      "ICT-1 conviction and sentence details were summarized",
+      "Former IGP Chowdhury Abdullah Al-Mamun was reported as an approver"
+    ],
+    relatedCaseIds: [publicCaseIds.sheikhHasinaIctJulyUprising],
+    relatedPersonIds: [publicPersonIds.sheikhHasina, publicPersonIds.chowdhuryAbdullahAlMamun]
   }),
   source({
     id: publicSourceIds.sheikhHasinaBssIctJudgment,
@@ -94,8 +140,8 @@ export const sheikhHasinaSources = [
       "Superior command responsibility was reported as part of the tribunal reasoning",
       "Former IGP Chowdhury Abdullah Al-Mamun was reported as an approver"
     ],
-    relatedCaseIds: [],
-    relatedPersonIds: [publicPersonIds.sheikhHasina]
+    relatedCaseIds: [publicCaseIds.sheikhHasinaIctJulyUprising],
+    relatedPersonIds: [publicPersonIds.sheikhHasina, publicPersonIds.chowdhuryAbdullahAlMamun]
   }),
   source({
     id: publicSourceIds.sheikhHasinaOhchrFactFinding,
@@ -120,7 +166,7 @@ export const sheikhHasinaSources = [
       "Reported estimate of deaths and injuries",
       "Findings concerning former-government and security-apparatus conduct"
     ],
-    relatedCaseIds: [],
+    relatedCaseIds: [publicCaseIds.sheikhHasinaIctJulyUprising],
     relatedPersonIds: [publicPersonIds.sheikhHasina]
   }),
   source({
@@ -144,7 +190,7 @@ export const sheikhHasinaSources = [
       "Hasina's denial and criticism of the verdict",
       "Reported appeal limitation unless she surrenders or is arrested within the stated period"
     ],
-    relatedCaseIds: [],
+    relatedCaseIds: [publicCaseIds.sheikhHasinaIctJulyUprising],
     relatedPersonIds: [publicPersonIds.sheikhHasina]
   }),
   source({

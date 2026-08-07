@@ -4,6 +4,14 @@ Use these prompts when asking Codex or another AI agent to research, suggest, ad
 
 All prompts assume the project rules in `AGENTS.md`, `docs/ai-data-workflow.md`, and `docs/editorial-safety.md` apply.
 
+Current data boundary:
+
+- Active real people and sources live in `src/data/public`.
+- Demo scaffold records for claims, incidents, areas, institutions, associations, impacts, dossiers, cases, news, corrections, and revisions may live in `src/data/fixtures`.
+- Do not attach demo scaffold records to real people as evidence.
+- Convert scaffold-style records into real public records only after source-backed research, duplicate checks, privacy review, and synchronized Bangla/English writing.
+- Route/page work must use the repository abstraction; route files must not import fixtures directly.
+
 ## 1. Search Web and Suggest People
 
 ```text
@@ -27,6 +35,9 @@ For each suggested person, return:
 - aliases
 - public role
 - why they may be public-interest
+- Story layer summary: historical identity, why listed, power base or influence context
+- Network layer leads: known public organizations, institutions, areas, associates, or offices to research later
+- Evidence layer leads: claims, incidents, cases, official findings, responses, corrections, or source bundles to research later
 - status boundary: allegation, filed case, trial, conviction, acquittal, dismissal, sanction, official finding, etc.
 - 2-5 source links
 - duplicate risk: none / possible / likely
@@ -61,10 +72,20 @@ Tasks:
    - src/data/public/ids.ts
    - src/data/public/people/index.ts
    - src/data/public/sources/index.ts
-6. Keep Bangla and English synchronized.
-7. Use neutral, status-aware wording.
-8. Do not add private identifiers.
-9. Run:
+6. Fill Story-layer fields only with source-backed summaries:
+   - whyListedBn / whyListedEn
+   - historicalOverviewBn / historicalOverviewEn
+   - riseToPowerBn / riseToPowerEn when supported
+   - powerBaseBn / powerBaseEn when supported
+   - documentedPatternsBn / documentedPatternsEn when supported
+   - historicalImpactBn / historicalImpactEn when supported
+   - legacyBn / legacyEn when supported
+7. Add influence domains only as coverage/navigation metadata, not guilt labels.
+8. Do not create real ClaimRecord, IncidentRecord, InstitutionAssociation, GeographicAssociation, ImpactRecord, or CaseRecord unless source-backed and explicitly requested.
+9. Keep Bangla and English synchronized.
+10. Use neutral, status-aware wording.
+11. Do not add private identifiers.
+12. Run:
    - pnpm format:check
    - pnpm lint
    - pnpm typecheck
@@ -105,7 +126,8 @@ Tasks:
 5. If the person does not exist and the source is sufficient, add a new per-person file and source file.
 6. Use the article as a SourceRecord with a short paraphrased excerpt.
 7. Preserve status boundaries. A news allegation, testimony, arrest, remand, or filed complaint is not a conviction.
-8. Run the full validation suite.
+8. If the article describes a historical event, public-interest claim, institution link, area link, or legal case, summarize it as a proposed Story/Network/Evidence addition unless the user explicitly asks to create structured records.
+9. Run the full validation suite.
 
 Final response:
 - say whether the person was added or an existing profile was enriched
@@ -130,6 +152,10 @@ Focus area:
 - Bangla wording
 - influence domains
 - historical overview
+- Story layer summaries
+- Network layer leads
+- Evidence layer leads
+- claims or incidents if explicitly requested and source-backed
 - corrections/acquittals/dismissals
 
 Tasks:
@@ -141,8 +167,10 @@ Tasks:
 5. Add only source-backed information.
 6. Keep all descriptions neutral and status-aware.
 7. Add new source records only when they support specific claims.
-8. Keep Bangla and English synchronized.
-9. Run the full validation suite.
+8. Keep influence domains as navigation metadata, not guilt labels.
+9. Do not link demo scaffold claims/incidents/cases/institutions to the real person.
+10. Keep Bangla and English synchronized.
+11. Run the full validation suite.
 
 Final response:
 - summarize enriched fields
@@ -214,7 +242,47 @@ Final response:
 - validation results if edits were made
 ```
 
-## 7. Strict Wording Rewrite
+## 7. Add Source-Backed Claim Or Incident
+
+```text
+Add a structured source-backed Story/Evidence record for an existing Black Sheep public person.
+
+Target person slug:
+Record type:
+- ClaimRecord
+- IncidentRecord
+- CaseRecord
+- InstitutionAssociation
+- GeographicAssociation
+- ImpactRecord
+
+Source links:
+
+Tasks:
+1. Read AGENTS.md, docs/ai-data-workflow.md, docs/domain-model.md, and docs/editorial-safety.md.
+2. Locate the existing public person and source files.
+3. Check duplicates by slug, title, source URL, person ID, institution name, area name, and case number where applicable.
+4. Verify that each proposed fact is supported by a source.
+5. Preserve status boundaries:
+   - ClaimRecord is not the same as CaseRecord.
+   - IncidentRecord is not the same as CaseRecord.
+   - associations are not proof of wrongdoing.
+   - disputed, retracted, acquitted, dismissed, or withdrawn records must be clearly labelled.
+6. Add or update source records first.
+7. Add the structured record only if it has sourceIds and bilingual text.
+8. Link the person's id arrays only after the structured record is complete.
+9. Do not include private identifiers, precise residence, private coordinates, private phone/email, or unsupported financial details.
+10. Keep Bangla and English synchronized.
+11. Run the full validation suite.
+
+Final response:
+- summarize structured records added
+- list source links used
+- state status boundaries and unresolved uncertainty
+- state validation results
+```
+
+## 8. Strict Wording Rewrite
 
 ```text
 Review and rewrite public profile wording for editorial safety.
@@ -239,5 +307,33 @@ Tasks:
 Final response:
 - wording risks found
 - files changed
+- validation results
+```
+
+## 9. Repository Or Route Refactor
+
+```text
+Refactor Black Sheep route/page data access without changing editorial content.
+
+Scope:
+
+Tasks:
+1. Inspect the existing route/component/repository code first.
+2. Keep frontend-only scope.
+3. Preserve public people and source data in src/data/public.
+4. Do not import fixtures directly from route files.
+5. Move any mock-only context lookup behind BlackSheepRepository methods.
+6. Keep strict TypeScript and Zod validation.
+7. Preserve Story, Network, and Evidence layer behavior.
+8. Run:
+   - pnpm format:check
+   - pnpm lint
+   - pnpm typecheck
+   - pnpm test
+   - pnpm build
+
+Final response:
+- repository methods changed
+- route files changed
 - validation results
 ```

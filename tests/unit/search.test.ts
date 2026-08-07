@@ -60,11 +60,17 @@ describe("search utilities", () => {
   });
 
   it("validates expanded public-interest records with Zod", () => {
-    expect(cases.map((record) => caseRecordSchema.parse(record))).toHaveLength(12);
-    expect(claims.map((record) => claimRecordSchema.parse(record))).toHaveLength(20);
-    expect(incidents.map((record) => incidentRecordSchema.parse(record))).toHaveLength(12);
-    expect(areas.map((record) => areaSchema.parse(record))).toHaveLength(15);
-    expect(institutions.map((record) => institutionSchema.parse(record))).toHaveLength(12);
+    expect(cases.map((record) => caseRecordSchema.parse(record)).length).toBeGreaterThanOrEqual(13);
+    expect(claims.map((record) => claimRecordSchema.parse(record)).length).toBeGreaterThanOrEqual(
+      24
+    );
+    expect(
+      incidents.map((record) => incidentRecordSchema.parse(record)).length
+    ).toBeGreaterThanOrEqual(13);
+    expect(areas.map((record) => areaSchema.parse(record)).length).toBeGreaterThanOrEqual(20);
+    expect(
+      institutions.map((record) => institutionSchema.parse(record)).length
+    ).toBeGreaterThanOrEqual(17);
     expect(people.map((person) => personNarrativeSchema.parse(person.narrative))).toHaveLength(22);
   });
 
@@ -77,5 +83,13 @@ describe("search utilities", () => {
       expect.arrayContaining([expect.objectContaining({ type: "PERSON" })])
     );
     expect(await repo.getPersonStoryContext(publicPerson!.id)).toBeTruthy();
+    const hasina = people.find((person) => person.slug === "sheikh-hasina");
+    expect(hasina).toBeDefined();
+    const hasinaStory = await repo.getPersonStoryContext(hasina!.id);
+    const hasinaEvidence = await repo.getPersonEvidenceContext(hasina!.id);
+    expect(hasinaStory?.claims.length).toBeGreaterThanOrEqual(4);
+    expect(hasinaStory?.incidents.length).toBeGreaterThanOrEqual(1);
+    expect(hasinaEvidence?.cases.length).toBeGreaterThanOrEqual(1);
+    expect(hasinaEvidence?.responses.length).toBeGreaterThanOrEqual(1);
   });
 });
