@@ -56,7 +56,14 @@ export const publicPersonIds = {
   jahangirAlamHomeSecretary: "00000000-0000-4000-8000-000000000085",
   ahmShamsuddinChowdhuryManik: "00000000-0000-4000-8000-000000000086",
   saddamHossainBcl: "00000000-0000-4000-8000-000000000087",
-  waliAsifInan: "00000000-0000-4000-8000-000000000088"
+  waliAsifInan: "00000000-0000-4000-8000-000000000088",
+  mdMatiurRahmanNbr: "00000000-0000-4000-8000-000000000089",
+  abuHenaMdRahmatulMuneem: "00000000-0000-4000-8000-000000000090",
+  zafarAhmedKhan: "00000000-0000-4000-8000-000000000091",
+  mdNazrulIslamRoads: "00000000-0000-4000-8000-000000000092",
+  mihirKantiMajumder: "00000000-0000-4000-8000-000000000093",
+  mdAshadulIslam: "00000000-0000-4000-8000-000000000094",
+  drMohammadJabedPatwary: "00000000-0000-4000-8000-000000000095"
 } as const;
 
 export const publicSourceIds = {
@@ -147,7 +154,14 @@ export const publicSourceIds = {
   hanifTbsIctWitness: "00000000-0000-4000-8000-000000000555",
   julyCrackdownDailyStarMamunTestimony: "00000000-0000-4000-8000-000000000556",
   dhakaTribuneJulyChargeSheet: "00000000-0000-4000-8000-000000000557",
-  inuTbsKushtiaCharges: "00000000-0000-4000-8000-000000000559"
+  inuTbsKushtiaCharges: "00000000-0000-4000-8000-000000000559",
+  matiurBdnewsAccCase: "00000000-0000-4000-8000-000000000560",
+  rahmatulMuneemBssTravelBan: "00000000-0000-4000-8000-000000000561",
+  expresswayBssFlatScam: "00000000-0000-4000-8000-000000000562",
+  mihirKantiTbsAccCases: "00000000-0000-4000-8000-000000000563",
+  ashadulNewAgeN95Probe: "00000000-0000-4000-8000-000000000564",
+  jabedPatwaryDhakaTribuneElectionCase: "00000000-0000-4000-8000-000000000565",
+  jabedPatwaryProthomAloPoliceCorruption: "00000000-0000-4000-8000-000000000566"
 } as const;
 
 export const publicClaimIds = {

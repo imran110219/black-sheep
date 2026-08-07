@@ -32,6 +32,15 @@ import { asaduzzamanNoorSources } from "./asaduzzaman-noor";
 import { engineerMosharrafHossainSources } from "./engineer-mosharraf-hossain";
 import { mahbubulAlamHanifSources } from "./mahbubul-alam-hanif";
 import { saddamHossainBclSources } from "./saddam-hossain-bcl";
+import {
+  ashadulNewAgeN95ProbeSource,
+  expresswayBssFlatScamSource,
+  jabedPatwaryDhakaTribuneElectionCaseSource,
+  jabedPatwaryProthomAloPoliceCorruptionSource,
+  matiurBdnewsAccCaseSource,
+  mihirKantiTbsAccCasesSource,
+  rahmatulMuneemBssTravelBanSource
+} from "./bureaucrat-corruption-2025";
 import { swedenAslamSources } from "./sweden-aslam";
 import { subrataBainSources } from "./subrata-bain";
 import { jisanAhmedSources } from "./jisan-ahmed";
@@ -78,6 +87,13 @@ export const publicSources = [
   ...engineerMosharrafHossainSources,
   ...mahbubulAlamHanifSources,
   ...saddamHossainBclSources,
+  matiurBdnewsAccCaseSource,
+  rahmatulMuneemBssTravelBanSource,
+  expresswayBssFlatScamSource,
+  mihirKantiTbsAccCasesSource,
+  ashadulNewAgeN95ProbeSource,
+  jabedPatwaryDhakaTribuneElectionCaseSource,
+  jabedPatwaryProthomAloPoliceCorruptionSource,
   ...swedenAslamSources,
   ...subrataBainSources,
   ...jisanAhmedSources,

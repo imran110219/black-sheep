@@ -46,6 +46,13 @@ import { jahangirAlamHomeSecretary } from "./jahangir-alam-home-secretary";
 import { ahmShamsuddinChowdhuryManik } from "./ahm-shamsuddin-chowdhury-manik";
 import { saddamHossainBcl } from "./saddam-hossain-bcl";
 import { waliAsifInan } from "./wali-asif-inan";
+import { mdMatiurRahmanNbr } from "./md-matiur-rahman-nbr";
+import { abuHenaMdRahmatulMuneem } from "./abu-hena-md-rahmatul-muneem";
+import { zafarAhmedKhan } from "./zafar-ahmed-khan";
+import { mdNazrulIslamRoads } from "./md-nazrul-islam-roads";
+import { mihirKantiMajumder } from "./mihir-kanti-majumder";
+import { mdAshadulIslam } from "./md-ashadul-islam";
+import { drMohammadJabedPatwary } from "./dr-mohammad-jabed-patwary";
 import { swedenAslam } from "./sweden-aslam";
 import { subrataBain } from "./subrata-bain";
 import { jisanAhmed } from "./jisan-ahmed";
@@ -106,6 +113,13 @@ export const publicPeople = [
   ahmShamsuddinChowdhuryManik,
   saddamHossainBcl,
   waliAsifInan,
+  mdMatiurRahmanNbr,
+  abuHenaMdRahmatulMuneem,
+  zafarAhmedKhan,
+  mdNazrulIslamRoads,
+  mihirKantiMajumder,
+  mdAshadulIslam,
+  drMohammadJabedPatwary,
   swedenAslam,
   subrataBain,
   jisanAhmed,
