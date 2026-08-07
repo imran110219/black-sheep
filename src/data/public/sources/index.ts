@@ -23,6 +23,15 @@ import { mKhurshidHossainSources } from "./m-khurshid-hossain";
 import { barristerMdHarunArRashidSources } from "./barrister-md-harun-ar-rashid";
 import { mdSaifulAlamSources } from "./md-saiful-alam";
 import { hamidulHaqueSources } from "./hamidul-haque";
+import { asaduzzamanKhanKamalSources } from "./asaduzzaman-khan-kamal";
+import { july45IctProceedingSource } from "./july-45-ict-proceeding";
+import { julyCrackdownMamunTestimonySource } from "./july-crackdown-mamun-testimony";
+import { hasanulHaqInuSources } from "./hasanul-haq-inu";
+import { abmFazleKarimChowdhurySources } from "./abm-fazle-karim-chowdhury";
+import { asaduzzamanNoorSources } from "./asaduzzaman-noor";
+import { engineerMosharrafHossainSources } from "./engineer-mosharraf-hossain";
+import { mahbubulAlamHanifSources } from "./mahbubul-alam-hanif";
+import { saddamHossainBclSources } from "./saddam-hossain-bcl";
 import { swedenAslamSources } from "./sweden-aslam";
 import { subrataBainSources } from "./subrata-bain";
 import { jisanAhmedSources } from "./jisan-ahmed";
@@ -60,6 +69,15 @@ export const publicSources = [
   ...barristerMdHarunArRashidSources,
   ...mdSaifulAlamSources,
   ...hamidulHaqueSources,
+  ...asaduzzamanKhanKamalSources,
+  july45IctProceedingSource,
+  julyCrackdownMamunTestimonySource,
+  ...hasanulHaqInuSources,
+  ...abmFazleKarimChowdhurySources,
+  ...asaduzzamanNoorSources,
+  ...engineerMosharrafHossainSources,
+  ...mahbubulAlamHanifSources,
+  ...saddamHossainBclSources,
   ...swedenAslamSources,
   ...subrataBainSources,
   ...jisanAhmedSources,

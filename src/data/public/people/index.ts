@@ -22,6 +22,30 @@ import { mKhurshidHossain } from "./m-khurshid-hossain";
 import { barristerMdHarunArRashid } from "./barrister-md-harun-ar-rashid";
 import { mdSaifulAlam } from "./md-saiful-alam";
 import { hamidulHaque } from "./hamidul-haque";
+import { asaduzzamanKhanKamal } from "./asaduzzaman-khan-kamal";
+import { amirHossainAmu } from "./amir-hossain-amu";
+import { qamrulIslam } from "./qamrul-islam";
+import { muhammadFarukKhan } from "./muhammad-faruk-khan";
+import { dipuMoni } from "./dipu-moni";
+import { abdurRazzaque } from "./abdur-razzaque";
+import { rashedKhanMenon } from "./rashed-khan-menon";
+import { hasanulHaqInu } from "./hasanul-haq-inu";
+import { tawfiqEElahiChowdhury } from "./tawfiq-e-elahi-chowdhury";
+import { zunaidAhmedPalak } from "./zunaid-ahmed-palak";
+import { kamalAhmedMajumder } from "./kamal-ahmed-majumder";
+import { golamDastagirGazi } from "./golam-dastagir-gazi";
+import { shajahanKhan } from "./shajahan-khan";
+import { abmFazleKarimChowdhury } from "./abm-fazle-karim-chowdhury";
+import { asaduzzamanNoor } from "./asaduzzaman-noor";
+import { engineerMosharrafHossain } from "./engineer-mosharraf-hossain";
+import { solaimanMohammadSelim } from "./solaiman-mohammad-selim";
+import { jahangirKabirNanak } from "./jahangir-kabir-nanak";
+import { mahbubulAlamHanif } from "./mahbubul-alam-hanif";
+import { mirzaAzam } from "./mirza-azam";
+import { jahangirAlamHomeSecretary } from "./jahangir-alam-home-secretary";
+import { ahmShamsuddinChowdhuryManik } from "./ahm-shamsuddin-chowdhury-manik";
+import { saddamHossainBcl } from "./saddam-hossain-bcl";
+import { waliAsifInan } from "./wali-asif-inan";
 import { swedenAslam } from "./sweden-aslam";
 import { subrataBain } from "./subrata-bain";
 import { jisanAhmed } from "./jisan-ahmed";
@@ -58,6 +82,30 @@ export const publicPeople = [
   barristerMdHarunArRashid,
   mdSaifulAlam,
   hamidulHaque,
+  asaduzzamanKhanKamal,
+  amirHossainAmu,
+  qamrulIslam,
+  muhammadFarukKhan,
+  dipuMoni,
+  abdurRazzaque,
+  rashedKhanMenon,
+  hasanulHaqInu,
+  tawfiqEElahiChowdhury,
+  zunaidAhmedPalak,
+  kamalAhmedMajumder,
+  golamDastagirGazi,
+  shajahanKhan,
+  abmFazleKarimChowdhury,
+  asaduzzamanNoor,
+  engineerMosharrafHossain,
+  solaimanMohammadSelim,
+  jahangirKabirNanak,
+  mahbubulAlamHanif,
+  mirzaAzam,
+  jahangirAlamHomeSecretary,
+  ahmShamsuddinChowdhuryManik,
+  saddamHossainBcl,
+  waliAsifInan,
   swedenAslam,
   subrataBain,
   jisanAhmed,
