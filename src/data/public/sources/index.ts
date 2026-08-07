@@ -44,6 +44,7 @@ import {
 import { sheikhFamilyPurbachalSources } from "./sheikh-family-purbachal";
 import { osmanFamilyNarayanganjSources } from "./osman-family-narayanganj";
 import { ahmedBrothersSources } from "./ahmed-brothers";
+import { mohammedSaifulAlamSources } from "./mohammed-saiful-alam";
 import { swedenAslamSources } from "./sweden-aslam";
 import { subrataBainSources } from "./subrata-bain";
 import { jisanAhmedSources } from "./jisan-ahmed";
@@ -100,6 +101,7 @@ export const publicSources = [
   ...sheikhFamilyPurbachalSources,
   ...osmanFamilyNarayanganjSources,
   ...ahmedBrothersSources,
+  ...mohammedSaifulAlamSources,
   ...swedenAslamSources,
   ...subrataBainSources,
   ...jisanAhmedSources,

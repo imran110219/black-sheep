@@ -68,6 +68,7 @@ import { azizAhmed } from "./aziz-ahmed";
 import { harisAhmed } from "./haris-ahmed";
 import { tofailAhmedJoseph } from "./tofail-ahmed-joseph";
 import { anisAhmed } from "./anis-ahmed";
+import { mohammedSaifulAlam } from "./mohammed-saiful-alam";
 import { swedenAslam } from "./sweden-aslam";
 import { subrataBain } from "./subrata-bain";
 import { jisanAhmed } from "./jisan-ahmed";
@@ -150,6 +151,7 @@ export const publicPeople = [
   harisAhmed,
   tofailAhmedJoseph,
   anisAhmed,
+  mohammedSaifulAlam,
   swedenAslam,
   subrataBain,
   jisanAhmed,

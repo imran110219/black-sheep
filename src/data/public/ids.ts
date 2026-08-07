@@ -78,7 +78,8 @@ export const publicPersonIds = {
   azizAhmed: "00000000-0000-4000-8000-000000000107",
   harisAhmed: "00000000-0000-4000-8000-000000000108",
   tofailAhmedJoseph: "00000000-0000-4000-8000-000000000109",
-  anisAhmed: "00000000-0000-4000-8000-000000000110"
+  anisAhmed: "00000000-0000-4000-8000-000000000110",
+  mohammedSaifulAlam: "00000000-0000-4000-8000-000000000111"
 } as const;
 
 export const publicSourceIds = {
@@ -196,7 +197,12 @@ export const publicSourceIds = {
   azizBssExtortionCase: "00000000-0000-4000-8000-000000000583",
   josephDailyStarPardon: "00000000-0000-4000-8000-000000000584",
   harisAnisProthomAloClemency: "00000000-0000-4000-8000-000000000585",
-  azizProthomAloResponse: "00000000-0000-4000-8000-000000000586"
+  azizProthomAloResponse: "00000000-0000-4000-8000-000000000586",
+  sAlamBssIslamiBankCase: "00000000-0000-4000-8000-000000000587",
+  sAlamDailyStarIllegalAssets: "00000000-0000-4000-8000-000000000588",
+  sAlamDailyStarBankGrab: "00000000-0000-4000-8000-000000000589",
+  sAlamProthomAloIslamiBankTakeover: "00000000-0000-4000-8000-000000000590",
+  sAlamBssShareFreeze: "00000000-0000-4000-8000-000000000591"
 } as const;
 
 export const publicClaimIds = {
