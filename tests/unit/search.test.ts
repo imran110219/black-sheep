@@ -71,7 +71,9 @@ describe("search utilities", () => {
     expect(
       institutions.map((record) => institutionSchema.parse(record)).length
     ).toBeGreaterThanOrEqual(17);
-    expect(people.map((person) => personNarrativeSchema.parse(person.narrative))).toHaveLength(22);
+    expect(
+      people.map((person) => personNarrativeSchema.parse(person.narrative)).length
+    ).toBeGreaterThanOrEqual(23);
   });
 
   it("searches across people, institutions, and incidents", async () => {

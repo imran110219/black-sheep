@@ -20,7 +20,9 @@ export const publicPersonIds = {
   tariqueAhmedSiddique: "00000000-0000-4000-8000-000000000049",
   ziaulAhsan: "00000000-0000-4000-8000-000000000050",
   saifuzzamanChowdhury: "00000000-0000-4000-8000-000000000051",
-  akhtaruzzamanGazipur: "00000000-0000-4000-8000-000000000052"
+  akhtaruzzamanGazipur: "00000000-0000-4000-8000-000000000052",
+  harunOrRashid: "00000000-0000-4000-8000-000000000053",
+  mdShahedKarim: "00000000-0000-4000-8000-000000000054"
 } as const;
 
 export const publicSourceIds = {
@@ -72,7 +74,18 @@ export const publicSourceIds = {
   sheikhHasinaApVerdictResponse: "00000000-0000-4000-8000-000000000276",
   sheikhHasinaDailyStarIronGrip: "00000000-0000-4000-8000-000000000277",
   sheikhHasinaBssIctFormalCharge: "00000000-0000-4000-8000-000000000278",
-  sheikhHasinaBssIctAppeal: "00000000-0000-4000-8000-000000000279"
+  sheikhHasinaBssIctAppeal: "00000000-0000-4000-8000-000000000279",
+  harunDailyStarTransfer: "00000000-0000-4000-8000-000000000280",
+  harunDailyStarAccInvestigation: "00000000-0000-4000-8000-000000000281",
+  harunDailyStarAccSummons: "00000000-0000-4000-8000-000000000282",
+  harunDailyStarAccountsFrozen: "00000000-0000-4000-8000-000000000283",
+  harunDailyStarTaxSeizureOrder: "00000000-0000-4000-8000-000000000284",
+  harunDailyStarSuspension: "00000000-0000-4000-8000-000000000285",
+  shahedProthomAloArrestAgain: "00000000-0000-4000-8000-000000000286",
+  shahedProthomAloArmsIndictment: "00000000-0000-4000-8000-000000000287",
+  shahedDailyStarArmsAcquittal: "00000000-0000-4000-8000-000000000288",
+  shahedProthomAloAccEmbezzlement: "00000000-0000-4000-8000-000000000289",
+  shahedProthomAloDghsMou: "00000000-0000-4000-8000-000000000290"
 } as const;
 
 export const publicClaimIds = {

@@ -10,6 +10,8 @@ import { saifuzzamanChowdhurySources } from "./saifuzzaman-chowdhury";
 import { tariqueAhmedSiddiqueSources } from "./tarique-ahmed-siddique";
 import { ziaulAhsanSources } from "./ziaul-ahsan";
 import { akhtaruzzamanGazipurSources } from "./akhtaruzzaman-gazipur";
+import { harunOrRashidSources } from "./harun-or-rashid";
+import { mdShahedKarimSources } from "./md-shahed-karim";
 import { swedenAslamSources } from "./sweden-aslam";
 import { subrataBainSources } from "./subrata-bain";
 import { jisanAhmedSources } from "./jisan-ahmed";
@@ -34,6 +36,8 @@ export const publicSources = [
   ...tariqueAhmedSiddiqueSources,
   ...ziaulAhsanSources,
   ...akhtaruzzamanGazipurSources,
+  ...harunOrRashidSources,
+  ...mdShahedKarimSources,
   ...swedenAslamSources,
   ...subrataBainSources,
   ...jisanAhmedSources,
