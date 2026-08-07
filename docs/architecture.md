@@ -28,12 +28,16 @@ src/data/public/
   people/
     sheikh-hasina.ts
     obaidul-quader.ts
-    top-terrors.ts
+    anisul-huq.ts
+    ...
+    ziaul-ahsan.ts
     index.ts
   sources/
     sheikh-hasina.ts
     obaidul-quader.ts
-    top-terrors.ts
+    anisul-huq.ts
+    ...
+    ziaul-ahsan.ts
     index.ts
   index.ts
 ```
@@ -45,6 +49,8 @@ src/data/index.ts
 ```
 
 It exports public `people` and `sources`, plus typed empty arrays for scaffolded entities such as claims, cases, incidents, areas, organizations, relationships, corrections, and revisions.
+
+Each public person and that person's primary source bundle should live in a separate slug-named file. Do not group people under labels such as former regime, terrorist, criminal, or any equivalent collection category.
 
 ## UI Structure
 

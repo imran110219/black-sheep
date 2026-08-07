@@ -18,19 +18,19 @@ The public frontend model is built around bilingual, source-backed public-intere
 
 Current public people live in:
 
-- `src/data/public/people/sheikh-hasina.ts`
-- `src/data/public/people/obaidul-quader.ts`
-- `src/data/public/people/top-terrors.ts`
+- `src/data/public/people/<person-slug>.ts`
+- `src/data/public/people/index.ts`
 
 ### `SourceRecord`
 
 `SourceRecord` stores online source metadata and the specific claims each source supports. Public sources currently live in:
 
-- `src/data/public/sources/sheikh-hasina.ts`
-- `src/data/public/sources/obaidul-quader.ts`
-- `src/data/public/sources/top-terrors.ts`
+- `src/data/public/sources/<person-slug>.ts`
+- `src/data/public/sources/index.ts`
 
 Every real person should have at least one source record before publication. Source excerpts must be short summaries, not copied article text.
+
+Data files must be organized per person/character rather than under broad collection labels. Descriptions must keep policy criticism, arrest reporting, filed cases, tribunal testimony, allegations, trial posture, and final court findings separate.
 
 ## Scaffolded Evidence Entities
 
