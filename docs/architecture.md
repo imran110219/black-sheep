@@ -12,11 +12,10 @@ Routes must not import data files directly. Pages and features should depend on:
 
 - `BlackSheepRepository`
 - `createBlackSheepRepository`
-- context helpers in `src/repositories/record-context.ts`
 
-The current repository implementation is local and read-only. It imports from `@/data`, which aggregates active public records from `src/data/public`.
+The current repository implementation is local and read-only. It imports from `@/data`, which aggregates active fictional demo records from `src/data/fixtures/mock-data.ts`.
 
-`src/data/fixtures/mock-data.ts` still exists as a fictional development fixture set, but it is not exported by `src/data/index.ts` and is not part of the active app data.
+Route components must not call mock-only context helpers such as `getPublicMockIndex()`. Story, evidence, network, area, institution, incident, dossier, news, source, organization, and case contexts are exposed as repository methods.
 
 ## Public Data Structure
 
@@ -48,7 +47,7 @@ The root aggregate is:
 src/data/index.ts
 ```
 
-It exports public `people` and `sources`, plus typed empty arrays for scaffolded entities such as claims, cases, incidents, areas, organizations, relationships, corrections, and revisions.
+For this product revision, it exports the fictional fixture graph: people, claims, incidents, areas, institutions, associations, impacts, dossiers, cases, sources, news, corrections, and revisions.
 
 Each public person and that person's primary source bundle should live in a separate slug-named file. Do not group people under labels such as former regime, terrorist, criminal, or any equivalent collection category.
 
@@ -61,12 +60,12 @@ The homepage is editorial-first: hero search, featured profiles, influence disco
 Profile pages are ordered as:
 
 1. cinematic identity header
-2. Story View
-3. influence footprint and people network
-4. timeline
-5. Evidence View
+2. sticky profile navigation
+3. Story/Evidence mode switch
+4. Story layer: why listed, metrics, history, claims, incidents, influence, network, geography, timeline
+5. Evidence layer: legal status, cases, sources, news, responses, corrections, revisions
 
-The evidence layer remains available even when a profile currently has only source records and no structured claims or cases.
+Story View is the default. Evidence View is selected with `?view=evidence` and reorders the evidence sections higher on the page.
 
 ## Validation
 

@@ -1,4 +1,4 @@
-import { sheikhHasinaWikipediaSource } from "./sheikh-hasina";
+import { sheikhHasinaSources } from "./sheikh-hasina";
 import { obaidulQuaderWikipediaSource } from "./obaidul-quader";
 import { anisulHuqSources } from "./anisul-huq";
 import { chowdhuryAbdullahAlMamunSources } from "./chowdhury-abdullah-al-mamun";
@@ -22,7 +22,7 @@ import { picchiHannanSources } from "./picchi-hannan";
 import { tokaiSagarSources } from "./tokai-sagar";
 
 export const publicSources = [
-  sheikhHasinaWikipediaSource,
+  ...sheikhHasinaSources,
   obaidulQuaderWikipediaSource,
   ...anisulHuqSources,
   ...chowdhuryAbdullahAlMamunSources,

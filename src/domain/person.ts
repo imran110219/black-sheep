@@ -44,8 +44,16 @@ export const personProfileSchema = z.object({
   organizations: z.array(z.string()),
   website: z.string().url().optional(),
   activePeriod: z.string(),
+  activePeriodStart: z.string().optional(),
+  activePeriodEnd: z.string().optional(),
+  historicalEraIds: z.array(z.string()),
   primaryAreaBn: z.string(),
   primaryAreaEn: z.string(),
+  primaryAreaIds: z.array(z.string().uuid()),
+  claimIds: z.array(z.string().uuid()),
+  incidentIds: z.array(z.string().uuid()),
+  institutionAssociationIds: z.array(z.string().uuid()),
+  geographicAssociationIds: z.array(z.string().uuid()),
   influenceDomains: z.array(influenceDomainSchema),
   historicalIdentityBn: z.string(),
   historicalIdentityEn: z.string(),
@@ -84,8 +92,16 @@ export type PersonCard = Pick<
   | "publicRoles"
   | "organizations"
   | "activePeriod"
+  | "activePeriodStart"
+  | "activePeriodEnd"
+  | "historicalEraIds"
   | "primaryAreaBn"
   | "primaryAreaEn"
+  | "primaryAreaIds"
+  | "claimIds"
+  | "incidentIds"
+  | "institutionAssociationIds"
+  | "geographicAssociationIds"
   | "influenceDomains"
   | "historicalIdentityBn"
   | "historicalIdentityEn"
@@ -97,10 +113,24 @@ export type PersonCard = Pick<
   | "relationshipIds"
   | "lastVerifiedAt"
   | "updatedAt"
->;
+> & {
+  counts?: {
+    claims: number;
+    incidents: number;
+    cases: number;
+    verifiedSources: number;
+    relationships: number;
+    institutions: number;
+    areas: number;
+  };
+};
 
 export type PeopleSearchQuery = {
   query?: string;
+  area?: string;
+  historicalEra?: string;
+  influenceDomain?: string;
+  institutionType?: string;
   legalStatus?: string;
   category?: string;
   politicalAffiliation?: string;
@@ -108,6 +138,13 @@ export type PeopleSearchQuery = {
   organization?: string;
   country?: string;
   tag?: string;
+  claimType?: string;
+  claimStatus?: string;
+  incidentType?: string;
+  relationshipType?: string;
+  verificationStatus?: string;
+  officialFindingAvailable?: string;
+  subjectResponseAvailable?: string;
   year?: string;
   sort?: "recently-verified" | "recently-updated" | "alphabetical";
   page?: number;

@@ -1,6 +1,12 @@
 # Domain Model
 
-The public frontend model is built around bilingual, source-backed public-interest profiles. The active data exported by `src/data/index.ts` is public-only; fictional fixtures remain in `src/data/fixtures/mock-data.ts` for development reference but are not part of the active app data.
+The frontend model is built around bilingual, source-aware public-interest profiles. The active data exported by `src/data/index.ts` is currently fictional demo data from `src/data/fixtures/mock-data.ts`.
+
+## Conceptual Layers
+
+- Story Layer: identity, why listed, historical overview, rise to power, power base, major themes, incidents, impact, and legacy.
+- Network Layer: people, relationships, institutions, organizations, areas, land interests, business bases, political bases, and incident locations.
+- Evidence Layer: claims, cases, legal status, official findings, sources, news, subject responses, corrections, and revision history.
 
 ## Active Public Entities
 
@@ -10,16 +16,13 @@ The public frontend model is built around bilingual, source-backed public-intere
 
 - bilingual names, aliases, summaries, descriptions, and historical identity text
 - occupation, public roles, political affiliation when applicable, organizations, public website, city, country, and active period
-- influence domains such as `POLITICS`, `ELECTIONS`, `VIOLENCE`, `PUBLIC_CONTRACTS`, `LAND`, and `PATRONAGE`
+- influence domains such as `POLITICS`, `GOVERNMENT`, `BANKING`, `LAND`, `BUSINESS`, `PUBLIC_CONTRACTS`, `RELIGION`, `MEDIA`, `SECURITY`, `ELECTIONS`, `HUMAN_RIGHTS`, and `FAMILY_NETWORK`
 - a `PersonNarrative` layer for story-oriented profile sections
 - references to cases, news, assets, relationships, claims, incidents, and sources through ids
 - publication and audit metadata: `publicationStatus`, `isActive`, `createdBy`, `updatedBy`, `lastVerifiedAt`, `publishedAt`, and `updatedAt`
 - `isDemo`, which is `false` for current public records
 
-Current public people live in:
-
-- `src/data/public/people/<person-slug>.ts`
-- `src/data/public/people/index.ts`
+Current active demo people live in `src/data/fixtures/mock-data.ts`. Future real public people should continue to use `src/data/public/people/<person-slug>.ts`.
 
 ### `SourceRecord`
 
@@ -41,9 +44,11 @@ The codebase also defines richer evidence and network entities:
 - `ClaimRecord`
 - `Area`
 - `GeographicAssociation`
+- `Institution`
 - `InstitutionAssociation`
 - `IncidentRecord`
 - `ImpactRecord`
+- `DossierCollection`
 - `CaseRecord`
 - `NewsRecord`
 - `AssetRecord`
@@ -52,7 +57,11 @@ The codebase also defines richer evidence and network entities:
 - `CorrectionRecord`
 - `RevisionRecord`
 
-These are active domain types, but most are currently empty in the public data export. They should be populated only when source-backed records are available.
+`ClaimRecord` represents public-interest claims or themes that are not necessarily court cases. `CaseRecord` represents legal or official case records with legal status, authority, court, outcome, and case-specific person roles.
+
+`IncidentRecord` represents historically important events separately from `CaseRecord`; an incident may link to claims, cases, people, institutions, areas, impact records, news, and sources without implying every linked person is responsible.
+
+`InfluenceDomain` tags are navigation and coverage metadata. They are not judgments of guilt.
 
 ## Status Boundaries
 

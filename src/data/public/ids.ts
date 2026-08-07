@@ -64,5 +64,11 @@ export const publicSourceIds = {
   saifuzzamanParliamentProfile: "00000000-0000-4000-8000-000000000268",
   akhtaruzzamanDailyStarArrest: "00000000-0000-4000-8000-000000000269",
   akhtaruzzamanParliamentProfile: "00000000-0000-4000-8000-000000000270",
-  akhtaruzzamanAjkerPatrikaElection: "00000000-0000-4000-8000-000000000271"
+  akhtaruzzamanAjkerPatrikaElection: "00000000-0000-4000-8000-000000000271",
+  sheikhHasinaAwamiLeagueProfile: "00000000-0000-4000-8000-000000000272",
+  sheikhHasinaBssIctCharges: "00000000-0000-4000-8000-000000000273",
+  sheikhHasinaBssIctJudgment: "00000000-0000-4000-8000-000000000274",
+  sheikhHasinaOhchrFactFinding: "00000000-0000-4000-8000-000000000275",
+  sheikhHasinaApVerdictResponse: "00000000-0000-4000-8000-000000000276",
+  sheikhHasinaDailyStarIronGrip: "00000000-0000-4000-8000-000000000277"
 } as const;

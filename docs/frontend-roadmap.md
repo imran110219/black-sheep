@@ -2,20 +2,20 @@
 
 ## Phase 1 Current Baseline
 
-The app is a localized, frontend-only, read-only public data product with:
+The app is a localized, frontend-only, read-only fictional demo data product with:
 
-- public profile records in `src/data/public`
-- source records for real profiles
+- active demo profile, claim, incident, area, institution, dossier, source, correction, and case records
 - repository abstraction
-- Story View and Evidence View profile layout
+- Story View and Evidence View profile layout using `?view=story|evidence`
 - editorial discovery homepage
+- area, institution, incident, and dossier routes
 - strict TypeScript, linting, formatting, tests, and production build checks
 
-Fictional fixtures remain available for development reference, but the active app data export is public-only.
+Existing real public records remain file-backed for future source-backed work, but they are not the active frontend dataset in this revision.
 
 ## Phase 2 Structured Evidence Expansion
 
-Populate source-backed public records for:
+Future source-backed public records can populate:
 
 - `ClaimRecord`
 - legal cases and outcomes
@@ -47,7 +47,7 @@ Search should continue to match Bangla and English names, aliases, narrative tex
 
 ## Phase 4 Dossiers and Network Views
 
-Add curated collection pages for themes such as:
+Improve curated collection pages for themes such as:
 
 - underworld and political patronage
 - urban extortion and tender manipulation

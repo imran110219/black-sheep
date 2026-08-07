@@ -6,7 +6,6 @@ import { PersonCard } from "@/features/people/PersonCard";
 import { formatDate } from "@/lib/dates";
 import { verificationLabels } from "@/lib/status";
 import { createBlackSheepRepository } from "@/repositories/repository-factory";
-import { getPublicMockIndex, getSourceContext } from "@/repositories/record-context";
 
 export default async function SourcePage({
   params
@@ -14,9 +13,10 @@ export default async function SourcePage({
   params: Promise<{ locale: Locale; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const source = await createBlackSheepRepository().getSourceBySlug(slug);
+  const repo = createBlackSheepRepository();
+  const source = await repo.getSourceBySlug(slug);
   if (!source) notFound();
-  const context = getSourceContext(source.id);
+  const context = await repo.getSourceContext(source.id);
   if (!context) notFound();
   return (
     <div className="grid gap-8">
@@ -85,12 +85,7 @@ export default async function SourcePage({
       </Section>
       <Section title={locale === "bn" ? "সম্পর্কিত ব্যক্তি" : "Related people"}>
         {context.people.map((person) => (
-          <PersonCard
-            key={person.id}
-            person={person}
-            cases={getPublicMockIndex().cases}
-            locale={locale}
-          />
+          <PersonCard key={person.id} person={person} locale={locale} />
         ))}
       </Section>
     </div>

@@ -1,6 +1,6 @@
 # Black Sheep
 
-Black Sheep is a frontend-only public-interest accountability encyclopedia. It presents public profiles, historical narrative, influence domains, source records, and scaffolded evidence structures without declaring that a listed person is guilty.
+Black Sheep is a frontend-only illustrated historical accountability encyclopedia. It presents fictional demo profiles, historical narrative, influence domains, networks, source records, claims, incidents, cases, institutions, areas, corrections, and evidence structures without declaring that a listed person is guilty.
 
 Default locale is Bangla (`/bn`), with English at `/en`.
 
@@ -29,7 +29,7 @@ pnpm validate
 
 ## Architecture
 
-Routes never import data files directly. Pages depend on `BlackSheepRepository`, which currently reads local public data from `src/data`. Active public records live under `src/data/public`; fictional fixtures remain under `src/data/fixtures` but are not exported by the active data index. Public DTOs avoid private identifiers and direct guilt booleans.
+Routes never import data files directly. Pages depend on `BlackSheepRepository`, which currently reads the active fictional demo dataset exported by `src/data`. Public DTOs avoid private identifiers and direct guilt booleans. The product is organized into Story, Network, and Evidence layers.
 
 ## Content Rules
 
@@ -39,9 +39,9 @@ Records distinguish reported allegation, inquiry, investigation, charge, trial, 
 
 The frontend does not render raw HTML or use `dangerouslySetInnerHTML`. Runtime data is validated with Zod where API boundaries exist. External links use `rel="noopener noreferrer"` and public URL helpers only allow HTTP(S). No secrets should be placed in `NEXT_PUBLIC_*` variables.
 
-## Public Data
+## Data
 
-Active data is public-only and file-backed. Public people and sources are organized by entity under `src/data/public`; each person/character has a separate slug-named people file and matching source file. Demo fixtures are retained separately for development reference only.
+The current active frontend export uses fictional demo fixtures from `src/data/fixtures/mock-data.ts`. Existing real public-data files remain in `src/data/public` for future source-backed work, but the active product revision uses demo data only.
 
 For data research, duplicate checks, enrichment, source rules, and AI-agent workflow, see `docs/ai-data-workflow.md`. For reusable Codex prompts, see `docs/codex-data-prompts.md`.
 
@@ -51,4 +51,4 @@ For data research, duplicate checks, enrichment, source rules, and AI-agent work
 
 ## Known Limitations
 
-There is no backend, authentication, admin portal, public submission flow, or API contract in the current scope. Several structured evidence arrays, such as claims, incidents, cases, and relationships, are currently scaffolded but empty in the public data export until source-backed records are added.
+There is no backend, authentication, admin portal, public submission flow, or API contract in the current scope. Maps are currently polished geographic cards rather than an interactive map dependency.

@@ -35,6 +35,12 @@ Profiles about real underworld figures or alleged syndicate leaders require extr
 
 Every real profile should have at least one `SourceRecord`. Every future claim, incident, relationship, institution association, area association, case, correction, or subject response should carry `sourceIds`.
 
+## Story, Network, Evidence
+
+Story summaries must be supported by source-backed records and must not turn allegations into established fact. Network associations must label whether a connection is verified, reported, disputed, or alleged. Evidence sections must distinguish reported claims, allegations, investigations, official findings, charges, convictions, acquittals, dismissals, retractions, and corrections.
+
+Claim status is not guilt status. Influence-domain tags are organizational metadata, not badness scores or probability labels.
+
 `SourceRecord.supportedClaims` should describe exactly what the source supports. Do not use a source to support details it does not actually establish.
 
 When adding source-backed data, preserve the source's status boundary:
@@ -60,6 +66,8 @@ Never publish:
 - unverified private financial details
 
 Use broad public geography such as city, district, constituency, reported area of influence, or institution name.
+
+`GeographicAssociation` must not expose precise private residences or private coordinates. Use district, city, constituency, locality, or broad area-of-influence records.
 
 ## Product Boundary
 

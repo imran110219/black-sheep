@@ -7,7 +7,6 @@ import { PersonCard } from "@/features/people/PersonCard";
 import { formatDate } from "@/lib/dates";
 import { categoryLabels, verificationLabels } from "@/lib/status";
 import { createBlackSheepRepository } from "@/repositories/repository-factory";
-import { getNewsContext, getPublicMockIndex } from "@/repositories/record-context";
 
 export default async function NewsPage({
   params
@@ -15,9 +14,10 @@ export default async function NewsPage({
   params: Promise<{ locale: Locale; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const news = await createBlackSheepRepository().getNewsBySlug(slug);
+  const repo = createBlackSheepRepository();
+  const news = await repo.getNewsBySlug(slug);
   if (!news) notFound();
-  const context = getNewsContext(news.id);
+  const context = await repo.getNewsContext(news.id);
   if (!context) notFound();
   return (
     <div className="grid gap-8">
@@ -56,12 +56,7 @@ export default async function NewsPage({
       </a>
       <Section title={locale === "bn" ? "সম্পর্কিত ব্যক্তি" : "Related people"}>
         {context.people.map((person) => (
-          <PersonCard
-            key={person.id}
-            person={person}
-            cases={getPublicMockIndex().cases}
-            locale={locale}
-          />
+          <PersonCard key={person.id} person={person} locale={locale} />
         ))}
       </Section>
       <Section title={locale === "bn" ? "সম্পর্কিত মামলা" : "Related cases"}>

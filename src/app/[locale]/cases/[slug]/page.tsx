@@ -16,7 +16,6 @@ import { formatDate } from "@/lib/dates";
 import { pageMetadata } from "@/lib/metadata";
 import { categoryLabels, roleLabels } from "@/lib/status";
 import { createBlackSheepRepository } from "@/repositories/repository-factory";
-import { getCaseContext } from "@/repositories/record-context";
 
 export async function generateMetadata({
   params
@@ -41,9 +40,10 @@ export default async function CasePage({
   params: Promise<{ locale: Locale; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const record = await createBlackSheepRepository().getCaseBySlug(slug);
+  const repo = createBlackSheepRepository();
+  const record = await repo.getCaseBySlug(slug);
   if (!record) notFound();
-  const context = getCaseContext(record.id);
+  const context = await repo.getCaseContext(record.id);
   if (!context) notFound();
   return (
     <div className="grid gap-8">

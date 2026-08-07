@@ -6,6 +6,10 @@
   "nav": {
     "home": "Home",
     "people": "People",
+    "places": "Places",
+    "institutions": "Institutions",
+    "incidents": "Incidents",
+    "dossiers": "Dossiers",
     "corrections": "Corrections",
     "methodology": "Methodology",
     "policy": "Policy",
@@ -16,7 +20,7 @@
   "actions": {
     "search": "Search",
     "clear": "Clear all",
-    "viewProfile": "View documented profile",
+    "viewProfile": "Explore profile",
     "viewCase": "View case",
     "copyLink": "Copy link",
     "print": "Print",

@@ -14,7 +14,7 @@ export const assetTypeSchema = z.enum([
 
 export const assetRecordSchema = z.object({
   id: z.string().uuid(),
-  isDemo: z.literal(true),
+  isDemo: z.boolean(),
   personId: z.string().uuid(),
   title: z.string(),
   assetType: assetTypeSchema,

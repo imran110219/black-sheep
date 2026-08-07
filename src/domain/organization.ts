@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const organizationSchema = z.object({
   id: z.string().uuid(),
-  isDemo: z.literal(true),
+  isDemo: z.boolean(),
   slug: z.string(),
   nameBn: z.string(),
   nameEn: z.string(),

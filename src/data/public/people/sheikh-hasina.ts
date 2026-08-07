@@ -7,68 +7,83 @@ export const sheikhHasina: PersonProfile = {
   slug: "sheikh-hasina",
   nameBn: "শেখ হাসিনা",
   nameEn: "Sheikh Hasina",
-  aliases: ["Sheikh Hasina Wazed", "শেখ হাসিনা ওয়াজেদ"],
+  aliases: ["Sheikh Hasina Wazed", "Sheikh Hasina Wajed", "শেখ হাসিনা ওয়াজেদ"],
   birthYear: 1947,
   summaryBn:
-    "বাংলাদেশ আওয়ামী লীগের সভাপতি এবং বাংলাদেশের সাবেক প্রধানমন্ত্রী হিসেবে পরিচিত জনজীবনের প্রভাবশালী রাজনৈতিক ব্যক্তিত্ব।",
+    "বাংলাদেশ আওয়ামী লীগের সভাপতি ও সাবেক প্রধানমন্ত্রী; ২০২৪ সালের জুলাই-আগস্ট গণ-অভ্যুত্থান-সংক্রান্ত আইসিটি মামলায় তার বিরুদ্ধে বিচার, দণ্ড ও জবাব প্রকাশ্য রেকর্ডে রয়েছে।",
   summaryEn:
-    "A prominent Bangladeshi political figure known as president of the Bangladesh Awami League and former prime minister of Bangladesh.",
+    "Bangladesh Awami League president and former prime minister whose public record now includes ICT trial, conviction, sentence, and response reporting related to the July-August 2024 uprising.",
   descriptionBn:
-    "এই প্রোফাইলটি প্রকাশ্য জীবনীমূলক উৎসের ভিত্তিতে রাজনৈতিক ভূমিকা, সময়কাল ও প্রতিষ্ঠানগত সম্পর্কের প্রাথমিক রেকর্ড হিসেবে যুক্ত করা হয়েছে।",
+    "এই প্রোফাইলটি দলীয় জীবনী, জাতিসংঘের মানবাধিকার fact-finding report, শাসনব্যবস্থা-সংক্রান্ত বিশ্লেষণ এবং আইসিটি-সংক্রান্ত সংবাদ প্রতিবেদনের ভিত্তিতে রাজনৈতিক ভূমিকা, ক্ষমতার সময়কাল, মানবাধিকার প্রেক্ষাপট ও আদালত-প্রক্রিয়ার status আলাদা করে রাখে।",
   descriptionEn:
-    "This profile is included as an initial public biographical record of political role, era, and institutional association based on public sources.",
+    "This profile separates political biography, period in power, governance-analysis context, human-rights context, and court-process status using party biography material, a UN fact-finding report, and ICT-related news reporting.",
   occupation: "POLITICIAN",
   politicalAffiliation: "AWAMI_LEAGUE",
-  publicRoles: ["Former Prime Minister of Bangladesh", "President of Bangladesh Awami League"],
-  organizations: ["Bangladesh Awami League"],
-  website: "https://en.wikipedia.org/wiki/Sheikh_Hasina",
+  publicRoles: [
+    "Former Prime Minister of Bangladesh",
+    "President of Bangladesh Awami League",
+    "Former Leader of the Opposition",
+    "Former Member of Parliament for Gopalganj-3"
+  ],
+  organizations: ["Bangladesh Awami League", "Government of Bangladesh", "Jatiya Sangsad"],
+  website: "https://www.albd.org/pages/16/Sheikh-Hasina",
   activePeriod: "1981-present",
+  historicalEraIds: [],
+  primaryAreaIds: [],
+  claimIds: [],
+  incidentIds: [],
+  institutionAssociationIds: [],
+  geographicAssociationIds: [],
   primaryAreaBn: "বাংলাদেশ",
   primaryAreaEn: "Bangladesh",
-  influenceDomains: ["POLITICS", "ELECTIONS", "PATRONAGE"],
+  influenceDomains: ["POLITICS", "ELECTIONS", "PATRONAGE", "HUMAN_RIGHTS", "VIOLENCE"],
   historicalIdentityBn:
-    "বাংলাদেশের দীর্ঘ সময়ের প্রধানমন্ত্রী ও আওয়ামী লীগ সভাপতি হিসেবে রাষ্ট্রক্ষমতা, নির্বাচন ও রাজনৈতিক উত্তরাধিকারের আলোচনায় কেন্দ্রীয় ব্যক্তি।",
+    "বাংলাদেশের দীর্ঘ সময়ের প্রধানমন্ত্রী ও আওয়ামী লীগ সভাপতি হিসেবে রাষ্ট্রক্ষমতা, নির্বাচন, মানবাধিকার রেকর্ড এবং ২০২৪-পরবর্তী জবাবদিহি আলোচনায় কেন্দ্রীয় ব্যক্তি।",
   historicalIdentityEn:
-    "A central figure in discussions of state power, elections, and political legacy as a long-serving prime minister and Awami League president.",
+    "A central figure in discussions of state power, elections, human-rights records, and post-2024 accountability as a long-serving prime minister and Awami League president.",
   narrative: {
     whyListedBn:
-      "শেখ হাসিনা বাংলাদেশের সাম্প্রতিক রাজনৈতিক ইতিহাসে দীর্ঘ সময় রাষ্ট্রক্ষমতা ও দলীয় নেতৃত্বের সঙ্গে যুক্ত থাকায় প্রোফাইলটি অন্তর্ভুক্ত।",
+      "শেখ হাসিনা দীর্ঘ সময় রাষ্ট্রক্ষমতা ও আওয়ামী লীগ নেতৃত্বের সঙ্গে যুক্ত ছিলেন এবং ২০২৪ সালের জুলাই-আগস্ট গণ-অভ্যুত্থান-সংক্রান্ত মানবাধিকার প্রতিবেদন, আইসিটি অভিযোগ, বিচার, দণ্ড এবং তার নিজের অস্বীকৃতি প্রকাশ্য রেকর্ডে রয়েছে বলে প্রোফাইলটি অন্তর্ভুক্ত।",
     whyListedEn:
-      "Sheikh Hasina is included because of her long association with state power and party leadership in Bangladesh's recent political history.",
+      "Sheikh Hasina is included because of her long association with state power and Awami League leadership, and because public records now include July-August 2024 human-rights reporting, ICT charges, trial, sentence, and her denial.",
     historicalOverviewBn:
-      "প্রকাশ্য উৎসে তাকে বাংলাদেশের প্রধানমন্ত্রী, সংসদ সদস্য ও আওয়ামী লীগ সভাপতি হিসেবে উল্লেখ করা হয়।",
+      "প্রকাশ্য উৎসে তাকে টুঙ্গিপাড়ায় জন্মগ্রহণকারী আওয়ামী লীগ সভাপতি, সাবেক প্রধানমন্ত্রী, সাবেক বিরোধীদলীয় নেতা এবং গোপালগঞ্জ-৩ আসনের সংসদীয় রাজনীতির কেন্দ্রীয় ব্যক্তি হিসেবে উল্লেখ করা হয়। ২০২৪ সালের ৫ আগস্ট তার সরকারের পতনের পর আইসিটি-তে জুলাই গণ-অভ্যুত্থান-সংক্রান্ত মামলায় তার বিরুদ্ধে অভিযোগ গঠন, অনুপস্থিতিতে বিচার এবং দণ্ডের খবর প্রকাশিত হয়েছে।",
     historicalOverviewEn:
-      "Public sources identify her as a former prime minister of Bangladesh, a member of parliament, and president of the Awami League.",
+      "Public sources identify her as a Tungipara-born Awami League president, former prime minister, former opposition leader, and central figure in Gopalganj-3 parliamentary politics. After the fall of her government on August 5, 2024, ICT-related reports record charge framing, trial in absentia, and sentencing in the July uprising case.",
     riseToPowerBn:
-      "১৯৮১ সালে আওয়ামী লীগ নেতৃত্বে আসার পর তিনি বিরোধী রাজনীতি ও পরবর্তীতে সরকার পরিচালনায় প্রধান ভূমিকা নেন।",
+      "১৯৮১ সালে দেশে ফেরার আগে অনুপস্থিতিতে আওয়ামী লীগ সভাপতি নির্বাচিত হন। এরপর সামরিক শাসনবিরোধী রাজনীতি, বিরোধীদলীয় নেতৃত্ব, ১৯৯৬ সালের নির্বাচনী বিজয় এবং ২০০৯-২০২৪ সময়ের ধারাবাহিক সরকার পরিচালনার মাধ্যমে তার রাজনৈতিক প্রভাব বিস্তৃত হয়।",
     riseToPowerEn:
-      "After assuming Awami League leadership in 1981, she became a major figure in opposition politics and later in government.",
-    powerBaseBn: "বাংলাদেশ আওয়ামী লীগ, জাতীয় রাজনীতি ও গোপালগঞ্জ-৩ আসনের রাজনৈতিক ভিত্তি।",
+      "Elected Awami League president in absentia before returning in 1981, she became a major figure through anti-military-rule politics, opposition leadership, the 1996 election victory, and consecutive governments from 2009 to 2024.",
+    powerBaseBn:
+      "বাংলাদেশ আওয়ামী লীগ, জাতীয় সরকার, সংসদীয় রাজনীতি এবং গোপালগঞ্জ-৩ আসনের রাজনৈতিক ভিত্তি।",
     powerBaseEn:
-      "Bangladesh Awami League, national politics, and the Gopalganj-3 constituency base.",
+      "Bangladesh Awami League, national government, parliamentary politics, and the Gopalganj-3 constituency base.",
     documentedPatternsBn:
-      "এই প্রাথমিক রেকর্ডে রাজনৈতিক নেতৃত্ব, নির্বাচনী ভূমিকা ও রাষ্ট্রক্ষমতার সময়কালকে আলাদা করে দেখানো হয়েছে।",
+      "উৎস-সমর্থিত থিম: দলীয় নেতৃত্ব, দীর্ঘ প্রধানমন্ত্রিত্ব, নির্বাচনী বিতর্ক, executive authority centralisation, গণতান্ত্রিক পরিসর সংকোচনের সমালোচনা, ২০২৪ সালের protest crackdown সম্পর্কিত মানবাধিকার প্রেক্ষাপট, আইসিটি অভিযোগ/বিচার/দণ্ড এবং subject response।",
     documentedPatternsEn:
-      "This initial record separates party leadership, electoral role, and periods in state power.",
+      "Source-backed themes: party leadership, long premiership, election controversies, centralisation of executive authority, democratic-space criticism, human-rights context around the 2024 protest crackdown, ICT charges/trial/sentence, and subject response.",
     historicalImpactBn:
-      "দীর্ঘ প্রধানমন্ত্রিত্ব ও দলীয় নেতৃত্বের কারণে বাংলাদেশের রাজনৈতিক প্রতিষ্ঠান, নির্বাচন ও নীতিনির্ধারণে তার প্রভাব আলোচিত।",
+      "দীর্ঘ প্রধানমন্ত্রিত্ব ও দলীয় নেতৃত্বের কারণে বাংলাদেশের রাজনৈতিক প্রতিষ্ঠান, নির্বাচন, আইনশৃঙ্খলা ব্যবস্থাপনা, উন্নয়ননীতি, বিরোধী রাজনীতি এবং ২০২৪-পরবর্তী জবাবদিহি কাঠামোতে তার প্রভাব জনস্বার্থের বিষয়।",
     historicalImpactEn:
-      "Her long premiership and party leadership make her influence on political institutions, elections, and policy a public-interest subject.",
+      "Her long premiership and party leadership make her influence on political institutions, elections, law-enforcement governance, development policy, opposition politics, and post-2024 accountability a public-interest subject.",
     publicReputationBn:
-      "প্রোফাইলটি জীবনীমূলক পরিচয় ও প্রাথমিক পাবলিক রেকর্ড হিসেবে প্রকাশিত; কোনো অভিযোগকে আদালতের ফলাফল হিসেবে দেখায় না।",
+      "প্রোফাইলটি জীবনী, মানবাধিকার প্রতিবেদন, আদালত-সংক্রান্ত প্রতিবেদন এবং তার জবাবকে আলাদা status হিসেবে রাখে। আইসিটি দণ্ডকে আদালত-প্রদত্ত দণ্ড হিসেবে দেখানো হয়েছে; একই সঙ্গে AP-প্রতিবেদিত অস্বীকৃতি ও appeal limitation-ও উল্লেখযোগ্য।",
     publicReputationEn:
-      "The profile is published as a biographical and initial public record; it does not present allegations as court outcomes.",
+      "The profile separates biography, human-rights reporting, court-process reporting, and her response. The ICT outcome is described as a court-imposed sentence, while AP-reported denial and appeal limitations remain relevant context.",
     legacyBn:
-      "পরবর্তী পর্যায়ে যাচাইকৃত দাবি, ঘটনা, আদালত রেকর্ড, জবাব ও সংশোধন আলাদা evidence layer-এ যুক্ত করা যাবে।",
+      "পরবর্তী পর্যায়ে আইসিটি রায়, আপিল/আত্মসমর্পণ/গ্রেপ্তার পরিস্থিতি, অন্য মামলার অগ্রগতি, খালাস, প্রত্যাহার বা সংশোধন পাওয়া গেলে পৃথক evidence record হিসেবে যুক্ত করা উচিত।",
     legacyEn:
-      "Verified claims, incidents, court records, responses, and corrections can be added later in the evidence layer.",
+      "Future updates should add the ICT judgment text, appeal/surrender/arrest posture, other case progress, acquittals, withdrawals, or corrections as separate evidence records when available.",
     featuredClaimIds: [],
     featuredRelationshipIds: [],
     featuredIncidentIds: []
   },
   city: "Dhaka",
   country: "Bangladesh",
-  socialLinks: [{ label: "Public profile", url: "https://en.wikipedia.org/wiki/Sheikh_Hasina" }],
+  socialLinks: [
+    { label: "Party profile", url: "https://www.albd.org/pages/16/Sheikh-Hasina" },
+    { label: "Public profile", url: "https://en.wikipedia.org/wiki/Sheikh_Hasina" }
+  ],
   tags: [],
   caseIds: [],
   newsIds: [],

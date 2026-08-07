@@ -15,7 +15,7 @@ export const relationshipTypeSchema = z.enum([
 
 export const relationshipRecordSchema = z.object({
   id: z.string().uuid(),
-  isDemo: z.literal(true),
+  isDemo: z.boolean(),
   fromPersonId: z.string().uuid(),
   toPersonId: z.string().uuid(),
   relationshipType: relationshipTypeSchema,

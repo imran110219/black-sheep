@@ -13,10 +13,14 @@ const domainLabels: Record<PersonProfile["influenceDomains"][number], { bn: stri
     PUBLIC_CONTRACTS: { bn: "সরকারি চুক্তি", en: "Public contracts" },
     RELIGION: { bn: "ধর্মীয় প্রতিষ্ঠান", en: "Religion" },
     MEDIA: { bn: "মিডিয়া", en: "Media" },
+    SECURITY: { bn: "নিরাপত্তা", en: "Security" },
     ELECTIONS: { bn: "নির্বাচন", en: "Elections" },
     VIOLENCE: { bn: "সহিংসতা", en: "Violence" },
     HUMAN_RIGHTS: { bn: "মানবাধিকার", en: "Human rights" },
-    PATRONAGE: { bn: "পৃষ্ঠপোষকতা", en: "Patronage" }
+    FAMILY_NETWORK: { bn: "পরিবার নেটওয়ার্ক", en: "Family network" },
+    PATRONAGE: { bn: "পৃষ্ঠপোষকতা", en: "Patronage" },
+    GOVERNMENT: { bn: "সরকার", en: "Government" },
+    OTHER: { bn: "অন্যান্য", en: "Other" }
   };
 
 export function PersonIdentityHeader({
@@ -36,7 +40,13 @@ export function PersonIdentityHeader({
         </div>
         <div className="grid gap-5 p-6 md:p-8">
           <div className="flex flex-wrap items-center gap-3">
-            <DemoDataNotice text={locale === "bn" ? "ডেমো ডেটা" : "Demo data"} />
+            {person.isDemo ? (
+              <DemoDataNotice text={locale === "bn" ? "ডেমো ডেটা" : "Demo data"} />
+            ) : (
+              <span className="inline-flex rounded-md border border-primary-foreground/25 bg-primary-foreground/10 px-2 py-1 text-xs font-medium">
+                {locale === "bn" ? "প্রকাশ্য রেকর্ড" : "Public record"}
+              </span>
+            )}
             <span className="text-sm text-primary-foreground/70">
               {locale === "bn" ? "শেষ হালনাগাদ" : "Last updated"}{" "}
               {formatDate(person.updatedAt, locale)}

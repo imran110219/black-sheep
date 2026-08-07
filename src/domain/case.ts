@@ -80,7 +80,7 @@ export type TimelineEvent = z.infer<typeof timelineEventSchema>;
 
 export const caseRecordSchema = z.object({
   id: z.string().uuid(),
-  isDemo: z.literal(true),
+  isDemo: z.boolean(),
   slug: z.string(),
   caseNumber: z.string(),
   titleBn: z.string(),

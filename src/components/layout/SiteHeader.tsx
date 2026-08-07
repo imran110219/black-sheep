@@ -11,8 +11,10 @@ export async function SiteHeader({ locale }: { locale: Locale }) {
   const items = [
     { href: "/", label: t("nav.home") },
     { href: "/people", label: t("nav.people") },
-    { href: "/corrections", label: t("nav.corrections") },
-    { href: "/methodology", label: t("nav.methodology") },
+    { href: "/areas", label: t("nav.places") },
+    { href: "/institutions", label: t("nav.institutions") },
+    { href: "/incidents", label: t("nav.incidents") },
+    { href: "/dossiers", label: t("nav.dossiers") },
     { href: "/about", label: t("nav.about") }
   ];
   return (

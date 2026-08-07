@@ -6,6 +6,10 @@
   "nav": {
     "home": "হোম",
     "people": "ব্যক্তি",
+    "places": "এলাকা",
+    "institutions": "প্রতিষ্ঠান",
+    "incidents": "ঘটনা",
+    "dossiers": "ডসিয়ার",
     "corrections": "সংশোধন",
     "methodology": "পদ্ধতি",
     "policy": "নীতি",
@@ -16,7 +20,7 @@
   "actions": {
     "search": "অনুসন্ধান",
     "clear": "সব মুছুন",
-    "viewProfile": "নথিভুক্ত প্রোফাইল দেখুন",
+    "viewProfile": "প্রোফাইল ও ইতিহাস দেখুন",
     "viewCase": "মামলা দেখুন",
     "copyLink": "লিংক কপি",
     "print": "প্রিন্ট",

@@ -1,5 +1,14 @@
 import type { CaseRecord } from "@/domain/case";
 import type { PersonCard, PeopleSearchQuery, PersonProfile } from "@/domain/person";
+import {
+  claims,
+  geographicAssociations,
+  incidents,
+  institutionAssociations,
+  institutions,
+  relationships,
+  subjectResponses
+} from "@/data";
 
 export function normalizeQuery(value: string | undefined) {
   return (value ?? "")
@@ -55,8 +64,36 @@ export function applyPeopleFilters(
 ) {
   return people.filter((person) => {
     const relatedCases = cases.filter((record) => person.caseIds.includes(record.id));
+    const relatedClaims = claims.filter((record) => record.personIds.includes(person.id));
+    const relatedIncidents = incidents.filter((record) =>
+      record.personLinks.some((link) => link.personId === person.id)
+    );
+    const relatedInstitutionAssociations = institutionAssociations.filter(
+      (record) => record.personId === person.id
+    );
+    const relatedGeographicAssociations = geographicAssociations.filter(
+      (record) => record.personId === person.id
+    );
+    const relatedRelationships = relationships.filter((record) =>
+      person.relationshipIds.includes(record.id)
+    );
     return (
       personMatchesQuery(person, query.query) &&
+      (!query.area ||
+        person.primaryAreaIds.includes(query.area) ||
+        relatedClaims.some((record) => record.areaIds.includes(query.area!)) ||
+        relatedIncidents.some((record) => record.areaIds.includes(query.area!)) ||
+        relatedGeographicAssociations.some((record) => record.areaId === query.area)) &&
+      (!query.historicalEra || person.historicalEraIds.includes(query.historicalEra)) &&
+      (!query.influenceDomain ||
+        person.influenceDomains.includes(query.influenceDomain as never)) &&
+      (!query.institutionType ||
+        relatedInstitutionAssociations.some((association) => {
+          const institution = institutions.find(
+            (record) => record.id === association.institutionId
+          );
+          return institution?.type === query.institutionType;
+        })) &&
       (!query.legalStatus ||
         relatedCases.some((record) => record.legalStatus === query.legalStatus)) &&
       (!query.category || relatedCases.some((record) => record.category === query.category)) &&
@@ -65,9 +102,45 @@ export function applyPeopleFilters(
       (!query.organization || person.organizations.includes(query.organization)) &&
       (!query.country || person.country === query.country) &&
       (!query.tag || person.tags.includes(query.tag)) &&
+      (!query.claimType || relatedClaims.some((record) => record.type === query.claimType)) &&
+      (!query.claimStatus || relatedClaims.some((record) => record.status === query.claimStatus)) &&
+      (!query.incidentType ||
+        relatedIncidents.some((record) => record.incidentType === query.incidentType)) &&
+      (!query.relationshipType ||
+        relatedRelationships.some((record) => record.relationshipType === query.relationshipType) ||
+        relatedInstitutionAssociations.some(
+          (record) => record.relationshipType === query.relationshipType
+        ) ||
+        relatedGeographicAssociations.some(
+          (record) => record.relationType === query.relationshipType
+        )) &&
+      (!query.verificationStatus ||
+        relatedClaims.some((record) => record.verificationStatus === query.verificationStatus) ||
+        relatedInstitutionAssociations.some(
+          (record) => record.verificationStatus === query.verificationStatus
+        ) ||
+        relatedGeographicAssociations.some(
+          (record) => record.verificationStatus === query.verificationStatus
+        )) &&
+      (!query.officialFindingAvailable ||
+        relatedClaims.some((record) =>
+          ["OFFICIAL_FINDING", "JUDICIALLY_ESTABLISHED"].includes(record.status)
+        )) &&
+      (!query.subjectResponseAvailable ||
+        subjectResponses.some((record) => record.personId === person.id)) &&
       (!query.year ||
         relatedCases.some((record) =>
           [record.filedAt, record.startedAt, record.resolvedAt]
+            .filter(Boolean)
+            .some((date) => date?.startsWith(query.year!))
+        ) ||
+        relatedClaims.some((record) =>
+          [record.startDate, record.endDate]
+            .filter(Boolean)
+            .some((date) => date?.startsWith(query.year!))
+        ) ||
+        relatedIncidents.some((record) =>
+          [record.occurredAt, record.periodStart, record.periodEnd]
             .filter(Boolean)
             .some((date) => date?.startsWith(query.year!))
         ))
@@ -87,8 +160,8 @@ export function sortPeople(
 }
 
 export function paginate<T>(items: T[], page = 1, pageSize = 9) {
-  const safePage = Math.max(1, page);
-  const safePageSize = Math.max(1, pageSize);
+  const safePage = Number.isFinite(page) ? Math.max(1, page) : 1;
+  const safePageSize = Number.isFinite(pageSize) ? Math.max(1, pageSize) : 9;
   const total = items.length;
   const totalPages = Math.ceil(total / safePageSize);
   const start = (safePage - 1) * safePageSize;

@@ -3,7 +3,7 @@ import { verificationStatusSchema } from "./common";
 
 export const subjectResponseSchema = z.object({
   id: z.string().uuid(),
-  isDemo: z.literal(true),
+  isDemo: z.boolean(),
   personId: z.string().uuid(),
   caseId: z.string().uuid().optional(),
   responseBn: z.string(),
@@ -26,7 +26,7 @@ export const correctionStatusSchema = z.enum([
 
 export const correctionRecordSchema = z.object({
   id: z.string().uuid(),
-  isDemo: z.literal(true),
+  isDemo: z.boolean(),
   entityType: z.string(),
   entityId: z.string().uuid(),
   titleBn: z.string(),

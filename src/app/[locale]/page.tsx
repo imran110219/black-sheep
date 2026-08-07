@@ -21,7 +21,6 @@ import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/domain/common";
 import { pageMetadata } from "@/lib/metadata";
 import { createBlackSheepRepository } from "@/repositories/repository-factory";
-import { getPublicMockIndex } from "@/repositories/record-context";
 
 const influenceLinks = [
   {
@@ -48,7 +47,7 @@ const influenceLinks = [
     icon: Network,
     bn: "পরিবার ও ক্ষমতার নেটওয়ার্ক",
     en: "Family and power networks",
-    query: "PATRONAGE"
+    query: "FAMILY_NETWORK"
   }
 ];
 
@@ -69,17 +68,26 @@ export async function generateMetadata({
   });
 }
 
-export default async function HomePage({ params }: { params: Promise<{ locale: Locale }> }) {
+export default async function HomePage({
+  params,
+  searchParams
+}: {
+  params: Promise<{ locale: Locale }>;
+  searchParams: Promise<Record<string, string | undefined>>;
+}) {
   const { locale } = await params;
+  const sp = await searchParams;
   const t = await getTranslations({ locale });
   const repo = createBlackSheepRepository();
-  const [profiles, recentCases] = await Promise.all([
-    repo.getRecentProfiles(3),
-    repo.getRecentCases(3)
+  const [profiles, incidents, dossiers, metadata, searchResults, recentCases] = await Promise.all([
+    repo.getFeaturedProfiles(3),
+    repo.getFeaturedIncidents(3),
+    repo.getFeaturedDossiers(6),
+    repo.getFilterMetadata(),
+    repo.globalSearch(sp.query ?? "", 6),
+    repo.getRecentCases(1)
   ]);
-  const index = getPublicMockIndex();
-  const featuredAreas = index.areas.filter((area) => area.type === "DISTRICT").slice(0, 6);
-  const featuredClaims = index.claims.slice(0, 3);
+  const featuredAreas = metadata.areas.slice(2, 8);
 
   return (
     <div className="grid gap-14">
@@ -103,7 +111,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
                 : "Black Sheep brings together public-interest profiles of influential and controversial figures: their roles, actions, allegations, cases, assets, institutions, places, relationships, and historical impact."}
             </p>
           </div>
-          <form action={`/${locale}/people`} className="flex max-w-3xl gap-2">
+          <form action={`/${locale}`} className="flex max-w-3xl gap-2">
             <label className="sr-only" htmlFor="home-search">
               {t("actions.search")}
             </label>
@@ -122,6 +130,28 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
               {t("actions.search")}
             </Button>
           </form>
+          {searchResults.length > 0 ? (
+            <div className="grid max-w-3xl gap-2 rounded-md border border-primary-foreground/15 bg-primary-foreground/10 p-3">
+              {searchResults.map((result) => (
+                <Link
+                  key={`${result.type}-${result.slug}`}
+                  href={hrefForSearchResult(result.type, result.slug)}
+                  locale={locale}
+                  className="rounded-md px-3 py-2 hover:bg-primary-foreground/10"
+                >
+                  <span className="text-xs uppercase text-primary-foreground/55">
+                    {result.type}
+                  </span>
+                  <span className="block font-medium">
+                    {locale === "bn" ? result.titleBn : result.titleEn}
+                  </span>
+                  <span className="text-sm text-primary-foreground/70">
+                    {locale === "bn" ? result.contextBn : result.contextEn}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          ) : null}
           <PresumptionOfInnocenceNotice
             text={
               locale === "bn"
@@ -143,7 +173,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
         />
         <div className="mt-5 grid gap-4 md:grid-cols-3">
           {profiles.map((person) => (
-            <PersonCard key={person.id} person={person} cases={index.cases} locale={locale} />
+            <PersonCard key={person.id} person={person} locale={locale} />
           ))}
         </div>
       </section>
@@ -163,7 +193,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
             return (
               <Link
                 key={item.query}
-                href={`/people?query=${item.query}`}
+                href={`/people?influenceDomain=${item.query}`}
                 locale={locale}
                 className="flex items-center gap-3 rounded-md border bg-background p-4 hover:bg-muted"
               >
@@ -189,7 +219,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
             {featuredAreas.map((area) => (
               <Link
                 key={area.id}
-                href={`/people?query=${locale === "bn" ? area.nameBn : area.nameEn}`}
+                href={`/areas/${area.slug}`}
                 locale={locale}
                 className="rounded-md border bg-background px-4 py-3 hover:bg-muted"
               >
@@ -208,15 +238,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
             }
           />
           <div className="mt-5 grid gap-2">
-            {[
-              "Pre-independence",
-              "Post-1971",
-              "Military rule",
-              "Democratic transition",
-              "Recent political eras"
-            ].map((era) => (
+            {["1980s", "1990s", "2000s", "2010s", "2020s"].map((era) => (
               <div key={era} className="rounded-md border bg-background px-4 py-3">
-                {locale === "bn" ? eraLabelBn(era) : era}
+                {locale === "bn" ? era.replace("s", " দশক") : era}
               </div>
             ))}
           </div>
@@ -233,22 +257,18 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
           }
         />
         <div className="mt-5 grid gap-4 md:grid-cols-3">
-          {[
-            ["bank-capture", "ব্যাংক প্রভাব নেটওয়ার্ক", "Bank influence networks"],
-            ["land-and-power", "ভূমি ও রাজনৈতিক ক্ষমতা", "Land and political power"],
-            ["public-procurement", "সরকারি ক্রয় বিতর্ক", "Public procurement controversies"]
-          ].map(([slug, bn, en]) => (
+          {dossiers.map((dossier) => (
             <Link
-              key={slug}
-              href={`/people?query=${slug}`}
+              key={dossier.id}
+              href={`/dossiers/${dossier.slug}`}
               locale={locale}
               className="rounded-md border bg-background p-5 hover:bg-muted"
             >
-              <p className="text-lg font-semibold">{locale === "bn" ? bn : en}</p>
+              <p className="text-lg font-semibold">
+                {locale === "bn" ? dossier.titleBn : dossier.titleEn}
+              </p>
               <p className="mt-3 text-sm text-muted-foreground">
-                {locale === "bn"
-                  ? "ব্যক্তি, প্রতিষ্ঠান, এলাকা, ঘটনা, সময়রেখা ও উৎস একত্রে দেখার জন্য।"
-                  : "For reading people, institutions, places, incidents, timelines, and sources together."}
+                {locale === "bn" ? dossier.summaryBn : dossier.summaryEn}
               </p>
             </Link>
           ))}
@@ -265,14 +285,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
           }
         />
         <div className="mt-5 grid gap-4 md:grid-cols-3">
-          {featuredClaims.map((claim) => (
-            <article key={claim.id} className="rounded-md border bg-background p-5">
-              <p className="text-sm text-muted-foreground">{claim.status.replaceAll("_", " ")}</p>
+          {incidents.map((incident) => (
+            <article key={incident.id} className="rounded-md border bg-background p-5">
+              <p className="text-sm text-muted-foreground">
+                {incident.incidentType.replaceAll("_", " ")}
+              </p>
               <h3 className="mt-2 font-semibold">
-                {locale === "bn" ? claim.titleBn : claim.titleEn}
+                {locale === "bn" ? incident.titleBn : incident.titleEn}
               </h3>
               <p className="mt-3 text-sm text-muted-foreground">
-                {locale === "bn" ? claim.summaryBn : claim.summaryEn}
+                {locale === "bn" ? incident.summaryBn : incident.summaryEn}
               </p>
             </article>
           ))}
@@ -307,13 +329,15 @@ function SectionHeading({ title, copy }: { title: string; copy: string }) {
   );
 }
 
-function eraLabelBn(era: string) {
-  const labels: Record<string, string> = {
-    "Pre-independence": "স্বাধীনতার পূর্বকাল",
-    "Post-1971": "১৯৭১-পরবর্তী সময়",
-    "Military rule": "সামরিক শাসনের সময়",
-    "Democratic transition": "গণতান্ত্রিক রূপান্তর",
-    "Recent political eras": "সাম্প্রতিক রাজনৈতিক সময়কাল"
+function hrefForSearchResult(type: string, slug: string) {
+  const routes: Record<string, string> = {
+    PERSON: `/people/${slug}`,
+    AREA: `/areas/${slug}`,
+    INSTITUTION: `/institutions/${slug}`,
+    INCIDENT: `/incidents/${slug}`,
+    CLAIM: `/people?query=${slug}`,
+    CASE: `/cases/${slug}`,
+    DOSSIER: `/dossiers/${slug}`
   };
-  return labels[era];
+  return routes[type] ?? "/";
 }

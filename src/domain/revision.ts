@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const revisionRecordSchema = z.object({
   id: z.string().uuid(),
-  isDemo: z.literal(true),
+  isDemo: z.boolean(),
   entityType: z.string(),
   entityId: z.string().uuid(),
   version: z.number().int().positive(),

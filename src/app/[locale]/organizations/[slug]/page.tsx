@@ -4,7 +4,6 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { CaseCard } from "@/features/cases/CaseCard";
 import { PersonCard } from "@/features/people/PersonCard";
 import { createBlackSheepRepository } from "@/repositories/repository-factory";
-import { getOrganizationContext, getPublicMockIndex } from "@/repositories/record-context";
 
 export default async function OrganizationPage({
   params
@@ -12,9 +11,10 @@ export default async function OrganizationPage({
   params: Promise<{ locale: Locale; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const organization = await createBlackSheepRepository().getOrganizationBySlug(slug);
+  const repo = createBlackSheepRepository();
+  const organization = await repo.getOrganizationBySlug(slug);
   if (!organization) notFound();
-  const context = getOrganizationContext(organization.id);
+  const context = await repo.getOrganizationContext(organization.id);
   if (!context) notFound();
   return (
     <div className="grid gap-8">
@@ -40,12 +40,7 @@ export default async function OrganizationPage({
       </header>
       <Section title={locale === "bn" ? "সম্পর্কিত ব্যক্তি" : "Related people"}>
         {context.people.map((person) => (
-          <PersonCard
-            key={person.id}
-            person={person}
-            cases={getPublicMockIndex().cases}
-            locale={locale}
-          />
+          <PersonCard key={person.id} person={person} locale={locale} />
         ))}
       </Section>
       <Section title={locale === "bn" ? "সম্পর্কিত মামলা" : "Related cases"}>

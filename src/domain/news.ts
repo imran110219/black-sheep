@@ -14,7 +14,7 @@ export const newsStrengthSchema = z.enum(["HIGH", "MEDIUM", "LOW"]);
 
 export const newsRecordSchema = z.object({
   id: z.string().uuid(),
-  isDemo: z.literal(true),
+  isDemo: z.boolean(),
   slug: z.string(),
   title: z.string(),
   publisher: z.string(),

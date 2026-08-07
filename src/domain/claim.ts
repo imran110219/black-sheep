@@ -18,6 +18,8 @@ export const claimTypeSchema = z.enum([
   "ILLICIT_ASSET",
   "HUMAN_RIGHTS_ABUSE",
   "HISTORICAL_RESPONSIBILITY",
+  "GOVERNMENT_CONTROL",
+  "INSTITUTIONAL_CAPTURE",
   "OTHER"
 ]);
 export type ClaimType = z.infer<typeof claimTypeSchema>;
@@ -35,36 +37,93 @@ export const claimStatusSchema = z.enum([
 ]);
 export type ClaimStatus = z.infer<typeof claimStatusSchema>;
 
-export const areaTypeSchema = z.enum(["COUNTRY", "DIVISION", "DISTRICT", "UPAZILA", "LOCALITY"]);
+export const areaTypeSchema = z.enum([
+  "COUNTRY",
+  "DIVISION",
+  "DISTRICT",
+  "UPAZILA",
+  "UNION",
+  "CONSTITUENCY",
+  "CITY",
+  "LOCALITY",
+  "OTHER"
+]);
 export type AreaType = z.infer<typeof areaTypeSchema>;
 
 export const influenceDomainSchema = z.enum([
   "POLITICS",
+  "GOVERNMENT",
   "BANKING",
   "LAND",
   "BUSINESS",
   "PUBLIC_CONTRACTS",
   "RELIGION",
   "MEDIA",
+  "SECURITY",
   "ELECTIONS",
   "VIOLENCE",
   "HUMAN_RIGHTS",
-  "PATRONAGE"
+  "FAMILY_NETWORK",
+  "PATRONAGE",
+  "OTHER"
 ]);
 export type InfluenceDomain = z.infer<typeof influenceDomainSchema>;
 
 export const areaSchema = z.object({
   id: z.string().uuid(),
+  isDemo: z.boolean(),
   slug: z.string(),
   nameBn: z.string(),
   nameEn: z.string(),
   type: areaTypeSchema,
-  parentId: z.string().uuid().optional()
+  parentId: z.string().uuid().optional(),
+  country: z.string(),
+  latitude: z.number().optional(),
+  longitude: z.number().optional(),
+  summaryBn: z.string().optional(),
+  summaryEn: z.string().optional()
 });
 export type Area = z.infer<typeof areaSchema>;
 
+export const institutionTypeSchema = z.enum([
+  "POLITICAL_PARTY",
+  "GOVERNMENT_AGENCY",
+  "BANK",
+  "FINANCIAL_INSTITUTION",
+  "COMPANY",
+  "BUSINESS_GROUP",
+  "RELIGIOUS_INSTITUTION",
+  "EDUCATIONAL_INSTITUTION",
+  "MEDIA_ORGANIZATION",
+  "FOUNDATION",
+  "NGO",
+  "SECURITY_AGENCY",
+  "CONTRACTING_COMPANY",
+  "FAMILY_ENTERPRISE",
+  "OTHER"
+]);
+export type InstitutionType = z.infer<typeof institutionTypeSchema>;
+
+export const institutionSchema = z.object({
+  id: z.string().uuid(),
+  isDemo: z.boolean(),
+  slug: z.string(),
+  nameBn: z.string(),
+  nameEn: z.string(),
+  type: institutionTypeSchema,
+  summaryBn: z.string(),
+  summaryEn: z.string(),
+  country: z.string(),
+  areaIds: z.array(z.string().uuid()),
+  website: z.string().url().optional(),
+  organizationId: z.string().uuid().optional(),
+  tagIds: z.array(z.string().uuid())
+});
+export type Institution = z.infer<typeof institutionSchema>;
+
 export const geographicAssociationSchema = z.object({
   id: z.string().uuid(),
+  isDemo: z.boolean(),
   personId: z.string().uuid(),
   areaId: z.string().uuid(),
   relationType: z.enum([
@@ -91,6 +150,7 @@ export type GeographicAssociation = z.infer<typeof geographicAssociationSchema>;
 
 export const institutionAssociationSchema = z.object({
   id: z.string().uuid(),
+  isDemo: z.boolean(),
   personId: z.string().uuid(),
   institutionId: z.string().uuid(),
   relationshipType: z.enum([
@@ -106,6 +166,7 @@ export const institutionAssociationSchema = z.object({
     "CONTRACTOR",
     "BORROWER",
     "ALLEGED_ASSOCIATE",
+    "OFFICIAL_ROLE",
     "OTHER"
   ]),
   startDate: z.string().optional(),
@@ -120,6 +181,7 @@ export type InstitutionAssociation = z.infer<typeof institutionAssociationSchema
 
 export const impactRecordSchema = z.object({
   id: z.string().uuid(),
+  isDemo: z.boolean(),
   incidentId: z.string().uuid().optional(),
   claimId: z.string().uuid().optional(),
   personId: z.string().uuid().optional(),
@@ -133,6 +195,7 @@ export const impactRecordSchema = z.object({
     "PUBLIC_INSTITUTION",
     "RELIGIOUS_COMMUNITY",
     "BUSINESS_ENVIRONMENT",
+    "MEDIA",
     "OTHER"
   ]),
   summaryBn: z.string(),
@@ -148,8 +211,18 @@ export type ImpactRecord = z.infer<typeof impactRecordSchema>;
 
 export const incidentPersonLinkSchema = z.object({
   personId: z.string().uuid(),
-  roleBn: z.string(),
-  roleEn: z.string(),
+  role: z.enum([
+    "LEADER",
+    "DECISION_MAKER",
+    "SUBJECT",
+    "ACCUSED",
+    "VICTIM",
+    "WITNESS",
+    "OFFICIAL",
+    "BENEFICIARY",
+    "RELATED_PERSON",
+    "OTHER"
+  ]),
   noteBn: z.string(),
   noteEn: z.string()
 });
@@ -157,11 +230,14 @@ export type IncidentPersonLink = z.infer<typeof incidentPersonLinkSchema>;
 
 export const incidentRecordSchema = z.object({
   id: z.string().uuid(),
+  isDemo: z.boolean(),
   slug: z.string(),
   titleBn: z.string(),
   titleEn: z.string(),
   summaryBn: z.string(),
   summaryEn: z.string(),
+  descriptionBn: z.string(),
+  descriptionEn: z.string(),
   incidentType: z.enum([
     "POLITICAL_VIOLENCE",
     "KILLING",
@@ -173,6 +249,8 @@ export const incidentRecordSchema = z.object({
     "PUBLIC_PROTEST",
     "HUMAN_RIGHTS_ABUSE",
     "FINANCIAL_SCANDAL",
+    "GOVERNMENT_CRACKDOWN",
+    "INSTITUTIONAL_CAPTURE",
     "OTHER"
   ]),
   occurredAt: z.string().optional(),
@@ -181,16 +259,20 @@ export const incidentRecordSchema = z.object({
   areaIds: z.array(z.string().uuid()),
   personLinks: z.array(incidentPersonLinkSchema),
   organizationIds: z.array(z.string().uuid()),
+  institutionIds: z.array(z.string().uuid()),
   claimIds: z.array(z.string().uuid()),
   caseIds: z.array(z.string().uuid()),
   sourceIds: z.array(z.string().uuid()),
   newsIds: z.array(z.string().uuid()),
-  impactRecords: z.array(impactRecordSchema)
+  impactRecordIds: z.array(z.string().uuid()),
+  lastVerifiedAt: z.string(),
+  updatedAt: z.string()
 });
 export type IncidentRecord = z.infer<typeof incidentRecordSchema>;
 
 export const claimRecordSchema = z.object({
   id: z.string().uuid(),
+  isDemo: z.boolean(),
   slug: z.string(),
   personIds: z.array(z.string().uuid()),
   titleBn: z.string(),
@@ -213,6 +295,7 @@ export const claimRecordSchema = z.object({
   editorialContextBn: z.string().optional(),
   editorialContextEn: z.string().optional(),
   isDisputed: z.boolean(),
-  lastVerifiedAt: z.string()
+  lastVerifiedAt: z.string(),
+  updatedAt: z.string()
 });
 export type ClaimRecord = z.infer<typeof claimRecordSchema>;
