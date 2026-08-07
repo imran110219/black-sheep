@@ -29,7 +29,11 @@ pnpm validate
 
 ## Architecture
 
-Routes never import data files directly. Pages depend on `BlackSheepRepository`, which currently reads active public people and sources plus demo scaffold data exported by `src/data`. Public DTOs avoid private identifiers and direct guilt booleans. The product is organized into Story, Network, and Evidence layers.
+Routes never import data files directly. Pages depend on `BlackSheepRepository`, which currently reads active public people and sources plus demo scaffold data exported by `src/data`. Public DTOs avoid private identifiers and direct guilt booleans. The product is organized into three layers:
+
+- Story: identity, why listed, historical overview, power base, major events, impact, and legacy.
+- Network: people, organizations, institutions, areas, relationships, influence domains, and associations.
+- Evidence: claims, cases, legal status, sources, news, subject responses, corrections, and revisions.
 
 ## Content Rules
 
@@ -41,7 +45,17 @@ The frontend does not render raw HTML or use `dangerouslySetInnerHTML`. Runtime 
 
 ## Data
 
-The active people and source records come from `src/data/public`. New scaffold records for claims, incidents, areas, institutions, associations, impacts, and dossiers are currently fictional demo data from `src/data/fixtures/mock-data.ts`.
+The active people and source records come from `src/data/public`. New scaffold records for claims, incidents, areas, institutions, associations, impacts, dossiers, cases, news, corrections, and revisions are currently fictional demo data from `src/data/fixtures/mock-data.ts`.
+
+Current route surface:
+
+- `/:locale`
+- `/:locale/people` and `/:locale/people/:slug`
+- `/:locale/areas` and `/:locale/areas/:slug`
+- `/:locale/institutions` and `/:locale/institutions/:slug`
+- `/:locale/incidents` and `/:locale/incidents/:slug`
+- `/:locale/dossiers` and `/:locale/dossiers/:slug`
+- existing policy, case, source, news, correction, and organization pages
 
 For data research, duplicate checks, enrichment, source rules, and AI-agent workflow, see `docs/ai-data-workflow.md`. For reusable Codex prompts, see `docs/codex-data-prompts.md`.
 
@@ -51,4 +65,4 @@ For data research, duplicate checks, enrichment, source rules, and AI-agent work
 
 ## Known Limitations
 
-There is no backend, authentication, admin portal, public submission flow, or API contract in the current scope. Maps are currently polished geographic cards rather than an interactive map dependency.
+There is no backend, authentication, admin portal, public submission flow, or API contract in the current scope. Maps are currently polished geographic cards rather than an interactive map dependency. The new scaffold claim, incident, institution, area, impact, and dossier records are demo records and should not be treated as source-backed records for the real public people until explicitly researched and linked.

@@ -2,6 +2,8 @@
 
 Black Sheep uses neutral wording, source attribution, and status separation. Being listed in a profile, source, claim, case, relationship, or incident does not by itself establish guilt.
 
+The current app has active real public people and source records, plus fictional demo scaffold records for the newer Story/Network/Evidence entities. Demo scaffold claims, incidents, areas, institutions, impacts, dossiers, and cases must not be presented as real evidence about real people.
+
 ## Required Language
 
 Use source-aware terms such as:
@@ -35,11 +37,15 @@ Profiles about real underworld figures or alleged syndicate leaders require extr
 
 Every real profile should have at least one `SourceRecord`. Every future claim, incident, relationship, institution association, area association, case, correction, or subject response should carry `sourceIds`.
 
+When converting demo scaffold records into real public records, first perform duplicate checks by slug, Bangla/English name, aliases, and source URLs. Then replace fictional IDs and summaries with source-backed, privacy-safe, status-aware records.
+
 ## Story, Network, Evidence
 
 Story summaries must be supported by source-backed records and must not turn allegations into established fact. Network associations must label whether a connection is verified, reported, disputed, or alleged. Evidence sections must distinguish reported claims, allegations, investigations, official findings, charges, convictions, acquittals, dismissals, retractions, and corrections.
 
 Claim status is not guilt status. Influence-domain tags are organizational metadata, not badness scores or probability labels.
+
+Do not create score-like fields, ranking labels, probability labels, or binary guilt fields. Avoid names such as `isCorrupt`, `isMurderer`, `crimeScore`, `badnessScore`, or equivalents.
 
 `SourceRecord.supportedClaims` should describe exactly what the source supports. Do not use a source to support details it does not actually establish.
 

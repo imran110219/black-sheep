@@ -19,10 +19,13 @@ The frontend model is built around bilingual, source-aware public-interest profi
 - influence domains such as `POLITICS`, `GOVERNMENT`, `BANKING`, `LAND`, `BUSINESS`, `PUBLIC_CONTRACTS`, `RELIGION`, `MEDIA`, `SECURITY`, `ELECTIONS`, `HUMAN_RIGHTS`, and `FAMILY_NETWORK`
 - a `PersonNarrative` layer for story-oriented profile sections
 - references to cases, news, assets, relationships, claims, incidents, and sources through ids
+- Story/Network fields: `activePeriodStart`, `activePeriodEnd`, `historicalEraIds`, `primaryAreaIds`, `claimIds`, `incidentIds`, `institutionAssociationIds`, `geographicAssociationIds`, and `influenceDomains`
 - publication and audit metadata: `publicationStatus`, `isActive`, `createdBy`, `updatedBy`, `lastVerifiedAt`, `publishedAt`, and `updatedAt`
 - `isDemo`, which is `false` for current public records
 
 Current active public people live in `src/data/public/people/<person-slug>.ts`.
+
+Two existing public records are hand-authored directly; most public people use `createPublicPerson`, which supplies defaults for the newer Story/Network fields. Keep those defaults in sync when adding fields to `PersonProfile`.
 
 ### `SourceRecord`
 
@@ -37,7 +40,7 @@ Data files must be organized per person/character rather than under broad collec
 
 Before adding or enriching public data, follow `docs/ai-data-workflow.md` for duplicate checks, web research, source record format, and validation commands.
 
-## Scaffolded Evidence Entities
+## Scaffolded Evidence And Network Entities
 
 The codebase also defines richer evidence and network entities:
 
@@ -62,6 +65,36 @@ The codebase also defines richer evidence and network entities:
 `IncidentRecord` represents historically important events separately from `CaseRecord`; an incident may link to claims, cases, people, institutions, areas, impact records, news, and sources without implying every linked person is responsible.
 
 `InfluenceDomain` tags are navigation and coverage metadata. They are not judgments of guilt.
+
+### `ClaimRecord` Versus `CaseRecord`
+
+Use `ClaimRecord` for a public-interest theme, allegation, reported pattern, official finding, disputed claim, retraction, or historical interpretation that is not itself a court or agency case file.
+
+Use `CaseRecord` for a specific legal or official proceeding with a case number, authority, court or tribunal, person roles, legal status, timeline, outcome, appeal posture, and case-specific sources.
+
+Never infer guilt from `ClaimStatus`. A judicially established claim should still point to the supporting case/source records.
+
+### `IncidentRecord` Versus `CaseRecord`
+
+Use `IncidentRecord` for a historical event or episode: what happened, when, where, who is linked, each person's exact role, related institutions, impact, and sources.
+
+Use `CaseRecord` for legal treatment of that incident. One incident can have zero, one, or many cases; one case can relate to multiple incidents.
+
+### `Institution` And Association Records
+
+`Institution` covers banks, companies, political parties, religious institutions, media organizations, public agencies, security agencies, foundations, NGOs, family enterprises, and contractors.
+
+`InstitutionAssociation` describes the person's role or reported relationship to an institution. Alleged associations must be visibly labelled and must not be displayed as proof of wrongdoing.
+
+### `Area` And Geographic Records
+
+`Area` supports broad public geography such as country, division, district, upazila, union, constituency, city, and locality.
+
+`GeographicAssociation` describes broad links such as birthplace, constituency, political base, business base, land interest, incident location, area of influence, or administrative control. Do not model precise private residential locations.
+
+### `DossierCollection`
+
+`DossierCollection` groups related people, claims, incidents, areas, institutions, and sources into an editorial collection. Current dossier records are fictional demos.
 
 ## Status Boundaries
 

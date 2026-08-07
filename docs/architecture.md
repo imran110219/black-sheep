@@ -17,6 +17,21 @@ The current repository implementation is local and read-only. It imports from `@
 
 Route components must not call mock-only context helpers such as `getPublicMockIndex()`. Story, evidence, network, area, institution, incident, dossier, news, source, organization, and case contexts are exposed as repository methods.
 
+Current repository context methods include:
+
+- `getPersonStoryContext`
+- `getPersonEvidenceContext`
+- `getPersonNetworkContext`
+- `getAreaContext`
+- `getInstitutionContext`
+- `getIncidentContext`
+- `getDossierContext`
+- `getCaseContext`
+- `getNewsContext`
+- `getSourceContext`
+- `getOrganizationContext`
+- `globalSearch`
+
 ## Public Data Structure
 
 Active public records are organized by entity:
@@ -49,6 +64,8 @@ src/data/index.ts
 
 For this product revision, it exports public people and sources, plus fictional scaffold records for claims, incidents, areas, institutions, associations, impacts, dossiers, cases, news, corrections, and revisions.
 
+Important boundary: public people and public sources are real-data records; scaffold claims, incidents, cases, institutions, areas, associations, impacts, and dossiers are demo records until researched and linked as source-backed public records.
+
 Each public person and that person's primary source bundle should live in a separate slug-named file. Do not group people under labels such as former regime, terrorist, criminal, or any equivalent collection category.
 
 For the full public-data workflow, including web research, duplicate checks, enrichment, and validation, see `docs/ai-data-workflow.md`.
@@ -66,6 +83,27 @@ Profile pages are ordered as:
 5. Evidence layer: legal status, cases, sources, news, responses, corrections, revisions
 
 Story View is the default. Evidence View is selected with `?view=evidence` and reorders the evidence sections higher on the page.
+
+## Routes
+
+Current locale-prefixed application routes include:
+
+- `/[locale]`
+- `/[locale]/people`
+- `/[locale]/people/[slug]`
+- `/[locale]/areas`
+- `/[locale]/areas/[slug]`
+- `/[locale]/institutions`
+- `/[locale]/institutions/[slug]`
+- `/[locale]/incidents`
+- `/[locale]/incidents/[slug]`
+- `/[locale]/dossiers`
+- `/[locale]/dossiers/[slug]`
+- `/[locale]/cases/[slug]`
+- `/[locale]/news/[slug]`
+- `/[locale]/sources/[slug]`
+- `/[locale]/organizations/[slug]`
+- policy/support pages such as about, methodology, source policy, privacy, legal, right of reply, and corrections
 
 ## Validation
 
