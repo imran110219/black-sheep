@@ -22,7 +22,17 @@ export const publicPersonIds = {
   saifuzzamanChowdhury: "00000000-0000-4000-8000-000000000051",
   akhtaruzzamanGazipur: "00000000-0000-4000-8000-000000000052",
   harunOrRashid: "00000000-0000-4000-8000-000000000053",
-  mdShahedKarim: "00000000-0000-4000-8000-000000000054"
+  mdShahedKarim: "00000000-0000-4000-8000-000000000054",
+  benazirAhmed: "00000000-0000-4000-8000-000000000055",
+  monirulIslam: "00000000-0000-4000-8000-000000000056",
+  biplobKumarSarker: "00000000-0000-4000-8000-000000000057",
+  habiburRahmanDmp: "00000000-0000-4000-8000-000000000058",
+  mdShahabuddinKhan: "00000000-0000-4000-8000-000000000059",
+  mofizUddinAhmed: "00000000-0000-4000-8000-000000000060",
+  mKhurshidHossain: "00000000-0000-4000-8000-000000000061",
+  barristerMdHarunArRashid: "00000000-0000-4000-8000-000000000062",
+  mdSaifulAlam: "00000000-0000-4000-8000-000000000063",
+  hamidulHaque: "00000000-0000-4000-8000-000000000064"
 } as const;
 
 export const publicSourceIds = {
@@ -85,7 +95,25 @@ export const publicSourceIds = {
   shahedProthomAloArmsIndictment: "00000000-0000-4000-8000-000000000287",
   shahedDailyStarArmsAcquittal: "00000000-0000-4000-8000-000000000288",
   shahedProthomAloAccEmbezzlement: "00000000-0000-4000-8000-000000000289",
-  shahedProthomAloDghsMou: "00000000-0000-4000-8000-000000000290"
+  shahedProthomAloDghsMou: "00000000-0000-4000-8000-000000000290",
+  benazirBssAccProbe: "00000000-0000-4000-8000-000000000531",
+  benazirBssIndicted: "00000000-0000-4000-8000-000000000532",
+  monirulDailyStarSbChief: "00000000-0000-4000-8000-000000000533",
+  policeDailyStarAccProbeLooms: "00000000-0000-4000-8000-000000000534",
+  biplobProthomAloSuspension: "00000000-0000-4000-8000-000000000535",
+  habiburProthomAloIctReport: "00000000-0000-4000-8000-000000000536",
+  shahabuddinDailyStarHighwayCameras: "00000000-0000-4000-8000-000000000537",
+  shahabuddinDailyStarForcedRetirement: "00000000-0000-4000-8000-000000000538",
+  mofizDailySunTransfer: "00000000-0000-4000-8000-000000000539",
+  mofizNewAgeTrafficInterview: "00000000-0000-4000-8000-000000000540",
+  khurshidNewAgeRabTransition: "00000000-0000-4000-8000-000000000541",
+  khurshidDailySunElectionRab: "00000000-0000-4000-8000-000000000542",
+  barristerHarunNewAgeRabDg: "00000000-0000-4000-8000-000000000543",
+  barristerHarunDailyStarIctWarrant: "00000000-0000-4000-8000-000000000544",
+  saifulDailyStarForcedRetirement: "00000000-0000-4000-8000-000000000545",
+  saifulProthomAloForcedRetirement: "00000000-0000-4000-8000-000000000546",
+  hamidulBdnewsDgfiAppointment: "00000000-0000-4000-8000-000000000547",
+  hamidulDailyStarForcedRetirement: "00000000-0000-4000-8000-000000000548"
 } as const;
 
 export const publicClaimIds = {
