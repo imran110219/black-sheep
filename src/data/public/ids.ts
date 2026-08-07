@@ -18,7 +18,9 @@ export const publicPersonIds = {
   sheikhFazleNoorTaposh: "00000000-0000-4000-8000-000000000047",
   salmanFRahman: "00000000-0000-4000-8000-000000000048",
   tariqueAhmedSiddique: "00000000-0000-4000-8000-000000000049",
-  ziaulAhsan: "00000000-0000-4000-8000-000000000050"
+  ziaulAhsan: "00000000-0000-4000-8000-000000000050",
+  saifuzzamanChowdhury: "00000000-0000-4000-8000-000000000051",
+  akhtaruzzamanGazipur: "00000000-0000-4000-8000-000000000052"
 } as const;
 
 export const publicSourceIds = {
@@ -55,5 +57,12 @@ export const publicSourceIds = {
   salmanBssAccCase: "00000000-0000-4000-8000-000000000261",
   salmanBssArrest: "00000000-0000-4000-8000-000000000262",
   tariqueSiddiqueProthomAloCase: "00000000-0000-4000-8000-000000000263",
-  ziaulAhsanDailyStarIctTestimony: "00000000-0000-4000-8000-000000000264"
+  ziaulAhsanDailyStarIctTestimony: "00000000-0000-4000-8000-000000000264",
+  saifuzzamanDailyStarVietnamProperties: "00000000-0000-4000-8000-000000000265",
+  saifuzzamanDailyStarForeignAssets: "00000000-0000-4000-8000-000000000266",
+  saifuzzamanDailyStarUcbCase: "00000000-0000-4000-8000-000000000267",
+  saifuzzamanParliamentProfile: "00000000-0000-4000-8000-000000000268",
+  akhtaruzzamanDailyStarArrest: "00000000-0000-4000-8000-000000000269",
+  akhtaruzzamanParliamentProfile: "00000000-0000-4000-8000-000000000270",
+  akhtaruzzamanAjkerPatrikaElection: "00000000-0000-4000-8000-000000000271"
 } as const;

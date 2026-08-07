@@ -2,6 +2,8 @@
 
 This document is the working checklist for AI agents and editors adding or enriching public data.
 
+For copy-pasteable Codex task prompts, use `docs/codex-data-prompts.md`.
+
 ## Scope
 
 The project is frontend-only and file-backed. Do not add backend, API-mode, authentication, admin tools, public submissions, crawlers, scrapers, or private datasets unless the project scope explicitly changes.

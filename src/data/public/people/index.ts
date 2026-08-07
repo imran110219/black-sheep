@@ -6,8 +6,10 @@ import { hasanMahmud } from "./hasan-mahmud";
 import { mohammadAliArafat } from "./mohammad-ali-arafat";
 import { sheikhFazleNoorTaposh } from "./sheikh-fazle-noor-taposh";
 import { salmanFRahman } from "./salman-f-rahman";
+import { saifuzzamanChowdhury } from "./saifuzzaman-chowdhury";
 import { tariqueAhmedSiddique } from "./tarique-ahmed-siddique";
 import { ziaulAhsan } from "./ziaul-ahsan";
+import { akhtaruzzamanGazipur } from "./akhtaruzzaman-gazipur";
 import { swedenAslam } from "./sweden-aslam";
 import { subrataBain } from "./subrata-bain";
 import { jisanAhmed } from "./jisan-ahmed";
@@ -28,8 +30,10 @@ export const publicPeople = [
   mohammadAliArafat,
   sheikhFazleNoorTaposh,
   salmanFRahman,
+  saifuzzamanChowdhury,
   tariqueAhmedSiddique,
   ziaulAhsan,
+  akhtaruzzamanGazipur,
   swedenAslam,
   subrataBain,
   jisanAhmed,

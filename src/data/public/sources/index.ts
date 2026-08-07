@@ -6,8 +6,10 @@ import { hasanMahmudSources } from "./hasan-mahmud";
 import { mohammadAliArafatSources } from "./mohammad-ali-arafat";
 import { sheikhFazleNoorTaposhSources } from "./sheikh-fazle-noor-taposh";
 import { salmanFRahmanSources } from "./salman-f-rahman";
+import { saifuzzamanChowdhurySources } from "./saifuzzaman-chowdhury";
 import { tariqueAhmedSiddiqueSources } from "./tarique-ahmed-siddique";
 import { ziaulAhsanSources } from "./ziaul-ahsan";
+import { akhtaruzzamanGazipurSources } from "./akhtaruzzaman-gazipur";
 import { swedenAslamSources } from "./sweden-aslam";
 import { subrataBainSources } from "./subrata-bain";
 import { jisanAhmedSources } from "./jisan-ahmed";
@@ -28,8 +30,10 @@ export const publicSources = [
   ...mohammadAliArafatSources,
   ...sheikhFazleNoorTaposhSources,
   ...salmanFRahmanSources,
+  ...saifuzzamanChowdhurySources,
   ...tariqueAhmedSiddiqueSources,
   ...ziaulAhsanSources,
+  ...akhtaruzzamanGazipurSources,
   ...swedenAslamSources,
   ...subrataBainSources,
   ...jisanAhmedSources,
