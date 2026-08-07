@@ -69,7 +69,12 @@ export const publicPersonIds = {
   saimaWazedPutul: "00000000-0000-4000-8000-000000000098",
   tulipSiddiq: "00000000-0000-4000-8000-000000000099",
   radwanMujibSiddiqBobby: "00000000-0000-4000-8000-000000000100",
-  azminaSiddiq: "00000000-0000-4000-8000-000000000101"
+  azminaSiddiq: "00000000-0000-4000-8000-000000000101",
+  shamimOsman: "00000000-0000-4000-8000-000000000102",
+  salmaOsman: "00000000-0000-4000-8000-000000000103",
+  tanvirAhmedTitu: "00000000-0000-4000-8000-000000000104",
+  imtinanOsmanAyon: "00000000-0000-4000-8000-000000000105",
+  labibaJohaAngona: "00000000-0000-4000-8000-000000000106"
 } as const;
 
 export const publicSourceIds = {
@@ -173,7 +178,14 @@ export const publicSourceIds = {
   purbachalApTulipBobbyAzminaVerdict: "00000000-0000-4000-8000-000000000569",
   purbachalBdnewsBobbyAzminaAllotmentCancel: "00000000-0000-4000-8000-000000000570",
   purbachalDailyStarChargesFramed: "00000000-0000-4000-8000-000000000571",
-  purbachalProthomAloTestimony: "00000000-0000-4000-8000-000000000572"
+  purbachalProthomAloTestimony: "00000000-0000-4000-8000-000000000572",
+  osmanTbsIctWarrant: "00000000-0000-4000-8000-000000000573",
+  osmanBssIctIndictment: "00000000-0000-4000-8000-000000000574",
+  osmanDhakaTribuneMoneyLaundering: "00000000-0000-4000-8000-000000000575",
+  osmanBssAccWealthCases: "00000000-0000-4000-8000-000000000576",
+  osmanDhakaTribunePoliticalInfluence: "00000000-0000-4000-8000-000000000577",
+  osmanBdnewsTokiAccusation: "00000000-0000-4000-8000-000000000578",
+  osmanTbsIctWitness: "00000000-0000-4000-8000-000000000579"
 } as const;
 
 export const publicClaimIds = {

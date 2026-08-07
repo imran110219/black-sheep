@@ -160,10 +160,11 @@ export function sortPeople(
 }
 
 export function paginate<T>(items: T[], page = 1, pageSize = 9) {
-  const safePage = Number.isFinite(page) ? Math.max(1, page) : 1;
   const safePageSize = Number.isFinite(pageSize) ? Math.max(1, pageSize) : 9;
   const total = items.length;
   const totalPages = Math.ceil(total / safePageSize);
+  const requestedPage = Number.isFinite(page) ? Math.max(1, page) : 1;
+  const safePage = totalPages > 0 ? Math.min(requestedPage, totalPages) : 1;
   const start = (safePage - 1) * safePageSize;
   return {
     items: items.slice(start, start + safePageSize),

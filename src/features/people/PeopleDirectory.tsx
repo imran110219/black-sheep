@@ -91,25 +91,30 @@ export function PeopleDirectory({
             ))}
           </div>
         )}
-        <div className="mt-6 flex justify-center gap-2">
-          <Button
-            type="button"
-            disabled={result.page <= 1}
-            onClick={() => update("page", String(result.page - 1))}
+        {result.totalPages > 1 ? (
+          <nav
+            className="mt-6 flex justify-center gap-2"
+            aria-label={locale === "bn" ? "পৃষ্ঠা নির্বাচন" : "Pagination"}
           >
-            {locale === "bn" ? "আগের" : "Previous"}
-          </Button>
-          <span className="grid h-10 place-items-center px-3 text-sm">
-            {result.page} / {Math.max(result.totalPages, 1)}
-          </span>
-          <Button
-            type="button"
-            disabled={result.page >= result.totalPages}
-            onClick={() => update("page", String(result.page + 1))}
-          >
-            {locale === "bn" ? "পরের" : "Next"}
-          </Button>
-        </div>
+            <Button
+              type="button"
+              disabled={result.page <= 1}
+              onClick={() => update("page", String(result.page - 1))}
+            >
+              {locale === "bn" ? "আগের" : "Previous"}
+            </Button>
+            <span className="grid h-10 place-items-center px-3 text-sm">
+              {result.page} / {result.totalPages}
+            </span>
+            <Button
+              type="button"
+              disabled={result.page >= result.totalPages}
+              onClick={() => update("page", String(result.page + 1))}
+            >
+              {locale === "bn" ? "পরের" : "Next"}
+            </Button>
+          </nav>
+        ) : null}
       </section>
     </div>
   );

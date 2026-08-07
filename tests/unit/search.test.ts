@@ -57,6 +57,11 @@ describe("search utilities", () => {
     expect(statusLabel("ACQUITTED", "bn")).toBe("খালাস");
     expect(formatDate("2026-07-01", "en")).toContain("2026");
     expect(paginate([1, 2, 3], Number.NaN, Number.NaN).page).toBe(1);
+    expect(paginate([1, 2, 3], 99, 2)).toMatchObject({
+      items: [3],
+      page: 2,
+      totalPages: 2
+    });
   });
 
   it("validates expanded public-interest records with Zod", () => {
