@@ -21,22 +21,22 @@ import { statusLabel } from "@/lib/status";
 import { createBlackSheepRepository } from "@/repositories/repository-factory";
 
 describe("search utilities", () => {
-  const publicPerson = people.find((person) => person.slug === "demo-person-1");
+  const publicPerson = people.find((person) => person.slug === "sweden-aslam");
 
   it("normalizes English and Bangla query text", () => {
-    expect(normalizeQuery("  Demo   PERSON 1  ")).toBe("demo person 1");
-    expect(normalizeQuery(" ডেমো  ব্যক্তি ১ ")).toBe("ডেমো ব্যক্তি ১");
+    expect(normalizeQuery("  Sweden   ASLAM  ")).toBe("sweden aslam");
+    expect(normalizeQuery(" সুইডেন  আসলাম ")).toBe("সুইডেন আসলাম");
   });
 
   it("matches Bangla or English names with OR behavior", () => {
     expect(publicPerson).toBeDefined();
-    expect(personMatchesQuery(publicPerson!, "ডেমো ব্যক্তি")).toBe(true);
-    expect(personMatchesQuery(publicPerson!, "Demo Person")).toBe(true);
+    expect(personMatchesQuery(publicPerson!, "সুইডেন আসলাম")).toBe(true);
+    expect(personMatchesQuery(publicPerson!, "Sweden Aslam")).toBe(true);
   });
 
   it("filters by affiliation before pagination", () => {
     const filtered = applyPeopleFilters(people, cases, {
-      influenceDomain: "POLITICS",
+      politicalAffiliation: "AWAMI_LEAGUE",
       page: 1,
       pageSize: 1
     });
@@ -49,7 +49,7 @@ describe("search utilities", () => {
     const sortedNames = sortPeople(people, "alphabetical").map((person) => person.nameEn);
     expect(sortedNames).toEqual([...sortedNames].sort((a, b) => a.localeCompare(b)));
     expect(publicPerson).toBeDefined();
-    expect(aggregateStatuses(publicPerson!, cases).length).toBeGreaterThan(0);
+    expect(aggregateStatuses(publicPerson!, cases)).toEqual([]);
   });
 
   it("provides localized status labels, date formatting, and safe pagination", () => {
@@ -65,7 +65,7 @@ describe("search utilities", () => {
     expect(incidents.map((record) => incidentRecordSchema.parse(record))).toHaveLength(12);
     expect(areas.map((record) => areaSchema.parse(record))).toHaveLength(15);
     expect(institutions.map((record) => institutionSchema.parse(record))).toHaveLength(12);
-    expect(people.map((person) => personNarrativeSchema.parse(person.narrative))).toHaveLength(10);
+    expect(people.map((person) => personNarrativeSchema.parse(person.narrative))).toHaveLength(22);
   });
 
   it("searches across people, institutions, and incidents", async () => {
@@ -73,7 +73,7 @@ describe("search utilities", () => {
     expect(await repo.globalSearch("metropolitan")).toEqual(
       expect.arrayContaining([expect.objectContaining({ type: "INSTITUTION" })])
     );
-    expect(await repo.globalSearch("Demo Person 1")).toEqual(
+    expect(await repo.globalSearch("Sweden Aslam")).toEqual(
       expect.arrayContaining([expect.objectContaining({ type: "PERSON" })])
     );
     expect(await repo.getPersonStoryContext(publicPerson!.id)).toBeTruthy();

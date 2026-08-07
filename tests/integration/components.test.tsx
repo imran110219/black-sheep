@@ -9,14 +9,14 @@ import en from "@/i18n/messages/en.json";
 
 describe("components", () => {
   it("renders person cards with locale-specific labels", () => {
-    const publicPerson = people.find((person) => person.slug === "demo-person-1");
+    const publicPerson = people.find((person) => person.slug === "sweden-aslam");
     expect(publicPerson).toBeDefined();
     render(
       <NextIntlClientProvider locale="en" messages={en}>
         <PersonCard person={publicPerson!} locale="en" />
       </NextIntlClientProvider>
     );
-    expect(screen.getByText("Demo Person 1")).toBeInTheDocument();
+    expect(screen.getByText("Sweden Aslam")).toBeInTheDocument();
     expect(screen.getByText(/Explore profile/i)).toBeInTheDocument();
   });
 

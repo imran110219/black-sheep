@@ -2,16 +2,17 @@
 
 ## Phase 1 Current Baseline
 
-The app is a localized, frontend-only, read-only fictional demo data product with:
+The app is a localized, frontend-only, read-only public data product with:
 
-- active demo profile, claim, incident, area, institution, dossier, source, correction, and case records
+- active public profile and source records
+- demo scaffold claim, incident, area, institution, dossier, correction, and case records
 - repository abstraction
 - Story View and Evidence View profile layout using `?view=story|evidence`
 - editorial discovery homepage
 - area, institution, incident, and dossier routes
 - strict TypeScript, linting, formatting, tests, and production build checks
 
-Existing real public records remain file-backed for future source-backed work, but they are not the active frontend dataset in this revision.
+Existing real public records remain file-backed and are active for people and source discovery.
 
 ## Phase 2 Structured Evidence Expansion
 

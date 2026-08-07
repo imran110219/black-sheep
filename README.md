@@ -1,6 +1,6 @@
 # Black Sheep
 
-Black Sheep is a frontend-only illustrated historical accountability encyclopedia. It presents fictional demo profiles, historical narrative, influence domains, networks, source records, claims, incidents, cases, institutions, areas, corrections, and evidence structures without declaring that a listed person is guilty.
+Black Sheep is a frontend-only illustrated historical accountability encyclopedia. It presents public profiles, historical narrative, influence domains, networks, source records, claims, incidents, cases, institutions, areas, corrections, and evidence structures without declaring that a listed person is guilty.
 
 Default locale is Bangla (`/bn`), with English at `/en`.
 
@@ -29,7 +29,7 @@ pnpm validate
 
 ## Architecture
 
-Routes never import data files directly. Pages depend on `BlackSheepRepository`, which currently reads the active fictional demo dataset exported by `src/data`. Public DTOs avoid private identifiers and direct guilt booleans. The product is organized into Story, Network, and Evidence layers.
+Routes never import data files directly. Pages depend on `BlackSheepRepository`, which currently reads active public people and sources plus demo scaffold data exported by `src/data`. Public DTOs avoid private identifiers and direct guilt booleans. The product is organized into Story, Network, and Evidence layers.
 
 ## Content Rules
 
@@ -41,7 +41,7 @@ The frontend does not render raw HTML or use `dangerouslySetInnerHTML`. Runtime 
 
 ## Data
 
-The current active frontend export uses fictional demo fixtures from `src/data/fixtures/mock-data.ts`. Existing real public-data files remain in `src/data/public` for future source-backed work, but the active product revision uses demo data only.
+The active people and source records come from `src/data/public`. New scaffold records for claims, incidents, areas, institutions, associations, impacts, and dossiers are currently fictional demo data from `src/data/fixtures/mock-data.ts`.
 
 For data research, duplicate checks, enrichment, source rules, and AI-agent workflow, see `docs/ai-data-workflow.md`. For reusable Codex prompts, see `docs/codex-data-prompts.md`.
 

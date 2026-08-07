@@ -13,7 +13,7 @@ Routes must not import data files directly. Pages and features should depend on:
 - `BlackSheepRepository`
 - `createBlackSheepRepository`
 
-The current repository implementation is local and read-only. It imports from `@/data`, which aggregates active fictional demo records from `src/data/fixtures/mock-data.ts`.
+The current repository implementation is local and read-only. It imports from `@/data`, which aggregates active public people/sources from `src/data/public` and demo scaffold records from `src/data/fixtures/mock-data.ts`.
 
 Route components must not call mock-only context helpers such as `getPublicMockIndex()`. Story, evidence, network, area, institution, incident, dossier, news, source, organization, and case contexts are exposed as repository methods.
 
@@ -47,7 +47,7 @@ The root aggregate is:
 src/data/index.ts
 ```
 
-For this product revision, it exports the fictional fixture graph: people, claims, incidents, areas, institutions, associations, impacts, dossiers, cases, sources, news, corrections, and revisions.
+For this product revision, it exports public people and sources, plus fictional scaffold records for claims, incidents, areas, institutions, associations, impacts, dossiers, cases, news, corrections, and revisions.
 
 Each public person and that person's primary source bundle should live in a separate slug-named file. Do not group people under labels such as former regime, terrorist, criminal, or any equivalent collection category.
 

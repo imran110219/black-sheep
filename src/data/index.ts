@@ -12,10 +12,9 @@ export {
   institutions,
   newsRecords,
   organizations,
-  people,
   relationships,
   revisions,
-  sources,
   subjectResponses,
   tags
 } from "./fixtures/mock-data";
+export { publicPeople as people, publicSources as sources } from "./public";

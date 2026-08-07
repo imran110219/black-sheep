@@ -7,7 +7,7 @@
 - Never introduce direct guilt booleans such as `isCorrupt` or `isMurderer`.
 - Never include NID, passport, private email, private phone, precise residence, private coordinates, or similar identifiers in public models.
 - Distinguish allegation, inquiry, investigation, charge, trial, conviction, appeal, acquittal, dismissal, withdrawn charges, sanctions, and closed records.
-- Real public records are allowed only when source-backed, privacy-safe, and status-aware. The current active frontend revision uses fictional demo data exported through `src/data`; future real-data activation must be explicit.
+- Real public records are allowed only when source-backed, privacy-safe, and status-aware. Active people and source records come from `src/data/public`; demo scaffold records may remain in `src/data/fixtures`.
 - Maintain the Story, Network, and Evidence layer distinction. Claim status, influence domains, and associations are not guilt indicators.
 - Keep each public person/character in a separate slug-named file under `src/data/public/people`; keep that person's source bundle in the matching slug-named file under `src/data/public/sources`.
 - Keep Bangla and English translations synchronized.

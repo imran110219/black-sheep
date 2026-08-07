@@ -1,6 +1,6 @@
 # Domain Model
 
-The frontend model is built around bilingual, source-aware public-interest profiles. The active data exported by `src/data/index.ts` is currently fictional demo data from `src/data/fixtures/mock-data.ts`.
+The frontend model is built around bilingual, source-aware public-interest profiles. The active people and sources exported by `src/data/index.ts` come from `src/data/public`; newer network/evidence scaffold records currently come from fictional fixtures.
 
 ## Conceptual Layers
 
@@ -22,7 +22,7 @@ The frontend model is built around bilingual, source-aware public-interest profi
 - publication and audit metadata: `publicationStatus`, `isActive`, `createdBy`, `updatedBy`, `lastVerifiedAt`, `publishedAt`, and `updatedAt`
 - `isDemo`, which is `false` for current public records
 
-Current active demo people live in `src/data/fixtures/mock-data.ts`. Future real public people should continue to use `src/data/public/people/<person-slug>.ts`.
+Current active public people live in `src/data/public/people/<person-slug>.ts`.
 
 ### `SourceRecord`
 
