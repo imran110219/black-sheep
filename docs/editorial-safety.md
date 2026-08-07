@@ -4,6 +4,27 @@ Black Sheep uses neutral wording, source attribution, and status separation. Bei
 
 The current app has active real public people and source records, plus fictional demo scaffold records for the newer Story/Network/Evidence entities. Demo scaffold claims, incidents, areas, institutions, impacts, dossiers, and cases must not be presented as real evidence about real people.
 
+## Inclusion Policy
+
+A public figure may be included even when no court case, charge, conviction, or formal investigation exists. Black Sheep is not only a case directory; it is a source-backed historical accountability encyclopedia.
+
+Inclusion without a case is allowed only when all of these are true:
+
+- the person is a public figure or otherwise has clear public-interest relevance
+- at least one credible public source supports the public role, controversy, documented action, institutional connection, incident, claim, or historical significance
+- the profile can be written without private identifiers or unsupported personal allegations
+- the record clearly separates public role, reported claim, allegation, official statement, investigation, finding, legal status, response, and historical interpretation
+
+Do not invent legal records. If no case exists, leave `caseIds` empty and use the correct evidence type:
+
+- `SourceRecord` for source metadata and supported facts
+- `NewsRecord` for article-level coverage
+- `ClaimRecord` for reported public-interest claims, themes, official findings, disputed claims, or historical interpretation
+- `IncidentRecord` for historically important events that may have no case
+- `InstitutionAssociation` or `GeographicAssociation` for source-backed public network or area links
+
+The absence of a case must not be treated as proof that reporting is false. The presence of a case must not be treated as proof of guilt.
+
 ## Required Language
 
 Use source-aware terms such as:

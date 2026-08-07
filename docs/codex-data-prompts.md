@@ -11,6 +11,7 @@ Current data boundary:
 - Do not attach demo scaffold records to real people as evidence.
 - Convert scaffold-style records into real public records only after source-backed research, duplicate checks, privacy review, and synchronized Bangla/English writing.
 - Route/page work must use the repository abstraction; route files must not import fixtures directly.
+- A court case is not required for a real public profile. If no real legal proceeding is source-backed, leave `caseIds` empty and use source-backed Story, News, Claim, Incident, Network, or association records instead.
 
 ## 1. Search Web and Suggest People
 
@@ -23,6 +24,7 @@ Goal:
 
 Research requirements:
 - Search established news, official records, court/tribunal reporting, ACC/police/government records, and reputable investigative reports.
+- Include source-backed public-interest people even when no case exists, as long as the sources support public role, influence, institutional connection, incident involvement, official finding, or reported controversy.
 - Prefer people with multiple independent public sources.
 - Include Bangla and English name variants where available.
 - Check the existing repo for duplicates before suggesting anyone:
@@ -81,11 +83,12 @@ Tasks:
    - historicalImpactBn / historicalImpactEn when supported
    - legacyBn / legacyEn when supported
 7. Add influence domains only as coverage/navigation metadata, not guilt labels.
-8. Do not create real ClaimRecord, IncidentRecord, InstitutionAssociation, GeographicAssociation, ImpactRecord, or CaseRecord unless source-backed and explicitly requested.
-9. Keep Bangla and English synchronized.
-10. Use neutral, status-aware wording.
-11. Do not add private identifiers.
-12. Run:
+8. A case is not required. If no legal case exists, keep `caseIds: []`; do not invent placeholder cases.
+9. Do not create real ClaimRecord, IncidentRecord, InstitutionAssociation, GeographicAssociation, ImpactRecord, or CaseRecord unless source-backed and explicitly requested.
+10. Keep Bangla and English synchronized.
+11. Use neutral, status-aware wording.
+12. Do not add private identifiers.
+13. Run:
    - pnpm format:check
    - pnpm lint
    - pnpm typecheck
@@ -126,8 +129,9 @@ Tasks:
 5. If the person does not exist and the source is sufficient, add a new per-person file and source file.
 6. Use the article as a SourceRecord with a short paraphrased excerpt.
 7. Preserve status boundaries. A news allegation, testimony, arrest, remand, or filed complaint is not a conviction.
-8. If the article describes a historical event, public-interest claim, institution link, area link, or legal case, summarize it as a proposed Story/Network/Evidence addition unless the user explicitly asks to create structured records.
-9. Run the full validation suite.
+8. If no case exists, keep `caseIds` empty and represent the item as news/source-backed Story, Claim, Incident, or Network context only when the source supports it.
+9. If the article describes a historical event, public-interest claim, institution link, area link, or legal case, summarize it as a proposed Story/Network/Evidence addition unless the user explicitly asks to create structured records.
+10. Run the full validation suite.
 
 Final response:
 - say whether the person was added or an existing profile was enriched
@@ -169,8 +173,9 @@ Tasks:
 7. Add new source records only when they support specific claims.
 8. Keep influence domains as navigation metadata, not guilt labels.
 9. Do not link demo scaffold claims/incidents/cases/institutions to the real person.
-10. Keep Bangla and English synchronized.
-11. Run the full validation suite.
+10. Do not create placeholder cases. If no case exists, keep the profile source-backed through Story, SourceRecord, NewsRecord, ClaimRecord, IncidentRecord, or Network records as appropriate.
+11. Keep Bangla and English synchronized.
+12. Run the full validation suite.
 
 Final response:
 - summarize enriched fields
@@ -268,6 +273,7 @@ Tasks:
    - IncidentRecord is not the same as CaseRecord.
    - associations are not proof of wrongdoing.
    - disputed, retracted, acquitted, dismissed, or withdrawn records must be clearly labelled.
+   - no-case records must remain no-case records; do not fabricate case numbers, courts, or legal statuses.
 6. Add or update source records first.
 7. Add the structured record only if it has sourceIds and bilingual text.
 8. Link the person's id arrays only after the structured record is complete.

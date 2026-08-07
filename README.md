@@ -39,6 +39,8 @@ Routes never import data files directly. Pages depend on `BlackSheepRepository`,
 
 Records distinguish reported allegation, inquiry, investigation, charge, trial, conviction, appeal, acquittal, dismissal, sanctions, audit findings, and closed matters. Media coverage is not shown as a judicial finding. Acquittals, bail releases, dismissed outcomes, and withdrawn charges must be displayed prominently.
 
+A public profile does not require a court case. Credible news, official, parliamentary, investigative, public-biography, or institutional sources can support a profile when the person is public-interest and the wording stays privacy-safe and status-aware. If no legal proceeding exists, `caseIds` stays empty; the record should use Story, Source, News, Claim, Incident, Network, or association data instead of placeholder cases.
+
 ## Security
 
 The frontend does not render raw HTML or use `dangerouslySetInnerHTML`. Runtime data is validated with Zod where API boundaries exist. External links use `rel="noopener noreferrer"` and public URL helpers only allow HTTP(S). No secrets should be placed in `NEXT_PUBLIC_*` variables.

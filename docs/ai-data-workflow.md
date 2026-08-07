@@ -16,6 +16,8 @@ Use real public data only when it is:
 - free of private identifiers
 - represented in both Bangla and English
 
+A court case is not required for inclusion. Many profiles will be source-backed from news reporting, official biographies, parliamentary records, agency statements, investigative reports, sanctions records, institutional records, or historically important incident coverage. When no case exists, keep `caseIds` empty and do not create a placeholder `CaseRecord`.
+
 Current active data state:
 
 - Real public people and real public sources are active from `src/data/public`.
@@ -82,6 +84,27 @@ Prefer primary or high-accountability sources:
 
 Do not use social media posts, copied blogs, unsourced listicles, or private documents as the only support for a profile.
 
+## Inclusion Without A Case
+
+Use this path when a source-backed public-interest person has no known legal case:
+
+1. Add or enrich the public person file with neutral Story-layer context.
+2. Add at least one `SourceRecord` that states exactly what the source supports.
+3. Link `sourceIds` and, if useful, `newsIds`.
+4. Leave `caseIds: []` unless a real proceeding is source-backed.
+5. Use `ClaimRecord` only for a specific public-interest claim or theme, with `REPORTED`, `ALLEGED`, `DISPUTED`, `OFFICIAL_FINDING`, or another accurate status.
+6. Use `IncidentRecord` only when the source describes a concrete event or period, and label each person's role precisely.
+7. Use association records only for public, source-backed institutions or broad geography.
+8. Write Bangla and English summaries so readers understand that the record is news/source-backed context, not a court finding.
+
+Suitable non-case inclusion examples include:
+
+- a public official whose governance actions or institutional power are documented by reliable news and official sources
+- a business, banking, media, religious, or political figure whose influence network is source-backed
+- a person connected to a historically important incident where no case has been filed
+- a figure named in an official report, inquiry, sanctions notice, parliamentary record, or investigative report
+- a person whose public response, correction, acquittal, dismissal, or denial is part of the historical record
+
 ## Duplicate Checks
 
 Before adding a person, run duplicate checks from the repo root:
@@ -130,6 +153,8 @@ Story, Network, and Evidence layer enrichment should remain incremental:
 
 Do not attach a structured claim, incident, institution association, geographic association, impact, or case to a real person until it is source-backed, privacy-safe, and status-aware.
 
+If a profile has only news/source support and no case, prefer Story-layer fields plus `SourceRecord`/`NewsRecord` first. Add structured `ClaimRecord`, `IncidentRecord`, or association records only when the source supports a specific claim, event, or relationship clearly enough to label it.
+
 Do not add private identifiers, exact residences, private family details, private phone/email, NID/passport numbers, private coordinates, or unsupported financial details.
 
 ## Status Language
@@ -151,6 +176,8 @@ Never convert news reporting, testimony, accusations, arrests, or remand into a 
 `ClaimStatus` is not a guilt status. `InfluenceDomain` values are coverage/navigation metadata, not labels of wrongdoing.
 
 Use `ClaimRecord` for public-interest claims or themes that are not necessarily court cases. Use `CaseRecord` for legal or official proceedings. Use `IncidentRecord` for historically important events that may or may not have related cases.
+
+Never upgrade a news-supported claim into a case. A `CaseRecord` requires a real filed complaint, tribunal/court record, authority proceeding, sanction, or official case-like process with source-backed status details.
 
 ## Source Records
 

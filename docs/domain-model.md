@@ -66,6 +66,10 @@ The codebase also defines richer evidence and network entities:
 
 `InfluenceDomain` tags are navigation and coverage metadata. They are not judgments of guilt.
 
+Public profiles are not required to have cases. A person may be represented with `caseIds: []` when credible sources support public-interest biography, role history, institutional power, reported controversies, official findings, incidents, or historical significance but no legal proceeding is source-backed.
+
+Do not create placeholder `CaseRecord` records for news-only profiles. Use `SourceRecord`, `NewsRecord`, `ClaimRecord`, `IncidentRecord`, `InstitutionAssociation`, or `GeographicAssociation` according to what the source actually supports.
+
 ### `ClaimRecord` Versus `CaseRecord`
 
 Use `ClaimRecord` for a public-interest theme, allegation, reported pattern, official finding, disputed claim, retraction, or historical interpretation that is not itself a court or agency case file.
