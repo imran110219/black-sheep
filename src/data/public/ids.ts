@@ -16,7 +16,8 @@ export const publicPersonIds = {
   hasanMahmud: "00000000-0000-4000-8000-000000000045",
   mohammadAliArafat: "00000000-0000-4000-8000-000000000046",
   sheikhFazleNoorTaposh: "00000000-0000-4000-8000-000000000047",
-  salmanFRahman: "00000000-0000-4000-8000-000000000048"
+  salmanFRahman: "00000000-0000-4000-8000-000000000048",
+  tariqueAhmedSiddique: "00000000-0000-4000-8000-000000000049"
 } as const;
 
 export const publicSourceIds = {
@@ -51,5 +52,6 @@ export const publicSourceIds = {
   taposhProthomAloBank: "00000000-0000-4000-8000-000000000259",
   salmanTbsBankLoans: "00000000-0000-4000-8000-000000000260",
   salmanBssAccCase: "00000000-0000-4000-8000-000000000261",
-  salmanBssArrest: "00000000-0000-4000-8000-000000000262"
+  salmanBssArrest: "00000000-0000-4000-8000-000000000262",
+  tariqueSiddiqueProthomAloCase: "00000000-0000-4000-8000-000000000263"
 } as const;
