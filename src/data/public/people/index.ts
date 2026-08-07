@@ -53,6 +53,12 @@ import { mdNazrulIslamRoads } from "./md-nazrul-islam-roads";
 import { mihirKantiMajumder } from "./mihir-kanti-majumder";
 import { mdAshadulIslam } from "./md-ashadul-islam";
 import { drMohammadJabedPatwary } from "./dr-mohammad-jabed-patwary";
+import { sheikhRehana } from "./sheikh-rehana";
+import { sajeebWazedJoy } from "./sajeeb-wazed-joy";
+import { saimaWazedPutul } from "./saima-wazed-putul";
+import { tulipSiddiq } from "./tulip-siddiq";
+import { radwanMujibSiddiqBobby } from "./radwan-mujib-siddiq-bobby";
+import { azminaSiddiq } from "./azmina-siddiq";
 import { swedenAslam } from "./sweden-aslam";
 import { subrataBain } from "./subrata-bain";
 import { jisanAhmed } from "./jisan-ahmed";
@@ -120,6 +126,12 @@ export const publicPeople = [
   mihirKantiMajumder,
   mdAshadulIslam,
   drMohammadJabedPatwary,
+  sheikhRehana,
+  sajeebWazedJoy,
+  saimaWazedPutul,
+  tulipSiddiq,
+  radwanMujibSiddiqBobby,
+  azminaSiddiq,
   swedenAslam,
   subrataBain,
   jisanAhmed,

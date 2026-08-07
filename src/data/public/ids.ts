@@ -63,7 +63,13 @@ export const publicPersonIds = {
   mdNazrulIslamRoads: "00000000-0000-4000-8000-000000000092",
   mihirKantiMajumder: "00000000-0000-4000-8000-000000000093",
   mdAshadulIslam: "00000000-0000-4000-8000-000000000094",
-  drMohammadJabedPatwary: "00000000-0000-4000-8000-000000000095"
+  drMohammadJabedPatwary: "00000000-0000-4000-8000-000000000095",
+  sheikhRehana: "00000000-0000-4000-8000-000000000096",
+  sajeebWazedJoy: "00000000-0000-4000-8000-000000000097",
+  saimaWazedPutul: "00000000-0000-4000-8000-000000000098",
+  tulipSiddiq: "00000000-0000-4000-8000-000000000099",
+  radwanMujibSiddiqBobby: "00000000-0000-4000-8000-000000000100",
+  azminaSiddiq: "00000000-0000-4000-8000-000000000101"
 } as const;
 
 export const publicSourceIds = {
@@ -161,7 +167,13 @@ export const publicSourceIds = {
   mihirKantiTbsAccCases: "00000000-0000-4000-8000-000000000563",
   ashadulNewAgeN95Probe: "00000000-0000-4000-8000-000000000564",
   jabedPatwaryDhakaTribuneElectionCase: "00000000-0000-4000-8000-000000000565",
-  jabedPatwaryProthomAloPoliceCorruption: "00000000-0000-4000-8000-000000000566"
+  jabedPatwaryProthomAloPoliceCorruption: "00000000-0000-4000-8000-000000000566",
+  purbachalBssHasinaRehanaTulipVerdict: "00000000-0000-4000-8000-000000000567",
+  purbachalBdnewsJoyPutulVerdict: "00000000-0000-4000-8000-000000000568",
+  purbachalApTulipBobbyAzminaVerdict: "00000000-0000-4000-8000-000000000569",
+  purbachalBdnewsBobbyAzminaAllotmentCancel: "00000000-0000-4000-8000-000000000570",
+  purbachalDailyStarChargesFramed: "00000000-0000-4000-8000-000000000571",
+  purbachalProthomAloTestimony: "00000000-0000-4000-8000-000000000572"
 } as const;
 
 export const publicClaimIds = {

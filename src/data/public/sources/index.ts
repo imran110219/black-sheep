@@ -41,6 +41,7 @@ import {
   mihirKantiTbsAccCasesSource,
   rahmatulMuneemBssTravelBanSource
 } from "./bureaucrat-corruption-2025";
+import { sheikhFamilyPurbachalSources } from "./sheikh-family-purbachal";
 import { swedenAslamSources } from "./sweden-aslam";
 import { subrataBainSources } from "./subrata-bain";
 import { jisanAhmedSources } from "./jisan-ahmed";
@@ -94,6 +95,7 @@ export const publicSources = [
   ashadulNewAgeN95ProbeSource,
   jabedPatwaryDhakaTribuneElectionCaseSource,
   jabedPatwaryProthomAloPoliceCorruptionSource,
+  ...sheikhFamilyPurbachalSources,
   ...swedenAslamSources,
   ...subrataBainSources,
   ...jisanAhmedSources,
