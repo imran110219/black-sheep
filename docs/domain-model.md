@@ -32,6 +32,8 @@ Every real person should have at least one source record before publication. Sou
 
 Data files must be organized per person/character rather than under broad collection labels. Descriptions must keep policy criticism, arrest reporting, filed cases, tribunal testimony, allegations, trial posture, and final court findings separate.
 
+Before adding or enriching public data, follow `docs/ai-data-workflow.md` for duplicate checks, web research, source record format, and validation commands.
+
 ## Scaffolded Evidence Entities
 
 The codebase also defines richer evidence and network entities:

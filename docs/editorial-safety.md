@@ -37,6 +37,16 @@ Every real profile should have at least one `SourceRecord`. Every future claim, 
 
 `SourceRecord.supportedClaims` should describe exactly what the source supports. Do not use a source to support details it does not actually establish.
 
+When adding source-backed data, preserve the source's status boundary:
+
+- a filed complaint is not a conviction
+- an arrest is not a finding
+- testimony is not a final judgment
+- a police or agency statement should be attributed to that body
+- an acquittal, dismissal, withdrawn charge, or bail release must not be hidden behind allegations
+
+Use short paraphrased source excerpts. Do not copy long passages from articles.
+
 ## Privacy Rules
 
 Never publish:

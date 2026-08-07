@@ -41,7 +41,9 @@ The frontend does not render raw HTML or use `dangerouslySetInnerHTML`. Runtime 
 
 ## Public Data
 
-Active data is public-only and file-backed. Public people and sources are organized by entity under `src/data/public`. Demo fixtures are retained separately for development reference only.
+Active data is public-only and file-backed. Public people and sources are organized by entity under `src/data/public`; each person/character has a separate slug-named people file and matching source file. Demo fixtures are retained separately for development reference only.
+
+For data research, duplicate checks, enrichment, source rules, and AI-agent workflow, see `docs/ai-data-workflow.md`.
 
 ## Scripts
 

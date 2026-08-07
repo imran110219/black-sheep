@@ -52,6 +52,8 @@ It exports public `people` and `sources`, plus typed empty arrays for scaffolded
 
 Each public person and that person's primary source bundle should live in a separate slug-named file. Do not group people under labels such as former regime, terrorist, criminal, or any equivalent collection category.
 
+For the full public-data workflow, including web research, duplicate checks, enrichment, and validation, see `docs/ai-data-workflow.md`.
+
 ## UI Structure
 
 The homepage is editorial-first: hero search, featured profiles, influence discovery, place discovery, historical eras, dossiers, and latest updates.
