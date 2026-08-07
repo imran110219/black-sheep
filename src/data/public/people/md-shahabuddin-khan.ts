@@ -8,7 +8,10 @@ export const mdShahabuddinKhan = createPublicPerson({
   nameBn: "মো. শাহাবুদ্দিন খান",
   aliases: ["Shahabuddin Khan", "Md. Shahabuddin Khan"],
   occupation: "LAW_ENFORCEMENT_OFFICIAL",
-  publicRoles: ["Former Highway Police chief", "Former Additional Inspector General of Highway Police"],
+  publicRoles: [
+    "Former Highway Police chief",
+    "Former Additional Inspector General of Highway Police"
+  ],
   organizations: ["Highway Police", "Bangladesh Police"],
   activePeriod: "2023-2024",
   primaryAreaEn: "Bangladesh",
@@ -31,6 +34,8 @@ export const mdShahabuddinKhan = createPublicPerson({
     "Current sources support role, surveillance-project, and administrative-status context. They do not support any criminal finding.",
   overviewBn:
     "বর্তমান উৎসগুলো role, surveillance-project ও administrative-status context সমর্থন করে। এগুলো কোনো criminal finding সমর্থন করে না।",
-  patternsEn: "Reported themes: highway policing, AI camera surveillance project, forced-retirement reporting.",
-  patternsBn: "প্রতিবেদনভিত্তিক থিম: highway policing, AI camera surveillance project, forced-retirement reporting।"
+  patternsEn:
+    "Reported themes: highway policing, AI camera surveillance project, forced-retirement reporting.",
+  patternsBn:
+    "প্রতিবেদনভিত্তিক থিম: highway policing, AI camera surveillance project, forced-retirement reporting।"
 });

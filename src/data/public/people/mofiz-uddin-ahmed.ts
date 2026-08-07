@@ -9,7 +9,11 @@ export const mofizUddinAhmed = createPublicPerson({
   aliases: ["Md Mofiz Uddin Ahmed", "Mofiz Uddin Ahmed PPM"],
   occupation: "LAW_ENFORCEMENT_OFFICIAL",
   publicRoles: ["Former DMP Additional Commissioner Traffic", "Former Sylhet Range DIG"],
-  organizations: ["Dhaka Metropolitan Police", "Bangladesh Police", "Criminal Investigation Department"],
+  organizations: [
+    "Dhaka Metropolitan Police",
+    "Bangladesh Police",
+    "Criminal Investigation Department"
+  ],
   activePeriod: "2019-2023",
   primaryAreaEn: "Dhaka and Sylhet",
   primaryAreaBn: "ঢাকা ও সিলেট",
@@ -31,6 +35,8 @@ export const mofizUddinAhmed = createPublicPerson({
     "Available sources support public-role and administrative-transfer context only. No allegation or finding is added beyond the source language.",
   overviewBn:
     "উপলব্ধ উৎস public-role ও administrative-transfer context সমর্থন করে। source language-এর বাইরে কোনো allegation বা finding যুক্ত করা হয়নি।",
-  patternsEn: "Reported themes: DMP traffic administration, Sylhet Range command, CID anti-terrorism transfer.",
-  patternsBn: "প্রতিবেদনভিত্তিক থিম: DMP traffic administration, Sylhet Range command, CID anti-terrorism transfer।"
+  patternsEn:
+    "Reported themes: DMP traffic administration, Sylhet Range command, CID anti-terrorism transfer.",
+  patternsBn:
+    "প্রতিবেদনভিত্তিক থিম: DMP traffic administration, Sylhet Range command, CID anti-terrorism transfer।"
 });

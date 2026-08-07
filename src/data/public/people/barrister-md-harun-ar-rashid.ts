@@ -8,7 +8,10 @@ export const barristerMdHarunArRashid = createPublicPerson({
   nameBn: "ব্যারিস্টার মো. হারুন-অর-রশীদ",
   aliases: ["Md Harun-Ar-Rashid", "Md Harun or Rashid", "Former RAB DG Harun"],
   occupation: "LAW_ENFORCEMENT_OFFICIAL",
-  publicRoles: ["Former Director General of Rapid Action Battalion", "Former Additional Inspector General of Police"],
+  publicRoles: [
+    "Former Director General of Rapid Action Battalion",
+    "Former Additional Inspector General of Police"
+  ],
   organizations: ["Rapid Action Battalion", "Bangladesh Police"],
   activePeriod: "2024-2025",
   primaryAreaEn: "Bangladesh",
@@ -31,7 +34,8 @@ export const barristerMdHarunArRashid = createPublicPerson({
     "Daily Star reporting says the ICT issued arrest warrants and attributed allegations to prosecution statements. This is recorded as tribunal-process reporting, not a conviction.",
   overviewBn:
     "Daily Star প্রতিবেদন বলছে ICT arrest warrants জারি করেছে এবং allegations prosecution statements-এর সঙ্গে attributed। এটি tribunal-process reporting হিসেবে রাখা হয়েছে, conviction নয়।",
-  patternsEn: "Reported themes: RAB command, July-August uprising, ICT arrest warrant, enforced-disappearance allegation context.",
+  patternsEn:
+    "Reported themes: RAB command, July-August uprising, ICT arrest warrant, enforced-disappearance allegation context.",
   patternsBn:
     "প্রতিবেদনভিত্তিক থিম: RAB command, July-August uprising, ICT arrest warrant, enforced-disappearance allegation context।"
 });

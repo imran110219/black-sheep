@@ -8,8 +8,16 @@ export const monirulIslam = createPublicPerson({
   nameBn: "মনিরুল ইসলাম",
   aliases: ["Md Monirul Islam", "Monirul Islam SB", "Monirul Islam CTTC"],
   occupation: "LAW_ENFORCEMENT_OFFICIAL",
-  publicRoles: ["Former CTTC chief", "Former Special Branch chief", "Former DMP Additional Commissioner"],
-  organizations: ["Bangladesh Police", "Special Branch", "Counter Terrorism and Transnational Crime unit"],
+  publicRoles: [
+    "Former CTTC chief",
+    "Former Special Branch chief",
+    "Former DMP Additional Commissioner"
+  ],
+  organizations: [
+    "Bangladesh Police",
+    "Special Branch",
+    "Counter Terrorism and Transnational Crime unit"
+  ],
   activePeriod: "2016-2024",
   primaryAreaEn: "Dhaka",
   primaryAreaBn: "ঢাকা",

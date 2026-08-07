@@ -8,7 +8,10 @@ export const mKhurshidHossain = createPublicPerson({
   nameBn: "এম খুরশিদ হোসেন",
   aliases: ["M. Khurshid Hossain", "RAB DG Khurshid Hossain"],
   occupation: "LAW_ENFORCEMENT_OFFICIAL",
-  publicRoles: ["Former Director General of Rapid Action Battalion", "Former Additional Inspector General of Police"],
+  publicRoles: [
+    "Former Director General of Rapid Action Battalion",
+    "Former Additional Inspector General of Police"
+  ],
   organizations: ["Rapid Action Battalion", "Bangladesh Police"],
   activePeriod: "2022-2024",
   primaryAreaEn: "Bangladesh",

@@ -8,7 +8,11 @@ export const mdSaifulAlam = createPublicPerson({
   nameBn: "লে. জেন. মো. সাইফুল আলম",
   aliases: ["Md Saiful Alam", "Saiful Alam DGFI", "Lt Gen Saiful Alam"],
   occupation: "MILITARY_OFFICIAL",
-  publicRoles: ["Former Director General of DGFI", "Former Quartermaster General", "Former National Defence College commandant"],
+  publicRoles: [
+    "Former Director General of DGFI",
+    "Former Quartermaster General",
+    "Former National Defence College commandant"
+  ],
   organizations: ["Bangladesh Army", "Directorate General of Forces Intelligence"],
   activePeriod: "2020-2024",
   primaryAreaEn: "Bangladesh",
@@ -31,7 +35,8 @@ export const mdSaifulAlam = createPublicPerson({
     "Daily Star and Prothom Alo reports support official-role and administrative-status context. The profile does not present the account-freeze reporting as a final finding.",
   overviewBn:
     "Daily Star ও Prothom Alo প্রতিবেদন official-role ও administrative-status context সমর্থন করে। account-freeze reporting-কে final finding হিসেবে উপস্থাপন করা হয়নি।",
-  patternsEn: "Reported themes: DGFI leadership, military reassignment, forced retirement, BFIU account-freeze reporting.",
+  patternsEn:
+    "Reported themes: DGFI leadership, military reassignment, forced retirement, BFIU account-freeze reporting.",
   patternsBn:
     "প্রতিবেদনভিত্তিক থিম: DGFI leadership, military reassignment, forced retirement, BFIU account-freeze reporting।"
 });

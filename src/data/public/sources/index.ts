@@ -12,6 +12,17 @@ import { ziaulAhsanSources } from "./ziaul-ahsan";
 import { akhtaruzzamanGazipurSources } from "./akhtaruzzaman-gazipur";
 import { harunOrRashidSources } from "./harun-or-rashid";
 import { mdShahedKarimSources } from "./md-shahed-karim";
+import { benazirAhmedSources } from "./benazir-ahmed";
+import { policeAccountability2024Sources } from "./police-accountability-2024";
+import { monirulIslamSources } from "./monirul-islam";
+import { biplobKumarSarkerSources } from "./biplob-kumar-sarker";
+import { habiburRahmanDmpSources } from "./habibur-rahman-dmp";
+import { mdShahabuddinKhanSources } from "./md-shahabuddin-khan";
+import { mofizUddinAhmedSources } from "./mofiz-uddin-ahmed";
+import { mKhurshidHossainSources } from "./m-khurshid-hossain";
+import { barristerMdHarunArRashidSources } from "./barrister-md-harun-ar-rashid";
+import { mdSaifulAlamSources } from "./md-saiful-alam";
+import { hamidulHaqueSources } from "./hamidul-haque";
 import { swedenAslamSources } from "./sweden-aslam";
 import { subrataBainSources } from "./subrata-bain";
 import { jisanAhmedSources } from "./jisan-ahmed";
@@ -38,6 +49,17 @@ export const publicSources = [
   ...akhtaruzzamanGazipurSources,
   ...harunOrRashidSources,
   ...mdShahedKarimSources,
+  ...benazirAhmedSources,
+  ...policeAccountability2024Sources,
+  ...monirulIslamSources,
+  ...biplobKumarSarkerSources,
+  ...habiburRahmanDmpSources,
+  ...mdShahabuddinKhanSources,
+  ...mofizUddinAhmedSources,
+  ...mKhurshidHossainSources,
+  ...barristerMdHarunArRashidSources,
+  ...mdSaifulAlamSources,
+  ...hamidulHaqueSources,
   ...swedenAslamSources,
   ...subrataBainSources,
   ...jisanAhmedSources,

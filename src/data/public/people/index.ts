@@ -12,6 +12,16 @@ import { ziaulAhsan } from "./ziaul-ahsan";
 import { akhtaruzzamanGazipur } from "./akhtaruzzaman-gazipur";
 import { harunOrRashid } from "./harun-or-rashid";
 import { mdShahedKarim } from "./md-shahed-karim";
+import { benazirAhmed } from "./benazir-ahmed";
+import { monirulIslam } from "./monirul-islam";
+import { biplobKumarSarker } from "./biplob-kumar-sarker";
+import { habiburRahmanDmp } from "./habibur-rahman-dmp";
+import { mdShahabuddinKhan } from "./md-shahabuddin-khan";
+import { mofizUddinAhmed } from "./mofiz-uddin-ahmed";
+import { mKhurshidHossain } from "./m-khurshid-hossain";
+import { barristerMdHarunArRashid } from "./barrister-md-harun-ar-rashid";
+import { mdSaifulAlam } from "./md-saiful-alam";
+import { hamidulHaque } from "./hamidul-haque";
 import { swedenAslam } from "./sweden-aslam";
 import { subrataBain } from "./subrata-bain";
 import { jisanAhmed } from "./jisan-ahmed";
@@ -38,6 +48,16 @@ export const publicPeople = [
   akhtaruzzamanGazipur,
   harunOrRashid,
   mdShahedKarim,
+  benazirAhmed,
+  monirulIslam,
+  biplobKumarSarker,
+  habiburRahmanDmp,
+  mdShahabuddinKhan,
+  mofizUddinAhmed,
+  mKhurshidHossain,
+  barristerMdHarunArRashid,
+  mdSaifulAlam,
+  hamidulHaque,
   swedenAslam,
   subrataBain,
   jisanAhmed,
