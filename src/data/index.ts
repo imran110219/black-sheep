@@ -42,6 +42,7 @@ import {
   roadSafetyMovement2018Incidents,
   roadSafetyMovement2018NewsRecords
 } from "./public/records/road-safety-movement-2018";
+import { financialScandalIncidents } from "./public/records/financial-scandals";
 export { publicPeople as people, publicSources as sources } from "./public";
 
 export const areas = [...sheikhHasinaAreas, ...shaplaChattarAreas, ...bdrPilkhanaAreas];
@@ -69,7 +70,8 @@ export const incidents = [
   ...sheikhHasinaIncidents,
   ...shaplaChattarIncidents,
   ...bdrPilkhanaIncidents,
-  ...roadSafetyMovement2018Incidents
+  ...roadSafetyMovement2018Incidents,
+  ...financialScandalIncidents
 ];
 export const institutionAssociations = sheikhHasinaInstitutionAssociations;
 export const institutions = [

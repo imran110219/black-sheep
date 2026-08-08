@@ -1,4 +1,4 @@
-import { publicPersonIds } from "../ids";
+import { publicIncidentIds, publicPersonIds } from "../ids";
 import { createPublicPerson } from "./_person-factory";
 
 export const rafiqulAmin = createPublicPerson({
@@ -32,5 +32,6 @@ export const rafiqulAmin = createPublicPerson({
   overviewBn:
     "Daily Star ও Dhaka Tribune reporting-এ বলা হয়েছে, Destiny money-laundering case-এ রফিকুল আমীন ও অন্যরা সাজা পেয়েছেন। Investor-loss ও company-network claims source-specific রাখা উচিত।",
   patternsEn: "Reported themes: MLM operations, investor funds, money-laundering conviction.",
-  patternsBn: "প্রতিবেদনভিত্তিক থিম: MLM operations, investor funds, money-laundering conviction।"
+  patternsBn: "প্রতিবেদনভিত্তিক থিম: MLM operations, investor funds, money-laundering conviction।",
+  incidentIds: [publicIncidentIds.destinyMoneyLaundering]
 });

@@ -28,6 +28,7 @@ export type PublicPersonSeed = {
   overviewBn: string;
   patternsEn?: string;
   patternsBn?: string;
+  incidentIds?: string[];
   narrativeStyle?: "general" | "caseHistory";
 };
 
@@ -116,7 +117,7 @@ export function createPublicPerson(seed: PublicPersonSeed): PersonProfile {
     primaryAreaEn: seed.primaryAreaEn,
     primaryAreaIds: [],
     claimIds: [],
-    incidentIds: [],
+    incidentIds: seed.incidentIds ?? [],
     institutionAssociationIds: [],
     geographicAssociationIds: [],
     city: seed.city,

@@ -1,4 +1,4 @@
-import { publicPersonIds } from "../ids";
+import { publicIncidentIds, publicPersonIds } from "../ids";
 import { createPublicPerson } from "./_person-factory";
 
 export const shamimaNasrinEvaly = createPublicPerson({
@@ -34,5 +34,6 @@ export const shamimaNasrinEvaly = createPublicPerson({
   patternsEn:
     "Reported themes: Evaly corporate governance, e-commerce fraud case, arrest and bail status.",
   patternsBn:
-    "প্রতিবেদনভিত্তিক থিম: Evaly corporate governance, e-commerce fraud case, arrest and bail status।"
+    "প্রতিবেদনভিত্তিক থিম: Evaly corporate governance, e-commerce fraud case, arrest and bail status।",
+  incidentIds: [publicIncidentIds.evalyConsumerPaymentFraud]
 });

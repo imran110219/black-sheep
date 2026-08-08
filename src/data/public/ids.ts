@@ -316,7 +316,12 @@ export const publicIncidentIds = {
   sheikhHasinaJulyAugustUprising: "00000000-0000-4000-8000-000000000341",
   shaplaChattarCrackdown2013: "00000000-0000-4000-8000-000000000342",
   bdrPilkhanaMassacre2009: "00000000-0000-4000-8000-000000000343",
-  roadSafetyMovement2018: "00000000-0000-4000-8000-000000000344"
+  roadSafetyMovement2018: "00000000-0000-4000-8000-000000000344",
+  hallmarkSonaliBankLoanScam: "00000000-0000-4000-8000-000000000345",
+  basicBankLoanScam: "00000000-0000-4000-8000-000000000346",
+  destinyMoneyLaundering: "00000000-0000-4000-8000-000000000347",
+  pkHalderFinancialInstitutionFraud: "00000000-0000-4000-8000-000000000348",
+  evalyConsumerPaymentFraud: "00000000-0000-4000-8000-000000000349"
 } as const;
 
 export const publicAreaIds = {

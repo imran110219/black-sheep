@@ -1,4 +1,4 @@
-import { publicPersonIds } from "../ids";
+import { publicIncidentIds, publicPersonIds } from "../ids";
 import { createPublicPerson } from "./_person-factory";
 
 export const jesminIslam = createPublicPerson({
@@ -34,5 +34,6 @@ export const jesminIslam = createPublicPerson({
   patternsEn:
     "Reported themes: corporate chairperson role, state-bank loan case, conviction reporting.",
   patternsBn:
-    "প্রতিবেদনভিত্তিক থিম: corporate chairperson role, state-bank loan case, conviction reporting।"
+    "প্রতিবেদনভিত্তিক থিম: corporate chairperson role, state-bank loan case, conviction reporting।",
+  incidentIds: [publicIncidentIds.hallmarkSonaliBankLoanScam]
 });

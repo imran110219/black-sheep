@@ -1,4 +1,4 @@
-import { publicPersonIds } from "../ids";
+import { publicIncidentIds, publicPersonIds } from "../ids";
 import { createPublicPerson } from "./_person-factory";
 
 export const sheikhAbdulHyeBacchu = createPublicPerson({
@@ -33,5 +33,6 @@ export const sheikhAbdulHyeBacchu = createPublicPerson({
     "Daily Star ও BSS reporting-এ বলা হয়েছে, alleged loan irregularities নিয়ে সাবেক Basic Bank chairman শেখ আবদুল হাই বাচ্চু ও অন্যদের বিরুদ্ধে দুদক proceedings করেছে। এই প্রোফাইল এগুলোকে case ও charge-sheet records হিসেবে রাখে, পরবর্তী judgment ছাড়া final conviction নয়।",
   patternsEn: "Reported themes: state-owned banking governance, loan irregularities, ACC cases.",
   patternsBn:
-    "প্রতিবেদনভিত্তিক থিম: রাষ্ট্রায়ত্ত ব্যাংক governance, loan irregularities, দুদক মামলা।"
+    "প্রতিবেদনভিত্তিক থিম: রাষ্ট্রায়ত্ত ব্যাংক governance, loan irregularities, দুদক মামলা।",
+  incidentIds: [publicIncidentIds.basicBankLoanScam]
 });
