@@ -317,7 +317,7 @@ Final response:
 
 ## 9. Repository Or Route Refactor
 
-```text
+````text
 Refactor Black Sheep route/page data access without changing editorial content.
 
 Scope:
@@ -341,4 +341,87 @@ Final response:
 - repository methods changed
 - route files changed
 - validation results
+
+## 10. Add Or Enrich A Historical Event
+
+```text
+Add this historical event to Black Sheep:
+
+Event details:
+- title:
+- Bangla title if known:
+- date or period:
+- location or area:
+- short description:
+- known people:
+- known organizations or institutions:
+- source links or search leads:
+
+Goal:
+- First determine whether this event already exists in Black Sheep.
+- If it exists, enrich the existing event without creating a duplicate.
+- If it does not exist, research and add one source-backed IncidentRecord, then add the related public people, news, sources, areas, institutions, claims, cases, impacts, responses, corrections, and timeline links that the evidence supports.
+
+Tasks:
+1. Read AGENTS.md, docs/ai-data-workflow.md, docs/domain-model.md, and docs/editorial-safety.md.
+2. Search the repository before editing:
+   - rg -i "event title|Bangla title|alias|location|date" src/data/public
+   - rg -i "incident|event title|location" src/data/public/records src/data/public/sources
+   - rg "source-url-fragment" src/data/public/sources
+3. Check for duplicates by:
+   - event slug
+   - English and Bangla titles
+   - alternate names and aliases
+   - date or date range
+   - area or location
+   - matching source URLs, case numbers, or official document numbers
+4. If the event exists:
+   - read the existing IncidentRecord and linked sources
+   - preserve its id and slug
+   - add only genuinely new source-backed facts
+   - merge duplicate source links instead of creating duplicate SourceRecords
+   - preserve existing corrections and revision history
+5. If the event does not exist:
+   - search established news, official records, court or tribunal reporting, government/ACC/police records, human-rights reports, and reputable investigations
+   - create a source-backed IncidentRecord in `src/data/public/records/<event-slug>.ts`
+   - use a precise incident type, date or period, broad public area, description, impact, sourceIds, and related ids
+   - do not use a private address or precise private location
+6. Research related people only after establishing the event from reliable sources:
+   - check existing people by English/Bangla name and aliases before adding anyone
+   - add an existing person only when a source supports a public-interest connection
+   - add a new person only when the person is publicly identifiable, source-backed, privacy-safe, and relevant to the event
+   - record the exact role: leader, decision-maker, subject, accused, victim, witness, official, beneficiary, related person, or other
+   - do not imply that every linked person caused or committed the event
+7. Research and link related records only when supported:
+   - `SourceRecord` for each source bundle and source URL
+   - `NewsRecord` for distinct news coverage
+   - `Area` and `GeographicAssociation` for broad public geography
+   - `Institution` and `InstitutionAssociation` for public organizations or institutions
+   - `ClaimRecord` for a public-interest claim or theme that is not itself a case
+   - `CaseRecord` only for a real filed case, tribunal proceeding, official inquiry, sanction, or other source-backed legal/official process
+   - `ImpactRecord` only for source-backed consequences; do not invent numeric values
+   - `SubjectResponse`, `CorrectionRecord`, and `RevisionRecord` when source-backed and applicable
+8. Preserve status boundaries. Clearly distinguish reported event, allegation, investigation, official finding, charge, trial, conviction, acquittal, dismissal, disputed claim, retraction, and historical interpretation.
+9. Do not create placeholder cases, placeholder people, fake news, fictional institutions, or unsourced associations merely to fill sections.
+10. Keep Bangla and English titles, summaries, descriptions, roles, and editorial context synchronized.
+11. Update only the necessary public data indexes, ids, and repository-backed context wiring. Routes must not import data files directly.
+12. Run:
+   - pnpm format:check
+   - pnpm lint
+   - pnpm typecheck
+   - pnpm test
+   - pnpm build
+
+Final response:
+- state whether the event already existed or was newly added
+- provide the event slug and affected files
+- list related people added or enriched and their exact documented roles
+- list news, sources, areas, institutions, claims, cases, impacts, responses, and corrections added
+- state duplicate checks performed
+- state unresolved status or identity uncertainty
+- state validation results
+````
+
+```
+
 ```

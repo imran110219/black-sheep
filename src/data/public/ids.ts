@@ -91,7 +91,22 @@ export const publicPersonIds = {
   golamKibriaShamim: "00000000-0000-4000-8000-000000000120",
   mohammadRasselEvaly: "00000000-0000-4000-8000-000000000121",
   shamimaNasrinEvaly: "00000000-0000-4000-8000-000000000122",
-  skSurChowdhury: "00000000-0000-4000-8000-000000000123"
+  skSurChowdhury: "00000000-0000-4000-8000-000000000123",
+  mohiuddinKhanAlamgir: "00000000-0000-4000-8000-000000000124",
+  shamsulHaqueTuku: "00000000-0000-4000-8000-000000000125",
+  sheikhFazlulKarimSelim: "00000000-0000-4000-8000-000000000126",
+  afmBahauddinNasim: "00000000-0000-4000-8000-000000000127",
+  abdulLatifSiddique: "00000000-0000-4000-8000-000000000128",
+  mrinalKantiDas: "00000000-0000-4000-8000-000000000129",
+  mofazzalHossainChowdhuryMaya: "00000000-0000-4000-8000-000000000130",
+  omarFarukChowdhury: "00000000-0000-4000-8000-000000000131",
+  salahuddinMahmud: "00000000-0000-4000-8000-000000000132",
+  imranHSarker: "00000000-0000-4000-8000-000000000133",
+  shahriarKabir: "00000000-0000-4000-8000-000000000134",
+  mozammelHaqueBabu: "00000000-0000-4000-8000-000000000135",
+  farzanaRupa: "00000000-0000-4000-8000-000000000136",
+  hasanMahmudKhandaker: "00000000-0000-4000-8000-000000000137",
+  akmShahidulHoque: "00000000-0000-4000-8000-000000000138"
 } as const;
 
 export const publicSourceIds = {
@@ -233,22 +248,32 @@ export const publicSourceIds = {
   evalyDhakaTribuneBail: "00000000-0000-4000-8000-000000000607",
   evalyTbsShamimaBail: "00000000-0000-4000-8000-000000000608",
   skSurDailyStarAccCase: "00000000-0000-4000-8000-000000000609",
-  skSurTbsAccCase: "00000000-0000-4000-8000-000000000610"
+  skSurTbsAccCase: "00000000-0000-4000-8000-000000000610",
+  shaplaChattarTbsTribunal: "00000000-0000-4000-8000-000000000611",
+  shaplaChattarBssTribunal: "00000000-0000-4000-8000-000000000612",
+  shaplaChattarBdnewsTribunal: "00000000-0000-4000-8000-000000000613",
+  shaplaChattarDailyStarWarrants: "00000000-0000-4000-8000-000000000614",
+  shaplaChattarBssInvestigation: "00000000-0000-4000-8000-000000000615",
+  shaplaChattarHumanRightsWatch: "00000000-0000-4000-8000-000000000616",
+  shaplaChattarOdhikarReport: "00000000-0000-4000-8000-000000000617"
 } as const;
 
 export const publicClaimIds = {
   sheikhHasinaJulyUprisingRightsFindings: "00000000-0000-4000-8000-000000000301",
   sheikhHasinaIctCommandResponsibility: "00000000-0000-4000-8000-000000000302",
   sheikhHasinaElectionControversies: "00000000-0000-4000-8000-000000000303",
-  sheikhHasinaExecutiveCentralisation: "00000000-0000-4000-8000-000000000304"
+  sheikhHasinaExecutiveCentralisation: "00000000-0000-4000-8000-000000000304",
+  shaplaChattarCrackdownAccountability: "00000000-0000-4000-8000-000000000305"
 } as const;
 
 export const publicCaseIds = {
-  sheikhHasinaIctJulyUprising: "00000000-0000-4000-8000-000000000321"
+  sheikhHasinaIctJulyUprising: "00000000-0000-4000-8000-000000000321",
+  shaplaChattarCrackdownTribunal: "00000000-0000-4000-8000-000000000322"
 } as const;
 
 export const publicIncidentIds = {
-  sheikhHasinaJulyAugustUprising: "00000000-0000-4000-8000-000000000341"
+  sheikhHasinaJulyAugustUprising: "00000000-0000-4000-8000-000000000341",
+  shaplaChattarCrackdown2013: "00000000-0000-4000-8000-000000000342"
 } as const;
 
 export const publicAreaIds = {
@@ -256,7 +281,8 @@ export const publicAreaIds = {
   dhaka: "00000000-0000-4000-8000-000000000362",
   gopalganj3: "00000000-0000-4000-8000-000000000363",
   rangpur: "00000000-0000-4000-8000-000000000364",
-  ashulia: "00000000-0000-4000-8000-000000000365"
+  ashulia: "00000000-0000-4000-8000-000000000365",
+  motijheelShaplaChattar: "00000000-0000-4000-8000-000000000366"
 } as const;
 
 export const publicInstitutionIds = {
@@ -264,7 +290,8 @@ export const publicInstitutionIds = {
   governmentOfBangladesh: "00000000-0000-4000-8000-000000000382",
   internationalCrimesTribunal1: "00000000-0000-4000-8000-000000000383",
   bangladeshPolice: "00000000-0000-4000-8000-000000000384",
-  ohchr: "00000000-0000-4000-8000-000000000385"
+  ohchr: "00000000-0000-4000-8000-000000000385",
+  hefazatEIslamBangladesh: "00000000-0000-4000-8000-000000000386"
 } as const;
 
 export const publicAssociationIds = {
@@ -277,7 +304,8 @@ export const publicAssociationIds = {
 } as const;
 
 export const publicImpactIds = {
-  sheikhHasinaJulyUprisingHumanRights: "00000000-0000-4000-8000-000000000441"
+  sheikhHasinaJulyUprisingHumanRights: "00000000-0000-4000-8000-000000000441",
+  shaplaChattarHumanRights: "00000000-0000-4000-8000-000000000442"
 } as const;
 
 export const publicRelationshipIds = {
@@ -287,7 +315,11 @@ export const publicRelationshipIds = {
 export const publicNewsIds = {
   sheikhHasinaBssCharges: "00000000-0000-4000-8000-000000000481",
   sheikhHasinaBssAppeal: "00000000-0000-4000-8000-000000000482",
-  sheikhHasinaApReturnStatement: "00000000-0000-4000-8000-000000000483"
+  sheikhHasinaApReturnStatement: "00000000-0000-4000-8000-000000000483",
+  shaplaChattarTbsTribunal: "00000000-0000-4000-8000-000000000484",
+  shaplaChattarBssTribunal: "00000000-0000-4000-8000-000000000485",
+  shaplaChattarDailyStarWarrants: "00000000-0000-4000-8000-000000000486",
+  shaplaChattarBdnewsTribunal: "00000000-0000-4000-8000-000000000487"
 } as const;
 
 export const publicCorrectionIds = {

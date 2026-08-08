@@ -68,6 +68,7 @@ import { ershadShikdarSources } from "./ershad-shikdar";
 import { mollaMasudSources } from "./molla-masud";
 import { picchiHannanSources } from "./picchi-hannan";
 import { tokaiSagarSources } from "./tokai-sagar";
+import { shaplaChattarSources } from "./shapla-chattar";
 
 export const publicSources = [
   ...sheikhHasinaSources,
@@ -133,5 +134,6 @@ export const publicSources = [
   ...ershadShikdarSources,
   ...mollaMasudSources,
   ...picchiHannanSources,
-  ...tokaiSagarSources
+  ...tokaiSagarSources,
+  ...shaplaChattarSources
 ];

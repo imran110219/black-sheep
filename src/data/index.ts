@@ -17,18 +17,27 @@ import {
   sheikhHasinaRevisions,
   sheikhHasinaSubjectResponses
 } from "./public/records/sheikh-hasina";
+import {
+  shaplaChattarAreas,
+  shaplaChattarCases,
+  shaplaChattarClaims,
+  shaplaChattarImpactRecords,
+  shaplaChattarIncidents,
+  shaplaChattarInstitutions,
+  shaplaChattarNewsRecords
+} from "./public/records/shapla-chattar";
 export { publicPeople as people, publicSources as sources } from "./public";
 
-export const areas = sheikhHasinaAreas;
-export const cases = sheikhHasinaCases;
-export const claims = sheikhHasinaClaims;
+export const areas = [...sheikhHasinaAreas, ...shaplaChattarAreas];
+export const cases = [...sheikhHasinaCases, ...shaplaChattarCases];
+export const claims = [...sheikhHasinaClaims, ...shaplaChattarClaims];
 export const corrections = sheikhHasinaCorrections;
 export const geographicAssociations = sheikhHasinaGeographicAssociations;
-export const impactRecords = sheikhHasinaImpactRecords;
-export const incidents = sheikhHasinaIncidents;
+export const impactRecords = [...sheikhHasinaImpactRecords, ...shaplaChattarImpactRecords];
+export const incidents = [...sheikhHasinaIncidents, ...shaplaChattarIncidents];
 export const institutionAssociations = sheikhHasinaInstitutionAssociations;
-export const institutions = sheikhHasinaInstitutions;
-export const newsRecords = sheikhHasinaNewsRecords;
+export const institutions = [...sheikhHasinaInstitutions, ...shaplaChattarInstitutions];
+export const newsRecords = [...sheikhHasinaNewsRecords, ...shaplaChattarNewsRecords];
 export const relationships = sheikhHasinaRelationships;
 export const revisions = sheikhHasinaRevisions;
 export const subjectResponses = sheikhHasinaSubjectResponses;

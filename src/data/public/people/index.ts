@@ -91,6 +91,21 @@ import { ershadShikdar } from "./ershad-shikdar";
 import { mollaMasud } from "./molla-masud";
 import { picchiHannan } from "./picchi-hannan";
 import { tokaiSagar } from "./tokai-sagar";
+import { mohiuddinKhanAlamgir } from "./mohiuddin-khan-alamgir";
+import { shamsulHaqueTuku } from "./shamsul-haque-tuku";
+import { sheikhFazlulKarimSelim } from "./sheikh-fazlul-karim-selim";
+import { afmBahauddinNasim } from "./afm-bahauddin-nasim";
+import { abdulLatifSiddique } from "./abdul-latif-siddique";
+import { mrinalKantiDas } from "./mrinal-kanti-das";
+import { mofazzalHossainChowdhuryMaya } from "./mofazzal-hossain-chowdhury-maya";
+import { omarFarukChowdhury } from "./omar-faruk-chowdhury";
+import { salahuddinMahmud } from "./salahuddin-mahmud";
+import { imranHSarker } from "./imran-h-sarker";
+import { shahriarKabir } from "./shahriar-kabir";
+import { mozammelHaqueBabu } from "./mozammel-haque-babu";
+import { farzanaRupa } from "./farzana-rupa";
+import { hasanMahmudKhandaker } from "./hasan-mahmud-khandaker";
+import { akmShahidulHoque } from "./akm-shahidul-hoque";
 
 export const publicPeople = [
   sheikhHasina,
@@ -185,5 +200,20 @@ export const publicPeople = [
   ershadShikdar,
   mollaMasud,
   picchiHannan,
-  tokaiSagar
+  tokaiSagar,
+  mohiuddinKhanAlamgir,
+  shamsulHaqueTuku,
+  sheikhFazlulKarimSelim,
+  afmBahauddinNasim,
+  abdulLatifSiddique,
+  mrinalKantiDas,
+  mofazzalHossainChowdhuryMaya,
+  omarFarukChowdhury,
+  salahuddinMahmud,
+  imranHSarker,
+  shahriarKabir,
+  mozammelHaqueBabu,
+  farzanaRupa,
+  hasanMahmudKhandaker,
+  akmShahidulHoque
 ];
