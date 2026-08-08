@@ -15,9 +15,9 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
     <footer className="mt-16 border-t bg-muted/35">
       <div className="mx-auto grid max-w-7xl gap-6 px-4 py-8 md:grid-cols-[1fr_auto]">
         <div>
-          <p className="font-semibold">Black Sheep</p>
+          <p className="font-semibold">{locale === "bn" ? "কালোখাতা" : "KaloKhata"}</p>
           <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{t("brand.descriptor")}</p>
-          <p className="mt-2 text-xs text-muted-foreground">editorial@blacksheep.example</p>
+          <p className="mt-2 text-xs text-muted-foreground">editorial@kalokhata.example</p>
         </div>
         <nav className="flex flex-wrap gap-3 text-sm" aria-label="Footer navigation">
           {links.map(([href, label]) => (

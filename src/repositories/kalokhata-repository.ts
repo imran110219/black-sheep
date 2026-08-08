@@ -207,7 +207,7 @@ export type GlobalSearchResult =
       contextEn: string;
     };
 
-export interface BlackSheepRepository {
+export interface KaloKhataRepository {
   searchPeople(query: PeopleSearchQuery): Promise<PaginatedResponse<PersonCard>>;
   getPersonBySlug(slug: string): Promise<PersonProfile | null>;
   getClaimBySlug(slug: string): Promise<ClaimRecord | null>;

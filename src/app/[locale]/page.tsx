@@ -16,7 +16,7 @@ import { PersonCard } from "@/features/people/PersonCard";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/domain/common";
 import { pageMetadata } from "@/lib/metadata";
-import { createBlackSheepRepository } from "@/repositories/repository-factory";
+import { createKaloKhataRepository } from "@/repositories/repository-factory";
 
 const influenceLinks = [
   {
@@ -54,7 +54,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return pageMetadata({
-    title: "Black Sheep",
+    title: locale === "bn" ? "কালোখাতা" : "KaloKhata",
     description:
       locale === "bn"
         ? "ক্ষমতা, কর্মকাণ্ড, সম্পর্ক ও বিতর্কের অনুসন্ধানযোগ্য ইতিহাস"
@@ -74,7 +74,7 @@ export default async function HomePage({
   const { locale } = await params;
   const sp = await searchParams;
   const t = await getTranslations({ locale });
-  const repo = createBlackSheepRepository();
+  const repo = createKaloKhataRepository();
   const [profiles, incidents, dossiers, metadata, searchResults, recentCases] = await Promise.all([
     repo.getFeaturedProfiles(3),
     repo.getFeaturedIncidents(3),
@@ -102,8 +102,8 @@ export default async function HomePage({
             </h1>
             <p className="mt-6 max-w-3xl text-lg text-primary-foreground/75">
               {locale === "bn"
-                ? "Black Sheep-এ জনজীবনে প্রভাবশালী ও বিতর্কিত ব্যক্তিদের রাজনৈতিক ভূমিকা, কর্মকাণ্ড, অভিযোগ, মামলা, সম্পদ, প্রতিষ্ঠান, এলাকা, সম্পর্ক ও ঐতিহাসিক প্রভাব এক জায়গায় তুলে ধরা হয়।"
-                : "Black Sheep brings together public-interest profiles of influential and controversial figures: their roles, actions, allegations, cases, assets, institutions, places, relationships, and historical impact."}
+                ? "কালোখাতায় জনজীবনে প্রভাবশালী ও বিতর্কিত ব্যক্তিদের রাজনৈতিক ভূমিকা, কর্মকাণ্ড, অভিযোগ, মামলা, সম্পদ, প্রতিষ্ঠান, এলাকা, সম্পর্ক ও ঐতিহাসিক প্রভাব এক জায়গায় তুলে ধরা হয়।"
+                : "KaloKhata brings together public-interest profiles of influential and controversial figures: their roles, actions, allegations, cases, assets, institutions, places, relationships, and historical impact."}
             </p>
           </div>
           <form action={`/${locale}`} className="flex max-w-3xl gap-2">

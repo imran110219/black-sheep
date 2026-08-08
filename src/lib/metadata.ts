@@ -25,7 +25,7 @@ export function pageMetadata({
         en: `/en${path}`
       }
     },
-    openGraph: { title, description, url, siteName: "Black Sheep", locale },
+    openGraph: { title, description, url, siteName: "KaloKhata", locale },
     twitter: { card: "summary", title, description },
     robots: env.NEXT_PUBLIC_ALLOW_INDEXING ? undefined : { index: false, follow: false }
   };

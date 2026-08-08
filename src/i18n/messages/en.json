@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "Black Sheep",
+    "name": "KaloKhata",
     "descriptor": "A documented public-interest accountability archive"
   },
   "nav": {
@@ -33,7 +33,7 @@
   },
   "home": {
     "heroTitle": "A documented view of power, allegations, and cases",
-    "heroCopy": "Black Sheep is a searchable archive of public-interest people, cases, public documents, news coverage, and legal statuses. Allegations are not presented as court findings.",
+    "heroCopy": "KaloKhata is a searchable archive of public-interest people, cases, public documents, news coverage, and legal statuses. Allegations are not presented as court findings.",
     "searchPlaceholder": "Search names, aliases, organizations, or topics",
     "disclaimer": "Being listed in a case or report does not by itself establish guilt.",
     "stats": "Archive statistics",

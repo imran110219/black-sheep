@@ -5,7 +5,7 @@ import { CaseCard } from "@/features/cases/CaseCard";
 import { NewsCard } from "@/features/news/NewsCard";
 import { SourceCard } from "@/features/sources/SourceCard";
 import { Link } from "@/i18n/navigation";
-import { createBlackSheepRepository } from "@/repositories/repository-factory";
+import { createKaloKhataRepository } from "@/repositories/repository-factory";
 
 export default async function IncidentPage({
   params
@@ -13,7 +13,7 @@ export default async function IncidentPage({
   params: Promise<{ locale: Locale; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const repo = createBlackSheepRepository();
+  const repo = createKaloKhataRepository();
   const incident = await repo.getIncidentBySlug(slug);
   if (!incident) notFound();
   const context = await repo.getIncidentContext(incident.id);

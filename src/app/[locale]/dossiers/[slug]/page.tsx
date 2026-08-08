@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { PersonCard } from "@/features/people/PersonCard";
 import { SourceCard } from "@/features/sources/SourceCard";
 import { Link } from "@/i18n/navigation";
-import { createBlackSheepRepository } from "@/repositories/repository-factory";
+import { createKaloKhataRepository } from "@/repositories/repository-factory";
 
 export default async function DossierPage({
   params
@@ -12,7 +12,7 @@ export default async function DossierPage({
   params: Promise<{ locale: Locale; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const repo = createBlackSheepRepository();
+  const repo = createKaloKhataRepository();
   const dossier = await repo.getDossierBySlug(slug);
   if (!dossier) notFound();
   const context = await repo.getDossierContext(dossier.id);

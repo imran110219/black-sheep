@@ -213,7 +213,7 @@ Before adding a new structured public record:
 4. Keep association role labels exact. Alleged association, reported association, official role, and verified role are different.
 5. Keep broad geography only. Do not publish precise private residences or private coordinates.
 6. Link the public person's `claimIds`, `incidentIds`, `institutionAssociationIds`, or `geographicAssociationIds` only after the structured record exists and has `sourceIds`.
-7. Keep all route/page access behind `BlackSheepRepository`; do not import fixture arrays directly in routes.
+7. Keep all route/page access behind `KaloKhataRepository`; do not import fixture arrays directly in routes.
 
 ## Quality Gates
 

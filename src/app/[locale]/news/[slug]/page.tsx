@@ -6,7 +6,7 @@ import { CaseCard } from "@/features/cases/CaseCard";
 import { PersonCard } from "@/features/people/PersonCard";
 import { formatDate } from "@/lib/dates";
 import { categoryLabels, verificationLabels } from "@/lib/status";
-import { createBlackSheepRepository } from "@/repositories/repository-factory";
+import { createKaloKhataRepository } from "@/repositories/repository-factory";
 
 export default async function NewsPage({
   params
@@ -14,7 +14,7 @@ export default async function NewsPage({
   params: Promise<{ locale: Locale; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const repo = createBlackSheepRepository();
+  const repo = createKaloKhataRepository();
   const news = await repo.getNewsBySlug(slug);
   if (!news) notFound();
   const context = await repo.getNewsContext(news.id);

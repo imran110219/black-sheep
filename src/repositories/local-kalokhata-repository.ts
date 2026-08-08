@@ -24,12 +24,12 @@ import {
 } from "@/data";
 import { applyPeopleFilters, normalizeQuery, paginate, sortPeople } from "@/lib/search";
 import type {
-  BlackSheepRepository,
+  KaloKhataRepository,
   FilterMetadata,
   GlobalSearchResult
-} from "./black-sheep-repository";
+} from "./kalokhata-repository";
 
-export class LocalBlackSheepRepository implements BlackSheepRepository {
+export class LocalKaloKhataRepository implements KaloKhataRepository {
   async searchPeople(query: PeopleSearchQuery) {
     const filtered = applyPeopleFilters(people, cases, query);
     const sorted = sortPeople(filtered, query.sort);

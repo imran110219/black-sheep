@@ -4,7 +4,7 @@ import type { Locale } from "@/domain/common";
 import type { PeopleSearchQuery } from "@/domain/person";
 import { PeopleDirectory } from "@/features/people/PeopleDirectory";
 import { pageMetadata } from "@/lib/metadata";
-import { createBlackSheepRepository } from "@/repositories/repository-factory";
+import { createKaloKhataRepository } from "@/repositories/repository-factory";
 
 const peopleSearchParamsSchema = z.object({
   query: z.string().optional(),
@@ -81,7 +81,7 @@ export default async function PeoplePage({
     page: sp.page,
     pageSize: 9
   };
-  const repo = createBlackSheepRepository();
+  const repo = createKaloKhataRepository();
   const [result, metadata] = await Promise.all([
     repo.searchPeople(query),
     repo.getFilterMetadata()

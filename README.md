@@ -1,6 +1,6 @@
-# Black Sheep
+# KaloKhata
 
-Black Sheep is a frontend-only illustrated historical accountability encyclopedia. It presents public profiles, historical narrative, influence domains, networks, source records, claims, incidents, cases, institutions, areas, corrections, and evidence structures without declaring that a listed person is guilty.
+KaloKhata is a frontend-only illustrated historical accountability encyclopedia. It presents public profiles, historical narrative, influence domains, networks, source records, claims, incidents, cases, institutions, areas, corrections, and evidence structures without declaring that a listed person is guilty.
 
 Default locale is Bangla (`/bn`), with English at `/en`.
 
@@ -29,7 +29,7 @@ pnpm validate
 
 ## Architecture
 
-Routes never import data files directly. Pages depend on `BlackSheepRepository`, which reads source-backed records exported by `src/data`. Public DTOs avoid private identifiers and direct guilt booleans. The product is organized into three layers:
+Routes never import data files directly. Pages depend on `KaloKhataRepository`, which reads source-backed records exported by `src/data`. Public DTOs avoid private identifiers and direct guilt booleans. The product is organized into three layers:
 
 - Story: identity, why listed, historical overview, power base, major events, impact, and legacy.
 - Network: people, organizations, institutions, areas, relationships, influence domains, and associations.

@@ -15,7 +15,7 @@ import { Link } from "@/i18n/navigation";
 import { formatDate } from "@/lib/dates";
 import { pageMetadata } from "@/lib/metadata";
 import { categoryLabels, roleLabels } from "@/lib/status";
-import { createBlackSheepRepository } from "@/repositories/repository-factory";
+import { createKaloKhataRepository } from "@/repositories/repository-factory";
 
 export async function generateMetadata({
   params
@@ -23,7 +23,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const record = await createBlackSheepRepository().getCaseBySlug(slug);
+  const record = await createKaloKhataRepository().getCaseBySlug(slug);
   return record
     ? pageMetadata({
         title: locale === "bn" ? record.titleBn : record.titleEn,
@@ -40,7 +40,7 @@ export default async function CasePage({
   params: Promise<{ locale: Locale; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const repo = createBlackSheepRepository();
+  const repo = createKaloKhataRepository();
   const record = await repo.getCaseBySlug(slug);
   if (!record) notFound();
   const context = await repo.getCaseContext(record.id);

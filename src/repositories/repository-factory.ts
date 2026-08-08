@@ -1,6 +1,6 @@
-import type { BlackSheepRepository } from "./black-sheep-repository";
-import { LocalBlackSheepRepository } from "./local-black-sheep-repository";
+import type { KaloKhataRepository } from "./kalokhata-repository";
+import { LocalKaloKhataRepository } from "./local-kalokhata-repository";
 
-export function createBlackSheepRepository(): BlackSheepRepository {
-  return new LocalBlackSheepRepository();
+export function createKaloKhataRepository(): KaloKhataRepository {
+  return new LocalKaloKhataRepository();
 }

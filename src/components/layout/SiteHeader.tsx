@@ -24,11 +24,13 @@ export async function SiteHeader({ locale }: { locale: Locale }) {
           href="/"
           locale={locale}
           className="flex items-center gap-3"
-          aria-label="Black Sheep home"
+          aria-label={locale === "bn" ? "কালোখাতা হোম" : "KaloKhata home"}
         >
           <BrandMark className="h-9 w-9 text-foreground" />
           <span>
-            <span className="block font-semibold leading-tight">Black Sheep</span>
+            <span className="block font-semibold leading-tight">
+              {locale === "bn" ? "কালোখাতা" : "KaloKhata"}
+            </span>
             <span className="hidden text-xs text-muted-foreground sm:block">
               {t("brand.descriptor")}
             </span>

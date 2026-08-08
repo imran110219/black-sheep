@@ -19,7 +19,7 @@ import {
   sortPeople
 } from "@/lib/search";
 import { statusLabel } from "@/lib/status";
-import { createBlackSheepRepository } from "@/repositories/repository-factory";
+import { createKaloKhataRepository } from "@/repositories/repository-factory";
 
 describe("search utilities", () => {
   const publicPerson = people.find((person) => person.slug === "sweden-aslam");
@@ -88,7 +88,7 @@ describe("search utilities", () => {
   });
 
   it("reverse-indexes incident roles into person story context", async () => {
-    const repo = createBlackSheepRepository();
+    const repo = createKaloKhataRepository();
     const roadSafety = incidents.find((incident) => incident.slug === "road-safety-movement-2018");
     expect(roadSafety).toBeDefined();
     for (const link of roadSafety!.personLinks) {
@@ -99,7 +99,7 @@ describe("search utilities", () => {
   });
 
   it("searches across people, institutions, and incidents", async () => {
-    const repo = createBlackSheepRepository();
+    const repo = createKaloKhataRepository();
     expect(await repo.globalSearch("Awami League")).toEqual(
       expect.arrayContaining([expect.objectContaining({ type: "INSTITUTION" })])
     );

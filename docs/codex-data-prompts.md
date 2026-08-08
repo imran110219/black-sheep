@@ -15,7 +15,7 @@ Current data boundary:
 ## 1. Search Web and Suggest People
 
 ```text
-Search the web for public-interest Bangladeshi people who may fit Black Sheep's accountability encyclopedia.
+Search the web for public-interest Bangladeshi people who may fit KaloKhata's accountability encyclopedia.
 
 Goal:
 - Suggest candidate people only.
@@ -50,7 +50,7 @@ Do not use guilt language. Do not include private identifiers.
 ## 2. Add One Person From Details
 
 ```text
-Add this person to the Black Sheep public data:
+Add this person to the KaloKhata public data:
 
 Person:
 - nameEn:
@@ -103,7 +103,7 @@ Final response:
 ## 3. Extract a News Link and Add Data
 
 ```text
-Check this news link and add relevant public data to Black Sheep:
+Check this news link and add relevant public data to KaloKhata:
 
 URL:
 
@@ -142,7 +142,7 @@ Final response:
 ## 4. Enrich Existing Character
 
 ```text
-Enrich this existing Black Sheep profile:
+Enrich this existing KaloKhata profile:
 
 Person slug or name:
 Focus area:
@@ -186,7 +186,7 @@ Final response:
 ## 5. Duplicate Audit
 
 ```text
-Audit Black Sheep public data for duplicate people or duplicate sources.
+Audit KaloKhata public data for duplicate people or duplicate sources.
 
 Tasks:
 1. Search duplicate person indicators:
@@ -249,7 +249,7 @@ Final response:
 ## 7. Add Source-Backed Claim Or Incident
 
 ```text
-Add a structured source-backed Story/Evidence record for an existing Black Sheep public person.
+Add a structured source-backed Story/Evidence record for an existing KaloKhata public person.
 
 Target person slug:
 Record type:
@@ -318,7 +318,7 @@ Final response:
 ## 9. Repository Or Route Refactor
 
 ````text
-Refactor Black Sheep route/page data access without changing editorial content.
+Refactor KaloKhata route/page data access without changing editorial content.
 
 Scope:
 
@@ -327,7 +327,7 @@ Tasks:
 2. Keep frontend-only scope.
 3. Preserve public people and source data in src/data/public.
 4. Do not import data files directly from route files.
-5. Keep all context lookups behind BlackSheepRepository methods.
+5. Keep all context lookups behind KaloKhataRepository methods.
 6. Keep strict TypeScript and Zod validation.
 7. Preserve Story, Network, and Evidence layer behavior.
 8. Run:
@@ -345,7 +345,7 @@ Final response:
 ## 10. Add Or Enrich A Historical Event
 
 ```text
-Add this historical event to Black Sheep:
+Add this historical event to KaloKhata:
 
 Event details:
 - title:
@@ -358,7 +358,7 @@ Event details:
 - source links or search leads:
 
 Goal:
-- First determine whether this event already exists in Black Sheep.
+- First determine whether this event already exists in KaloKhata.
 - If it exists, enrich the existing event without creating a duplicate.
 - If it does not exist, research and add one source-backed IncidentRecord, then add the related public people, news, sources, areas, institutions, claims, cases, impacts, responses, corrections, and timeline links that the evidence supports.
 

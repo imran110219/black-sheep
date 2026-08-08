@@ -11,7 +11,7 @@ import type { Locale } from "@/domain/common";
 import type { PeopleSearchQuery, PersonCard as PersonCardType } from "@/domain/person";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { categoryLabels, statusLabel } from "@/lib/status";
-import type { FilterMetadata } from "@/repositories/black-sheep-repository";
+import type { FilterMetadata } from "@/repositories/kalokhata-repository";
 import { PersonCard } from "./PersonCard";
 
 export function PeopleDirectory({

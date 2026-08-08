@@ -1,11 +1,11 @@
 import type { Locale } from "@/domain/common";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { Link } from "@/i18n/navigation";
-import { createBlackSheepRepository } from "@/repositories/repository-factory";
+import { createKaloKhataRepository } from "@/repositories/repository-factory";
 
 export default async function AreasPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
-  const metadata = await createBlackSheepRepository().getFilterMetadata();
+  const metadata = await createKaloKhataRepository().getFilterMetadata();
   return (
     <div className="grid gap-8">
       <Breadcrumbs locale={locale} items={[{ label: locale === "bn" ? "এলাকা" : "Places" }]} />

@@ -5,7 +5,7 @@ import { CaseCard } from "@/features/cases/CaseCard";
 import { PersonCard } from "@/features/people/PersonCard";
 import { formatDate } from "@/lib/dates";
 import { verificationLabels } from "@/lib/status";
-import { createBlackSheepRepository } from "@/repositories/repository-factory";
+import { createKaloKhataRepository } from "@/repositories/repository-factory";
 
 export default async function SourcePage({
   params
@@ -13,7 +13,7 @@ export default async function SourcePage({
   params: Promise<{ locale: Locale; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const repo = createBlackSheepRepository();
+  const repo = createKaloKhataRepository();
   const source = await repo.getSourceBySlug(slug);
   if (!source) notFound();
   const context = await repo.getSourceContext(source.id);

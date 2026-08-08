@@ -5,7 +5,7 @@ import { CaseCard } from "@/features/cases/CaseCard";
 import { PersonCard } from "@/features/people/PersonCard";
 import { SourceCard } from "@/features/sources/SourceCard";
 import { Link } from "@/i18n/navigation";
-import { createBlackSheepRepository } from "@/repositories/repository-factory";
+import { createKaloKhataRepository } from "@/repositories/repository-factory";
 
 export default async function InstitutionPage({
   params
@@ -13,7 +13,7 @@ export default async function InstitutionPage({
   params: Promise<{ locale: Locale; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const repo = createBlackSheepRepository();
+  const repo = createKaloKhataRepository();
   const institution = await repo.getInstitutionBySlug(slug);
   if (!institution) notFound();
   const context = await repo.getInstitutionContext(institution.id);

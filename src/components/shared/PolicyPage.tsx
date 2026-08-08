@@ -64,11 +64,11 @@ const content = {
   about: {
     bn: [
       "সম্পর্কে",
-      "Black Sheep ক্ষমতা, নথি, মামলা ও জবাবদিহির তথ্যকে নিরপেক্ষভাবে সাজায়। এটি রেটিং, ভোটিং, জনমত আদালত বা অপরাধী তালিকা নয়। ভবিষ্যৎ রোডম্যাপে পাবলিক API, সম্পাদকীয় সিস্টেম ও উন্নত অনুসন্ধান আছে।"
+      "কালোখাতা ক্ষমতা, নথি, মামলা ও জবাবদিহির তথ্যকে নিরপেক্ষভাবে সাজায়। এটি রেটিং, ভোটিং, জনমত আদালত বা অপরাধী তালিকা নয়। ভবিষ্যৎ রোডম্যাপে পাবলিক API, সম্পাদকীয় সিস্টেম ও উন্নত অনুসন্ধান আছে।"
     ],
     en: [
       "About",
-      "Black Sheep organizes power, documents, cases, and accountability information neutrally. It is not a rating system, voting site, public trial, or criminal list. The roadmap includes a public API, editorial system, and stronger search."
+      "KaloKhata organizes power, documents, cases, and accountability information neutrally. It is not a rating system, voting site, public trial, or criminal list. The roadmap includes a public API, editorial system, and stronger search."
     ]
   }
 } as const;

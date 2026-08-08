@@ -1,10 +1,10 @@
 import type { Locale } from "@/domain/common";
 import { CorrectionCard } from "@/features/corrections/CorrectionCard";
-import { createBlackSheepRepository } from "@/repositories/repository-factory";
+import { createKaloKhataRepository } from "@/repositories/repository-factory";
 
 export default async function CorrectionsPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
-  const corrections = await createBlackSheepRepository().getCorrections();
+  const corrections = await createKaloKhataRepository().getCorrections();
   return (
     <div className="grid gap-6">
       <header>

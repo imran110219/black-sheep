@@ -13,7 +13,7 @@ export function Breadcrumbs({
       <ol className="flex flex-wrap gap-2">
         <li>
           <Link href="/" locale={locale} className="hover:text-foreground">
-            Black Sheep
+            {locale === "bn" ? "কালোখাতা" : "KaloKhata"}
           </Link>
         </li>
         {items.map((item) => (

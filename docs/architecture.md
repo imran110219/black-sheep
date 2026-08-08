@@ -1,6 +1,6 @@
 # Architecture
 
-Black Sheep is a frontend-only Next.js App Router application. Locale-prefixed routes live under `src/app/[locale]`; Bangla and English are supported through `next-intl`.
+KaloKhata is a frontend-only Next.js App Router application. Locale-prefixed routes live under `src/app/[locale]`; Bangla and English are supported through `next-intl`.
 
 ## Rendering Model
 
@@ -10,8 +10,8 @@ Server Components are the default. Client Components are limited to UI behavior 
 
 Routes must not import data files directly. Pages and features should depend on:
 
-- `BlackSheepRepository`
-- `createBlackSheepRepository`
+- `KaloKhataRepository`
+- `createKaloKhataRepository`
 
 The current repository implementation is local and read-only. It imports source-backed records from `@/data`, primarily from `src/data/public` and the researched Sheikh Hasina record set.
 

@@ -20,7 +20,7 @@ import { RelationshipCard } from "@/features/relationships/RelationshipCard";
 import { SourceCard } from "@/features/sources/SourceCard";
 import { Link } from "@/i18n/navigation";
 import { pageMetadata } from "@/lib/metadata";
-import { createBlackSheepRepository } from "@/repositories/repository-factory";
+import { createKaloKhataRepository } from "@/repositories/repository-factory";
 
 const profileSearchParamsSchema = z.object({
   view: z.enum(["story", "evidence"]).catch("story")
@@ -32,7 +32,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const person = await createBlackSheepRepository().getPersonBySlug(slug);
+  const person = await createKaloKhataRepository().getPersonBySlug(slug);
   if (!person) return {};
   return pageMetadata({
     title: locale === "bn" ? person.nameBn : person.nameEn,
@@ -51,7 +51,7 @@ export default async function PersonPage({
 }) {
   const { locale, slug } = await params;
   const { view } = profileSearchParamsSchema.parse(await searchParams);
-  const repo = createBlackSheepRepository();
+  const repo = createKaloKhataRepository();
   const person = await repo.getPersonBySlug(slug);
   if (!person) notFound();
   const [storyContext, evidenceContext, networkContext] = await Promise.all([
@@ -136,7 +136,7 @@ export default async function PersonPage({
       ) : null}
 
       <section id="overview" className="grid gap-8 scroll-mt-32">
-        <Section title={locale === "bn" ? "কেন Black Sheep-এ" : "Why this person is listed"}>
+        <Section title={locale === "bn" ? "কেন কালোখাতায়" : "Why this person is listed"}>
           <p className="max-w-4xl text-lg text-muted-foreground">
             {locale === "bn" ? person.narrative.whyListedBn : person.narrative.whyListedEn}
           </p>

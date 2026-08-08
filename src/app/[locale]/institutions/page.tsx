@@ -1,7 +1,7 @@
 import type { Locale } from "@/domain/common";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { Link } from "@/i18n/navigation";
-import { createBlackSheepRepository } from "@/repositories/repository-factory";
+import { createKaloKhataRepository } from "@/repositories/repository-factory";
 
 export default async function InstitutionsPage({
   params
@@ -9,7 +9,7 @@ export default async function InstitutionsPage({
   params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
-  const institutions = await createBlackSheepRepository().getInstitutions();
+  const institutions = await createKaloKhataRepository().getInstitutions();
   return (
     <div className="grid gap-8">
       <Breadcrumbs
