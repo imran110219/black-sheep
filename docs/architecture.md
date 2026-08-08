@@ -62,9 +62,9 @@ The root aggregate is:
 src/data/index.ts
 ```
 
-For this product revision, it exports public people and sources, plus fictional scaffold records for claims, incidents, areas, institutions, associations, impacts, dossiers, cases, news, corrections, and revisions.
+It exports the active public people and sources, the researched Sheikh Hasina record set, and fictional scaffold records for claims, incidents, areas, institutions, associations, impacts, dossiers, cases, news, corrections, and revisions.
 
-Important boundary: public people and public sources are real-data records; scaffold claims, incidents, cases, institutions, areas, associations, impacts, and dossiers are demo records until researched and linked as source-backed public records.
+Important boundary: public people and public sources are real-data records. The Sheikh Hasina structured record set is source-backed public data. Other claims, incidents, cases, institutions, areas, associations, impacts, and dossiers currently come from demo scaffolding and must not be presented as evidence about active public people until researched and linked.
 
 Each public person and that person's primary source bundle should live in a separate slug-named file. Do not group people under labels such as former regime, terrorist, criminal, or any equivalent collection category.
 
@@ -83,6 +83,8 @@ Profile pages are ordered as:
 5. Evidence layer: legal status, cases, sources, news, responses, corrections, revisions
 
 Story View is the default. Evidence View is selected with `?view=evidence` and reorders the evidence sections higher on the page.
+
+People-directory filters are parsed with Zod at the route boundary. Supported parameters include text search, area, historical era, influence domain, institution type, legal status, claim and incident type/status, relationship and verification status, official-finding and response availability, year, sort order, and positive integer `page`. Invalid or non-finite page values fall back safely, and out-of-range pages resolve to the last available page.
 
 ## Routes
 

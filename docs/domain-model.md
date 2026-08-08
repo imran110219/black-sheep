@@ -1,6 +1,6 @@
 # Domain Model
 
-The frontend model is built around bilingual, source-aware public-interest profiles. The active people and sources exported by `src/data/index.ts` come from `src/data/public`; newer network/evidence scaffold records currently come from fictional fixtures.
+The frontend model is built around bilingual, source-aware public-interest profiles. The active people and sources exported by `src/data/index.ts` come from `src/data/public`. The Sheikh Hasina structured record set is also active public data; the remaining newer network/evidence records currently come from fictional fixtures until researched and linked.
 
 ## Conceptual Layers
 
@@ -23,7 +23,7 @@ The frontend model is built around bilingual, source-aware public-interest profi
 - publication and audit metadata: `publicationStatus`, `isActive`, `createdBy`, `updatedBy`, `lastVerifiedAt`, `publishedAt`, and `updatedAt`
 - `isDemo`, which is `false` for current public records
 
-Current active public people live in `src/data/public/people/<person-slug>.ts`.
+Current active public people live in `src/data/public/people/<person-slug>.ts`. As of 2026-08-08, the active index contains 93 public-person modules and 102 matching source modules. Counts are a snapshot, not a schema guarantee.
 
 Two existing public records are hand-authored directly; most public people use `createPublicPerson`, which supplies defaults for the newer Story/Network fields. Keep those defaults in sync when adding fields to `PersonProfile`.
 
@@ -40,7 +40,7 @@ Data files must be organized per person/character rather than under broad collec
 
 Before adding or enriching public data, follow `docs/ai-data-workflow.md` for duplicate checks, web research, source record format, and validation commands.
 
-## Scaffolded Evidence And Network Entities
+## Evidence And Network Entities
 
 The codebase also defines richer evidence and network entities:
 
@@ -98,7 +98,7 @@ Use `CaseRecord` for legal treatment of that incident. One incident can have zer
 
 ### `DossierCollection`
 
-`DossierCollection` groups related people, claims, incidents, areas, institutions, and sources into an editorial collection. Current dossier records are fictional demos.
+`DossierCollection` groups related people, claims, incidents, areas, institutions, and sources into an editorial collection. Current dossier records are fictional demos. The same demo boundary applies to scaffold claims, incidents, associations, impacts, areas, institutions, and cases unless a record is explicitly moved into a source-backed public module.
 
 ## Status Boundaries
 

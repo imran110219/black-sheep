@@ -21,9 +21,12 @@ A court case is not required for inclusion. Many profiles will be source-backed 
 Current active data state:
 
 - Real public people and real public sources are active from `src/data/public`.
-- Newer Story/Network/Evidence scaffold records may exist as fictional demo data in `src/data/fixtures`.
+- As of 2026-08-08, the active index contains 93 public-person modules and 102 source modules. Recent additions include public officials and security leaders, political and family networks, business and banking figures, and financial- and health-sector accountability profiles.
+- The Sheikh Hasina structured Story/Network/Evidence records in `src/data/public/records` are source-backed public data.
+- Other newer Story/Network/Evidence scaffold records may exist as fictional demo data in `src/data/fixtures`.
 - Demo scaffold claims, incidents, areas, institutions, associations, impacts, dossiers, cases, news, corrections, and revisions must not be treated as real evidence for public people.
 - Do not replace active `people` or `sources` exports with fixture people/sources unless the user explicitly asks for demo-only mode.
+- Adding a real public person from source-backed reporting is valid even when `caseIds` is empty.
 
 ## File Format
 
