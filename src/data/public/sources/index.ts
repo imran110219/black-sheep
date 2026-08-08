@@ -72,6 +72,7 @@ import { shaplaChattarSources } from "./shapla-chattar";
 import { obaidulQuaderEnrichmentSources } from "./obaidul-quader-enrichment";
 import { bdrPilkhanaSources } from "./bdr-pilkhana";
 import { julyPoliceOfficialsSources } from "./july-police-officials";
+import { roadSafetyMovement2018Sources } from "./road-safety-movement-2018";
 
 export const publicSources = [
   ...sheikhHasinaSources,
@@ -141,5 +142,6 @@ export const publicSources = [
   ...shaplaChattarSources,
   ...obaidulQuaderEnrichmentSources,
   ...bdrPilkhanaSources,
-  ...julyPoliceOfficialsSources
+  ...julyPoliceOfficialsSources,
+  ...roadSafetyMovement2018Sources
 ];

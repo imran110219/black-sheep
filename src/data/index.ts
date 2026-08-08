@@ -36,6 +36,12 @@ import {
   bdrPilkhanaInstitutions,
   bdrPilkhanaNewsRecords
 } from "./public/records/bdr-pilkhana";
+import {
+  roadSafetyMovement2018Claims,
+  roadSafetyMovement2018ImpactRecords,
+  roadSafetyMovement2018Incidents,
+  roadSafetyMovement2018NewsRecords
+} from "./public/records/road-safety-movement-2018";
 export { publicPeople as people, publicSources as sources } from "./public";
 
 export const areas = [...sheikhHasinaAreas, ...shaplaChattarAreas, ...bdrPilkhanaAreas];
@@ -45,18 +51,25 @@ export const cases = [
   ...obaidulQuaderCases,
   ...bdrPilkhanaCases
 ];
-export const claims = [...sheikhHasinaClaims, ...shaplaChattarClaims, ...bdrPilkhanaClaims];
+export const claims = [
+  ...sheikhHasinaClaims,
+  ...shaplaChattarClaims,
+  ...bdrPilkhanaClaims,
+  ...roadSafetyMovement2018Claims
+];
 export const corrections = sheikhHasinaCorrections;
 export const geographicAssociations = sheikhHasinaGeographicAssociations;
 export const impactRecords = [
   ...sheikhHasinaImpactRecords,
   ...shaplaChattarImpactRecords,
-  ...bdrPilkhanaImpactRecords
+  ...bdrPilkhanaImpactRecords,
+  ...roadSafetyMovement2018ImpactRecords
 ];
 export const incidents = [
   ...sheikhHasinaIncidents,
   ...shaplaChattarIncidents,
-  ...bdrPilkhanaIncidents
+  ...bdrPilkhanaIncidents,
+  ...roadSafetyMovement2018Incidents
 ];
 export const institutionAssociations = sheikhHasinaInstitutionAssociations;
 export const institutions = [
@@ -67,7 +80,8 @@ export const institutions = [
 export const newsRecords = [
   ...sheikhHasinaNewsRecords,
   ...shaplaChattarNewsRecords,
-  ...bdrPilkhanaNewsRecords
+  ...bdrPilkhanaNewsRecords,
+  ...roadSafetyMovement2018NewsRecords
 ];
 export const relationships = sheikhHasinaRelationships;
 export const revisions = sheikhHasinaRevisions;

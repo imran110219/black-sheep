@@ -282,7 +282,14 @@ export const publicSourceIds = {
   bdrPilkhanaCommissionFindings: "00000000-0000-4000-8000-000000000631",
   julyPoliceRampuraIctCharges: "00000000-0000-4000-8000-000000000632",
   julyPoliceChankharpulIctCharges: "00000000-0000-4000-8000-000000000633",
-  ishtiaqAhmedBssIctCustody: "00000000-0000-4000-8000-000000000634"
+  ishtiaqAhmedBssIctCustody: "00000000-0000-4000-8000-000000000634",
+  roadSafetyMovementDailyStarAmnesty: "00000000-0000-4000-8000-000000000635",
+  roadSafetyMovementHumanRightsWatch: "00000000-0000-4000-8000-000000000636",
+  roadSafetyMovementArrests: "00000000-0000-4000-8000-000000000637",
+  roadSafetyMovementRetrospective: "00000000-0000-4000-8000-000000000638",
+  roadSafetyMovementPoliticalResponse: "00000000-0000-4000-8000-000000000639",
+  roadSafetyMovementQuaderStatement: "00000000-0000-4000-8000-000000000640",
+  roadSafetyMovementMinisterComments: "00000000-0000-4000-8000-000000000641"
 } as const;
 
 export const publicClaimIds = {
@@ -291,7 +298,8 @@ export const publicClaimIds = {
   sheikhHasinaElectionControversies: "00000000-0000-4000-8000-000000000303",
   sheikhHasinaExecutiveCentralisation: "00000000-0000-4000-8000-000000000304",
   shaplaChattarCrackdownAccountability: "00000000-0000-4000-8000-000000000305",
-  bdrPilkhanaAccountability: "00000000-0000-4000-8000-000000000306"
+  bdrPilkhanaAccountability: "00000000-0000-4000-8000-000000000306",
+  roadSafetyMovement2018: "00000000-0000-4000-8000-000000000307"
 } as const;
 
 export const publicCaseIds = {
@@ -307,7 +315,8 @@ export const publicCaseIds = {
 export const publicIncidentIds = {
   sheikhHasinaJulyAugustUprising: "00000000-0000-4000-8000-000000000341",
   shaplaChattarCrackdown2013: "00000000-0000-4000-8000-000000000342",
-  bdrPilkhanaMassacre2009: "00000000-0000-4000-8000-000000000343"
+  bdrPilkhanaMassacre2009: "00000000-0000-4000-8000-000000000343",
+  roadSafetyMovement2018: "00000000-0000-4000-8000-000000000344"
 } as const;
 
 export const publicAreaIds = {
@@ -345,7 +354,8 @@ export const publicAssociationIds = {
 export const publicImpactIds = {
   sheikhHasinaJulyUprisingHumanRights: "00000000-0000-4000-8000-000000000441",
   shaplaChattarHumanRights: "00000000-0000-4000-8000-000000000442",
-  bdrPilkhanaHumanRights: "00000000-0000-4000-8000-000000000443"
+  bdrPilkhanaHumanRights: "00000000-0000-4000-8000-000000000443",
+  roadSafetyMovement2018HumanRights: "00000000-0000-4000-8000-000000000444"
 } as const;
 
 export const publicRelationshipIds = {
@@ -365,7 +375,14 @@ export const publicNewsIds = {
   bdrPilkhanaHumanRights: "00000000-0000-4000-8000-000000000490",
   bdrPilkhanaAmnesty: "00000000-0000-4000-8000-000000000491",
   bdrPilkhanaAppeals: "00000000-0000-4000-8000-000000000492",
-  bdrPilkhanaBssJustice: "00000000-0000-4000-8000-000000000493"
+  bdrPilkhanaBssJustice: "00000000-0000-4000-8000-000000000493",
+  roadSafetyMovementDailyStarAmnesty: "00000000-0000-4000-8000-000000000494",
+  roadSafetyMovementHumanRightsWatch: "00000000-0000-4000-8000-000000000495",
+  roadSafetyMovementArrests: "00000000-0000-4000-8000-000000000496",
+  roadSafetyMovementRetrospective: "00000000-0000-4000-8000-000000000497",
+  roadSafetyMovementPoliticalResponse: "00000000-0000-4000-8000-000000000498",
+  roadSafetyMovementQuaderStatement: "00000000-0000-4000-8000-000000000499",
+  roadSafetyMovementMinisterComments: "00000000-0000-4000-8000-000000000500"
 } as const;
 
 export const publicCorrectionIds = {
