@@ -27,11 +27,3 @@ export function EditorialNotice({
 export function PresumptionOfInnocenceNotice({ text }: { text: string }) {
   return <EditorialNotice tone="amber">{text}</EditorialNotice>;
 }
-
-export function DemoDataNotice({ text = "Demo data" }: { text?: string }) {
-  return (
-    <span className="inline-flex rounded-md border border-amber-500/40 bg-amber-500/10 px-2 py-1 text-xs font-medium">
-      {text}
-    </span>
-  );
-}

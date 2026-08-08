@@ -1,6 +1,6 @@
 # Domain Model
 
-The frontend model is built around bilingual, source-aware public-interest profiles. The active people and sources exported by `src/data/index.ts` come from `src/data/public`. The Sheikh Hasina structured record set is also active public data; the remaining newer network/evidence records currently come from fictional fixtures until researched and linked.
+The frontend model is built around bilingual, source-aware public-interest profiles. The active people, sources, and Sheikh Hasina structured records exported by `src/data/index.ts` are source-backed public data. Entity schemas remain available for future additions, but fictional fixture records are not active.
 
 ## Conceptual Layers
 
@@ -98,7 +98,7 @@ Use `CaseRecord` for legal treatment of that incident. One incident can have zer
 
 ### `DossierCollection`
 
-`DossierCollection` groups related people, claims, incidents, areas, institutions, and sources into an editorial collection. Current dossier records are fictional demos. The same demo boundary applies to scaffold claims, incidents, associations, impacts, areas, institutions, and cases unless a record is explicitly moved into a source-backed public module.
+`DossierCollection` groups related people, claims, incidents, areas, institutions, and sources into an editorial collection. No dossier records are currently active until a source-backed collection is researched.
 
 ## Status Boundaries
 

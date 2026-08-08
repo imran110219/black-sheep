@@ -8,10 +8,10 @@ test("homepage loads in Bangla and switches to English", async ({ page }) => {
 });
 
 test("search, filter, profile, case, corrections and not-found flows work", async ({ page }) => {
-  await page.goto("/en/people?query=Demo%20Person%201&legalStatus=ALLEGATION_REPORTED");
-  await expect(page.getByText("Demo Person 1")).toBeVisible();
+  await page.goto("/en/people?query=Sheikh%20Hasina");
+  await expect(page.getByText("Sheikh Hasina")).toBeVisible();
   await page
-    .getByRole("link", { name: /View documented profile/i })
+    .getByRole("link", { name: /Explore profile/i })
     .first()
     .click();
   await expect(page.getByText(/Being listed/)).toBeVisible();

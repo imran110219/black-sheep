@@ -7,10 +7,9 @@ All prompts assume the project rules in `AGENTS.md`, `docs/ai-data-workflow.md`,
 Current data boundary:
 
 - Active real people and sources live in `src/data/public`.
-- Demo scaffold records for claims, incidents, areas, institutions, associations, impacts, dossiers, cases, news, corrections, and revisions may live in `src/data/fixtures`.
-- Do not attach demo scaffold records to real people as evidence.
-- Convert scaffold-style records into real public records only after source-backed research, duplicate checks, privacy review, and synchronized Bangla/English writing.
-- Route/page work must use the repository abstraction; route files must not import fixtures directly.
+- No fictional demo records are active in the application data index.
+- Add structured records to `src/data/public` only after source-backed research, duplicate checks, privacy review, and synchronized Bangla/English writing.
+- Route/page work must use the repository abstraction; route files must not import data files directly.
 - A court case is not required for a real public profile. If no real legal proceeding is source-backed, leave `caseIds` empty and use source-backed Story, News, Claim, Incident, Network, or association records instead.
 
 ## 1. Search Web and Suggest People
@@ -172,7 +171,7 @@ Tasks:
 6. Keep all descriptions neutral and status-aware.
 7. Add new source records only when they support specific claims.
 8. Keep influence domains as navigation metadata, not guilt labels.
-9. Do not link demo scaffold claims/incidents/cases/institutions to the real person.
+9. Do not link unresearched claims/incidents/cases/institutions to the real person.
 10. Do not create placeholder cases. If no case exists, keep the profile source-backed through Story, SourceRecord, NewsRecord, ClaimRecord, IncidentRecord, or Network records as appropriate.
 11. Keep Bangla and English synchronized.
 12. Run the full validation suite.
@@ -327,8 +326,8 @@ Tasks:
 1. Inspect the existing route/component/repository code first.
 2. Keep frontend-only scope.
 3. Preserve public people and source data in src/data/public.
-4. Do not import fixtures directly from route files.
-5. Move any mock-only context lookup behind BlackSheepRepository methods.
+4. Do not import data files directly from route files.
+5. Keep all context lookups behind BlackSheepRepository methods.
 6. Keep strict TypeScript and Zod validation.
 7. Preserve Story, Network, and Evidence layer behavior.
 8. Run:

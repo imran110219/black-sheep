@@ -29,7 +29,7 @@ pnpm validate
 
 ## Architecture
 
-Routes never import data files directly. Pages depend on `BlackSheepRepository`, which currently reads active public people and sources plus demo scaffold data exported by `src/data`. Public DTOs avoid private identifiers and direct guilt booleans. The product is organized into three layers:
+Routes never import data files directly. Pages depend on `BlackSheepRepository`, which reads source-backed records exported by `src/data`. Public DTOs avoid private identifiers and direct guilt booleans. The product is organized into three layers:
 
 - Story: identity, why listed, historical overview, power base, major events, impact, and legacy.
 - Network: people, organizations, institutions, areas, relationships, influence domains, and associations.
@@ -47,9 +47,7 @@ The frontend does not render raw HTML or use `dangerouslySetInnerHTML`. Runtime 
 
 ## Data
 
-The active people and source records come from `src/data/public`. As of 2026-08-08, the active index contains 93 source-backed public-person modules and 102 source modules, covering political and administrative leadership, security officials, family and institutional networks, business and banking figures, and financial and health-sector accountability profiles. This inventory is an editorial snapshot and will grow after duplicate and source review.
-
-The newer structured claims, incidents, areas, institutions, associations, impacts, dossiers, cases, news, corrections, and revisions remain fictional scaffold data except for the explicitly researched Sheikh Hasina record set in `src/data/public/records`. Do not treat scaffold records as evidence about other public people.
+The active people and source records come from `src/data/public`. As of 2026-08-08, the active index contains 93 source-backed public-person modules and 102 source modules. The structured claims, incidents, areas, institutions, associations, impacts, cases, news, corrections, and revisions currently active in the application are the researched Sheikh Hasina record set in `src/data/public/records`; empty collections remain available for future source-backed expansion.
 
 Current route surface:
 
@@ -69,4 +67,4 @@ For data research, duplicate checks, enrichment, source rules, and AI-agent work
 
 ## Known Limitations
 
-There is no backend, authentication, admin portal, public submission flow, or API contract in the current scope. Maps are currently polished geographic cards rather than an interactive map dependency. Public profiles may be added from reliable news, official, investigative, or biographical sources even when no case exists; those profiles keep `caseIds: []` and use careful source-backed wording.
+There is no backend, authentication, admin portal, public submission flow, or API contract in the current scope. Maps are currently polished geographic cards rather than an interactive map dependency. Public profiles may be added from reliable news, official, investigative, or biographical sources even when no case exists; those profiles keep `caseIds: []` and use careful source-backed wording. No fictional demo records are active.

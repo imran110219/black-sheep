@@ -29,7 +29,7 @@ import type {
   GlobalSearchResult
 } from "./black-sheep-repository";
 
-export class MockBlackSheepRepository implements BlackSheepRepository {
+export class LocalBlackSheepRepository implements BlackSheepRepository {
   async searchPeople(query: PeopleSearchQuery) {
     const filtered = applyPeopleFilters(people, cases, query);
     const sorted = sortPeople(filtered, query.sort);

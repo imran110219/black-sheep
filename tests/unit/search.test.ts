@@ -65,25 +65,19 @@ describe("search utilities", () => {
   });
 
   it("validates expanded public-interest records with Zod", () => {
-    expect(cases.map((record) => caseRecordSchema.parse(record)).length).toBeGreaterThanOrEqual(13);
-    expect(claims.map((record) => claimRecordSchema.parse(record)).length).toBeGreaterThanOrEqual(
-      24
-    );
-    expect(
-      incidents.map((record) => incidentRecordSchema.parse(record)).length
-    ).toBeGreaterThanOrEqual(13);
-    expect(areas.map((record) => areaSchema.parse(record)).length).toBeGreaterThanOrEqual(20);
-    expect(
-      institutions.map((record) => institutionSchema.parse(record)).length
-    ).toBeGreaterThanOrEqual(17);
+    expect(cases.map((record) => caseRecordSchema.parse(record)).length).toBeGreaterThan(0);
+    expect(claims.map((record) => claimRecordSchema.parse(record)).length).toBeGreaterThan(0);
+    expect(incidents.map((record) => incidentRecordSchema.parse(record)).length).toBeGreaterThan(0);
+    expect(areas.map((record) => areaSchema.parse(record)).length).toBeGreaterThan(0);
+    expect(institutions.map((record) => institutionSchema.parse(record)).length).toBeGreaterThan(0);
     expect(
       people.map((person) => personNarrativeSchema.parse(person.narrative)).length
-    ).toBeGreaterThanOrEqual(23);
+    ).toBeGreaterThan(0);
   });
 
   it("searches across people, institutions, and incidents", async () => {
     const repo = createBlackSheepRepository();
-    expect(await repo.globalSearch("metropolitan")).toEqual(
+    expect(await repo.globalSearch("Awami League")).toEqual(
       expect.arrayContaining([expect.objectContaining({ type: "INSTITUTION" })])
     );
     expect(await repo.globalSearch("Sweden Aslam")).toEqual(

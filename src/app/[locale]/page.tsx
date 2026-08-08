@@ -11,11 +11,7 @@ import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
-  DemoDataNotice,
-  EditorialNotice,
-  PresumptionOfInnocenceNotice
-} from "@/components/shared/Notices";
+import { EditorialNotice, PresumptionOfInnocenceNotice } from "@/components/shared/Notices";
 import { PersonCard } from "@/features/people/PersonCard";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/domain/common";
@@ -94,7 +90,6 @@ export default async function HomePage({
       <section className="grid min-h-[68vh] content-center gap-8 border-y bg-primary px-4 py-12 text-primary-foreground md:px-8">
         <div className="mx-auto grid w-full max-w-6xl gap-8">
           <div className="max-w-4xl">
-            <DemoDataNotice text={t("common.demoData")} />
             <p className="mt-5 text-sm uppercase tracking-widest text-primary-foreground/60">
               {locale === "bn"
                 ? "ক্ষমতা, কর্মকাণ্ড, সম্পর্ক ও বিতর্কের অনুসন্ধানযোগ্য ইতিহাস"

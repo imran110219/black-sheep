@@ -5,9 +5,9 @@
 The app is a localized, frontend-only, read-only public data product with:
 
 - active public profile and source records
-- demo scaffold claim, incident, area, institution, dossier, correction, and case records
+- source-backed public claim, incident, area, institution, correction, and case records where researched
 - repository abstraction
-- repository-backed page contexts; route components should not import fixture data or call mock-only context helpers
+- repository-backed page contexts; route components should not import data files or access repository internals
 - Story View and Evidence View profile layout using `?view=story|evidence`
 - editorial discovery homepage
 - area, institution, incident, and dossier routes
@@ -16,7 +16,7 @@ The app is a localized, frontend-only, read-only public data product with:
 
 Existing real public records remain file-backed and active for people and source discovery. The current public index contains 93 person modules and 102 source modules, including recent political, security, family-network, banking, financial, and health-sector research. The Sheikh Hasina structured record set is the current source-backed Story/Network/Evidence example.
 
-The current scaffold records for claims, incidents, institutions, areas, associations, impacts, dossiers, cases, news, corrections, and revisions are fictional demo records, except for the source-backed Sheikh Hasina record set. They are UI/data-shape coverage, not real evidence attached to other active public people.
+The active structured records are the source-backed Sheikh Hasina record set. Other collections are empty until source-backed records are researched and added. Fictional demo records are no longer exported by the application.
 
 ## Phase 2 Structured Evidence Expansion
 
@@ -34,7 +34,7 @@ Future source-backed public records can populate:
 
 Do this incrementally. A real person profile can exist with basic public biography and sources, but claims, incidents, cases, institution associations, area associations, and impact records should not be attached until each record has source ids and careful status language.
 
-When converting a demo scaffold entity into real data:
+When adding a new structured entity as real data:
 
 - keep it in a slug-named public data module where appropriate
 - preserve status boundaries

@@ -1,6 +1,5 @@
 import type { Locale } from "@/domain/common";
 import type { PersonCard as PersonCardType } from "@/domain/person";
-import { DemoDataNotice } from "@/components/shared/Notices";
 import { Link } from "@/i18n/navigation";
 import { formatDate } from "@/lib/dates";
 import { initials } from "@/lib/utils";
@@ -46,7 +45,6 @@ export function PersonCard({ person, locale }: { person: PersonCardType; locale:
       <div className="flex flex-1 flex-col p-5">
         <div className="flex flex-wrap items-center gap-2">
           <h3 className="font-semibold">{name}</h3>
-          {person.isDemo ? <DemoDataNotice text={locale === "bn" ? "ডেমো" : "Demo"} /> : null}
         </div>
         <p className="mt-1 text-sm text-muted-foreground">
           {person.publicRoles[0] ?? person.occupation} ·{" "}

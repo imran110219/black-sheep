@@ -13,9 +13,9 @@ Routes must not import data files directly. Pages and features should depend on:
 - `BlackSheepRepository`
 - `createBlackSheepRepository`
 
-The current repository implementation is local and read-only. It imports from `@/data`, which aggregates active public people/sources from `src/data/public` and demo scaffold records from `src/data/fixtures/mock-data.ts`.
+The current repository implementation is local and read-only. It imports source-backed records from `@/data`, primarily from `src/data/public` and the researched Sheikh Hasina record set.
 
-Route components must not call mock-only context helpers such as `getPublicMockIndex()`. Story, evidence, network, area, institution, incident, dossier, news, source, organization, and case contexts are exposed as repository methods.
+Route components must not access repository internals or data arrays directly. Story, evidence, network, area, institution, incident, dossier, news, source, organization, and case contexts are exposed as repository methods.
 
 Current repository context methods include:
 
@@ -62,9 +62,9 @@ The root aggregate is:
 src/data/index.ts
 ```
 
-It exports the active public people and sources, the researched Sheikh Hasina record set, and fictional scaffold records for claims, incidents, areas, institutions, associations, impacts, dossiers, cases, news, corrections, and revisions.
+It exports the active public people and sources plus the researched Sheikh Hasina record set. Empty typed collections are retained for entity types that do not yet have researched public records.
 
-Important boundary: public people and public sources are real-data records. The Sheikh Hasina structured record set is source-backed public data. Other claims, incidents, cases, institutions, areas, associations, impacts, and dossiers currently come from demo scaffolding and must not be presented as evidence about active public people until researched and linked.
+Important boundary: active application records are source-backed public data. No fictional demo records are exported by `src/data`.
 
 Each public person and that person's primary source bundle should live in a separate slug-named file. Do not group people under labels such as former regime, terrorist, criminal, or any equivalent collection category.
 

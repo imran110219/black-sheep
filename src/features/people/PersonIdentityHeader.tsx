@@ -1,6 +1,5 @@
 import type { Locale } from "@/domain/common";
 import type { PersonProfile } from "@/domain/person";
-import { DemoDataNotice } from "@/components/shared/Notices";
 import { formatDate } from "@/lib/dates";
 import { initials } from "@/lib/utils";
 
@@ -40,13 +39,9 @@ export function PersonIdentityHeader({
         </div>
         <div className="grid gap-5 p-6 md:p-8">
           <div className="flex flex-wrap items-center gap-3">
-            {person.isDemo ? (
-              <DemoDataNotice text={locale === "bn" ? "ডেমো ডেটা" : "Demo data"} />
-            ) : (
-              <span className="inline-flex rounded-md border border-primary-foreground/25 bg-primary-foreground/10 px-2 py-1 text-xs font-medium">
-                {locale === "bn" ? "প্রকাশ্য রেকর্ড" : "Public record"}
-              </span>
-            )}
+            <span className="inline-flex rounded-md border border-primary-foreground/25 bg-primary-foreground/10 px-2 py-1 text-xs font-medium">
+              {locale === "bn" ? "প্রকাশ্য রেকর্ড" : "Public record"}
+            </span>
             <span className="text-sm text-primary-foreground/70">
               {locale === "bn" ? "শেষ হালনাগাদ" : "Last updated"}{" "}
               {formatDate(person.updatedAt, locale)}

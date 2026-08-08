@@ -36,13 +36,13 @@
     "heroCopy": "Black Sheep is a searchable archive of public-interest people, cases, public documents, news coverage, and legal statuses. Allegations are not presented as court findings.",
     "searchPlaceholder": "Search names, aliases, organizations, or topics",
     "disclaimer": "Being listed in a case or report does not by itself establish guilt.",
-    "stats": "Demo statistics",
+    "stats": "Archive statistics",
     "recentProfiles": "Recently updated profiles",
     "recentCases": "Recently updated cases",
     "browseCategory": "Browse by category",
     "browseStatus": "Browse by legal status",
     "methodologyPreview": "Each record separates sources, legal status, subject responses, and corrections.",
-    "replyCallout": "Request a correction or right of reply. Contact: editorial@blacksheep.example (demo placeholder)."
+    "replyCallout": "Request a correction or right of reply through the published editorial process."
   },
   "people": {
     "title": "People directory",
@@ -101,7 +101,6 @@
     "excerpt": "Short excerpt"
   },
   "common": {
-    "demoData": "Demo data",
     "loading": "Loading",
     "notFound": "Record not found",
     "error": "Something went wrong",

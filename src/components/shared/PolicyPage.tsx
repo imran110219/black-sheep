@@ -34,21 +34,21 @@ const content = {
   "right-of-reply": {
     bn: [
       "জবাবের অধিকার",
-      "বিষয় ব্যক্তি editorial@blacksheep.example ঠিকানায় সহায়ক নথিসহ জবাব পাঠাতে পারেন। এটি ডেমো প্লেসহোল্ডার যোগাযোগ। জবাব যাচাই শেষে সংশ্লিষ্ট রেকর্ডে প্রদর্শিত হয়।"
+      "বিষয় ব্যক্তি প্রকাশিত সম্পাদকীয় প্রক্রিয়ার মাধ্যমে সহায়ক নথিসহ জবাব পাঠাতে পারেন। জবাব যাচাই শেষে সংশ্লিষ্ট রেকর্ডে প্রদর্শিত হয়।"
     ],
     en: [
       "Right of reply",
-      "A subject may send a response with supporting records to editorial@blacksheep.example. This is a demo placeholder contact. Reviewed responses are displayed with the related record."
+      "A subject may submit a response with supporting records through the published editorial process. Reviewed responses are displayed with the related record."
     ]
   },
   privacy: {
     bn: [
       "গোপনীয়তা",
-      "অপ্রয়োজনীয় ব্যক্তিগত শনাক্তকারী, ব্যক্তিগত ঠিকানা, ফোন, ইমেইল বা আর্থিক বিবরণ প্রকাশ করা হয় না। অ্যানালিটিক্স ভবিষ্যৎ প্লেসহোল্ডার।"
+      "অপ্রয়োজনীয় ব্যক্তিগত শনাক্তকারী, ব্যক্তিগত ঠিকানা, ফোন, ইমেইল বা আর্থিক বিবরণ প্রকাশ করা হয় না। বর্তমানে অ্যানালিটিক্স সংগ্রহ করা হয় না।"
     ],
     en: [
       "Privacy",
-      "Unnecessary personal identifiers, private addresses, phone numbers, emails, and private financial details are not published. Analytics are a future placeholder."
+      "Unnecessary personal identifiers, private addresses, phone numbers, emails, and private financial details are not published. Analytics are not currently collected."
     ]
   },
   legal: {

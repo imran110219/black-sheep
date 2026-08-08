@@ -1,22 +1,7 @@
-import {
-  areas as demoAreas,
-  assets,
-  cases as demoCases,
-  claims as demoClaims,
-  corrections as demoCorrections,
-  dossiers,
-  geographicAssociations as demoGeographicAssociations,
-  impactRecords as demoImpactRecords,
-  incidents as demoIncidents,
-  institutionAssociations as demoInstitutionAssociations,
-  institutions as demoInstitutions,
-  newsRecords as demoNewsRecords,
-  organizations,
-  relationships as demoRelationships,
-  revisions as demoRevisions,
-  subjectResponses as demoSubjectResponses,
-  tags
-} from "./fixtures/mock-data";
+import type { AssetRecord } from "@/domain/asset";
+import type { DossierCollection } from "@/domain/dossier";
+import type { Organization } from "@/domain/organization";
+import type { Tag } from "@/domain/tag";
 import {
   sheikhHasinaAreas,
   sheikhHasinaCases,
@@ -34,23 +19,21 @@ import {
 } from "./public/records/sheikh-hasina";
 export { publicPeople as people, publicSources as sources } from "./public";
 
-export const areas = [...sheikhHasinaAreas, ...demoAreas];
-export const cases = [...sheikhHasinaCases, ...demoCases];
-export const claims = [...sheikhHasinaClaims, ...demoClaims];
-export const corrections = [...sheikhHasinaCorrections, ...demoCorrections];
-export const geographicAssociations = [
-  ...sheikhHasinaGeographicAssociations,
-  ...demoGeographicAssociations
-];
-export const impactRecords = [...sheikhHasinaImpactRecords, ...demoImpactRecords];
-export const incidents = [...sheikhHasinaIncidents, ...demoIncidents];
-export const institutionAssociations = [
-  ...sheikhHasinaInstitutionAssociations,
-  ...demoInstitutionAssociations
-];
-export const institutions = [...sheikhHasinaInstitutions, ...demoInstitutions];
-export const newsRecords = [...sheikhHasinaNewsRecords, ...demoNewsRecords];
-export const relationships = [...sheikhHasinaRelationships, ...demoRelationships];
-export const revisions = [...sheikhHasinaRevisions, ...demoRevisions];
-export const subjectResponses = [...sheikhHasinaSubjectResponses, ...demoSubjectResponses];
-export { assets, dossiers, organizations, tags };
+export const areas = sheikhHasinaAreas;
+export const cases = sheikhHasinaCases;
+export const claims = sheikhHasinaClaims;
+export const corrections = sheikhHasinaCorrections;
+export const geographicAssociations = sheikhHasinaGeographicAssociations;
+export const impactRecords = sheikhHasinaImpactRecords;
+export const incidents = sheikhHasinaIncidents;
+export const institutionAssociations = sheikhHasinaInstitutionAssociations;
+export const institutions = sheikhHasinaInstitutions;
+export const newsRecords = sheikhHasinaNewsRecords;
+export const relationships = sheikhHasinaRelationships;
+export const revisions = sheikhHasinaRevisions;
+export const subjectResponses = sheikhHasinaSubjectResponses;
+
+export const assets: AssetRecord[] = [];
+export const dossiers: DossierCollection[] = [];
+export const organizations: Organization[] = [];
+export const tags: Tag[] = [];

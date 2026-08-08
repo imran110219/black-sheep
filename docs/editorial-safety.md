@@ -2,7 +2,7 @@
 
 Black Sheep uses neutral wording, source attribution, and status separation. Being listed in a profile, source, claim, case, relationship, or incident does not by itself establish guilt.
 
-The current app has active real public people and source records, plus fictional demo scaffold records for the newer Story/Network/Evidence entities. Demo scaffold claims, incidents, areas, institutions, impacts, dossiers, and cases must not be presented as real evidence about real people.
+The current app has active source-backed public people, sources, and the researched Sheikh Hasina Story/Network/Evidence records. No fictional demo records are active in the application data index.
 
 ## Inclusion Policy
 
@@ -58,7 +58,7 @@ Profiles about real underworld figures or alleged syndicate leaders require extr
 
 Every real profile should have at least one `SourceRecord`. Every future claim, incident, relationship, institution association, area association, case, correction, or subject response should carry `sourceIds`.
 
-When converting demo scaffold records into real public records, first perform duplicate checks by slug, Bangla/English name, aliases, and source URLs. Then replace fictional IDs and summaries with source-backed, privacy-safe, status-aware records.
+When adding new structured records, first perform duplicate checks by slug, Bangla/English name, aliases, and source URLs. Add only source-backed, privacy-safe, status-aware records.
 
 ## Story, Network, Evidence
 

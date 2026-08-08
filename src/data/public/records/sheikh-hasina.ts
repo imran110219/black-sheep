@@ -787,6 +787,6 @@ export const sheikhHasinaRevisions: RevisionRecord[] = [
       "Added source-backed claims, incident, case, institutions, geographic associations, subject response, correction, and impact records to the Sheikh Hasina profile.",
     changedAt: "2026-08-07",
     publicNote:
-      "Structured enrichment based on public sources; demo scaffold records remain separate."
+      "Structured enrichment based on the cited public sources; unresearched records remain excluded."
   }
 ];
