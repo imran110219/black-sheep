@@ -27,18 +27,48 @@ import {
   shaplaChattarNewsRecords
 } from "./public/records/shapla-chattar";
 import { obaidulQuaderCases } from "./public/records/obaidul-quader";
+import {
+  bdrPilkhanaAreas,
+  bdrPilkhanaCases,
+  bdrPilkhanaClaims,
+  bdrPilkhanaImpactRecords,
+  bdrPilkhanaIncidents,
+  bdrPilkhanaInstitutions,
+  bdrPilkhanaNewsRecords
+} from "./public/records/bdr-pilkhana";
 export { publicPeople as people, publicSources as sources } from "./public";
 
-export const areas = [...sheikhHasinaAreas, ...shaplaChattarAreas];
-export const cases = [...sheikhHasinaCases, ...shaplaChattarCases, ...obaidulQuaderCases];
-export const claims = [...sheikhHasinaClaims, ...shaplaChattarClaims];
+export const areas = [...sheikhHasinaAreas, ...shaplaChattarAreas, ...bdrPilkhanaAreas];
+export const cases = [
+  ...sheikhHasinaCases,
+  ...shaplaChattarCases,
+  ...obaidulQuaderCases,
+  ...bdrPilkhanaCases
+];
+export const claims = [...sheikhHasinaClaims, ...shaplaChattarClaims, ...bdrPilkhanaClaims];
 export const corrections = sheikhHasinaCorrections;
 export const geographicAssociations = sheikhHasinaGeographicAssociations;
-export const impactRecords = [...sheikhHasinaImpactRecords, ...shaplaChattarImpactRecords];
-export const incidents = [...sheikhHasinaIncidents, ...shaplaChattarIncidents];
+export const impactRecords = [
+  ...sheikhHasinaImpactRecords,
+  ...shaplaChattarImpactRecords,
+  ...bdrPilkhanaImpactRecords
+];
+export const incidents = [
+  ...sheikhHasinaIncidents,
+  ...shaplaChattarIncidents,
+  ...bdrPilkhanaIncidents
+];
 export const institutionAssociations = sheikhHasinaInstitutionAssociations;
-export const institutions = [...sheikhHasinaInstitutions, ...shaplaChattarInstitutions];
-export const newsRecords = [...sheikhHasinaNewsRecords, ...shaplaChattarNewsRecords];
+export const institutions = [
+  ...sheikhHasinaInstitutions,
+  ...shaplaChattarInstitutions,
+  ...bdrPilkhanaInstitutions
+];
+export const newsRecords = [
+  ...sheikhHasinaNewsRecords,
+  ...shaplaChattarNewsRecords,
+  ...bdrPilkhanaNewsRecords
+];
 export const relationships = sheikhHasinaRelationships;
 export const revisions = sheikhHasinaRevisions;
 export const subjectResponses = sheikhHasinaSubjectResponses;

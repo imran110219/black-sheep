@@ -106,7 +106,9 @@ export const publicPersonIds = {
   mozammelHaqueBabu: "00000000-0000-4000-8000-000000000135",
   farzanaRupa: "00000000-0000-4000-8000-000000000136",
   hasanMahmudKhandaker: "00000000-0000-4000-8000-000000000137",
-  akmShahidulHoque: "00000000-0000-4000-8000-000000000138"
+  akmShahidulHoque: "00000000-0000-4000-8000-000000000138",
+  shakilAhmedBdr: "00000000-0000-4000-8000-000000000140",
+  saharaKhatun: "00000000-0000-4000-8000-000000000141"
 } as const;
 
 export const publicSourceIds = {
@@ -261,7 +263,15 @@ export const publicSourceIds = {
   obaidulDailyStarIctCharges: "00000000-0000-4000-8000-000000000620",
   obaidulFinancialExpressFlatCase: "00000000-0000-4000-8000-000000000621",
   obaidulDailyStarTunnelCase: "00000000-0000-4000-8000-000000000622",
-  obaidulJagoNewsJihadAcquittal: "00000000-0000-4000-8000-000000000623"
+  obaidulJagoNewsJihadAcquittal: "00000000-0000-4000-8000-000000000623",
+  bdrPilkhanaCourtJudgment: "00000000-0000-4000-8000-000000000624",
+  bdrPilkhanaNationalProbeSummary: "00000000-0000-4000-8000-000000000625",
+  bdrPilkhanaHumanRights: "00000000-0000-4000-8000-000000000626",
+  bdrPilkhanaAmnesty: "00000000-0000-4000-8000-000000000627",
+  bdrPilkhanaCommission: "00000000-0000-4000-8000-000000000628",
+  bdrPilkhanaAppeals: "00000000-0000-4000-8000-000000000629",
+  bdrPilkhanaBssJustice: "00000000-0000-4000-8000-000000000630",
+  bdrPilkhanaCommissionFindings: "00000000-0000-4000-8000-000000000631"
 } as const;
 
 export const publicClaimIds = {
@@ -269,7 +279,8 @@ export const publicClaimIds = {
   sheikhHasinaIctCommandResponsibility: "00000000-0000-4000-8000-000000000302",
   sheikhHasinaElectionControversies: "00000000-0000-4000-8000-000000000303",
   sheikhHasinaExecutiveCentralisation: "00000000-0000-4000-8000-000000000304",
-  shaplaChattarCrackdownAccountability: "00000000-0000-4000-8000-000000000305"
+  shaplaChattarCrackdownAccountability: "00000000-0000-4000-8000-000000000305",
+  bdrPilkhanaAccountability: "00000000-0000-4000-8000-000000000306"
 } as const;
 
 export const publicCaseIds = {
@@ -278,12 +289,14 @@ export const publicCaseIds = {
   obaidulQuaderJulyUprisingIct: "00000000-0000-4000-8000-000000000323",
   obaidulQuaderExpresswayFlat: "00000000-0000-4000-8000-000000000324",
   obaidulQuaderKarnaphuliTunnel: "00000000-0000-4000-8000-000000000325",
-  obaidulQuaderJihadMurderAcquittal: "00000000-0000-4000-8000-000000000326"
+  obaidulQuaderJihadMurderAcquittal: "00000000-0000-4000-8000-000000000326",
+  bdrPilkhanaCriminalCase: "00000000-0000-4000-8000-000000000327"
 } as const;
 
 export const publicIncidentIds = {
   sheikhHasinaJulyAugustUprising: "00000000-0000-4000-8000-000000000341",
-  shaplaChattarCrackdown2013: "00000000-0000-4000-8000-000000000342"
+  shaplaChattarCrackdown2013: "00000000-0000-4000-8000-000000000342",
+  bdrPilkhanaMassacre2009: "00000000-0000-4000-8000-000000000343"
 } as const;
 
 export const publicAreaIds = {
@@ -292,7 +305,8 @@ export const publicAreaIds = {
   gopalganj3: "00000000-0000-4000-8000-000000000363",
   rangpur: "00000000-0000-4000-8000-000000000364",
   ashulia: "00000000-0000-4000-8000-000000000365",
-  motijheelShaplaChattar: "00000000-0000-4000-8000-000000000366"
+  motijheelShaplaChattar: "00000000-0000-4000-8000-000000000366",
+  pilkhanaBdrHeadquarters: "00000000-0000-4000-8000-000000000367"
 } as const;
 
 export const publicInstitutionIds = {
@@ -301,7 +315,11 @@ export const publicInstitutionIds = {
   internationalCrimesTribunal1: "00000000-0000-4000-8000-000000000383",
   bangladeshPolice: "00000000-0000-4000-8000-000000000384",
   ohchr: "00000000-0000-4000-8000-000000000385",
-  hefazatEIslamBangladesh: "00000000-0000-4000-8000-000000000386"
+  hefazatEIslamBangladesh: "00000000-0000-4000-8000-000000000386",
+  borderGuardsBangladesh: "00000000-0000-4000-8000-000000000387",
+  bangladeshArmy: "00000000-0000-4000-8000-000000000388",
+  ministryOfHomeAffairs: "00000000-0000-4000-8000-000000000389",
+  bdrIndependentInvestigationCommission: "00000000-0000-4000-8000-000000000390"
 } as const;
 
 export const publicAssociationIds = {
@@ -315,7 +333,8 @@ export const publicAssociationIds = {
 
 export const publicImpactIds = {
   sheikhHasinaJulyUprisingHumanRights: "00000000-0000-4000-8000-000000000441",
-  shaplaChattarHumanRights: "00000000-0000-4000-8000-000000000442"
+  shaplaChattarHumanRights: "00000000-0000-4000-8000-000000000442",
+  bdrPilkhanaHumanRights: "00000000-0000-4000-8000-000000000443"
 } as const;
 
 export const publicRelationshipIds = {
@@ -329,7 +348,13 @@ export const publicNewsIds = {
   shaplaChattarTbsTribunal: "00000000-0000-4000-8000-000000000484",
   shaplaChattarBssTribunal: "00000000-0000-4000-8000-000000000485",
   shaplaChattarDailyStarWarrants: "00000000-0000-4000-8000-000000000486",
-  shaplaChattarBdnewsTribunal: "00000000-0000-4000-8000-000000000487"
+  shaplaChattarBdnewsTribunal: "00000000-0000-4000-8000-000000000487",
+  bdrPilkhanaCommission: "00000000-0000-4000-8000-000000000488",
+  bdrPilkhanaCourtJudgment: "00000000-0000-4000-8000-000000000489",
+  bdrPilkhanaHumanRights: "00000000-0000-4000-8000-000000000490",
+  bdrPilkhanaAmnesty: "00000000-0000-4000-8000-000000000491",
+  bdrPilkhanaAppeals: "00000000-0000-4000-8000-000000000492",
+  bdrPilkhanaBssJustice: "00000000-0000-4000-8000-000000000493"
 } as const;
 
 export const publicCorrectionIds = {
