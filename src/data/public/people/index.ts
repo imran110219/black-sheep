@@ -106,7 +106,6 @@ import { mozammelHaqueBabu } from "./mozammel-haque-babu";
 import { farzanaRupa } from "./farzana-rupa";
 import { hasanMahmudKhandaker } from "./hasan-mahmud-khandaker";
 import { akmShahidulHoque } from "./akm-shahidul-hoque";
-import { shakilAhmedBdr } from "./shakil-ahmed-bdr";
 import { saharaKhatun } from "./sahara-khatun";
 
 export const publicPeople = [
@@ -218,6 +217,5 @@ export const publicPeople = [
   farzanaRupa,
   hasanMahmudKhandaker,
   akmShahidulHoque,
-  shakilAhmedBdr,
   saharaKhatun
 ];

@@ -7,7 +7,6 @@ const relatedPeople = [
   publicPersonIds.sheikhFazlulKarimSelim,
   publicPersonIds.jahangirKabirNanak,
   publicPersonIds.mirzaAzam,
-  publicPersonIds.shakilAhmedBdr,
   publicPersonIds.saharaKhatun
 ];
 

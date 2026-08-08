@@ -24,7 +24,6 @@ const relatedPeople = [
   publicPersonIds.sheikhFazlulKarimSelim,
   publicPersonIds.jahangirKabirNanak,
   publicPersonIds.mirzaAzam,
-  publicPersonIds.shakilAhmedBdr,
   publicPersonIds.saharaKhatun
 ];
 
@@ -192,14 +191,6 @@ export const bdrPilkhanaCases: CaseRecord[] = [
       "The published Supreme Court judgment, reporting on the 2017 High Court verdict, and 2026 reporting on pending appeals support this record.",
     personLinks: [
       {
-        personId: publicPersonIds.shakilAhmedBdr,
-        caseId,
-        role: "OTHER",
-        legalPosition: "Deceased victim identified in the court record",
-        noteBn: "আদালতের রেকর্ডে নিহত বিডিআর মহাপরিচালক হিসেবে উল্লেখিত।",
-        noteEn: "Identified in the court record as the deceased BDR director general."
-      },
-      {
         personId: publicPersonIds.sheikhHasina,
         caseId,
         role: "OTHER",
@@ -336,13 +327,6 @@ export const bdrPilkhanaIncidents: IncidentRecord[] = [
     periodEnd: "2009-02-26",
     areaIds: [publicAreaIds.dhaka, areaId],
     personLinks: [
-      {
-        personId: publicPersonIds.shakilAhmedBdr,
-        role: "VICTIM",
-        noteBn: "আদালতের রেকর্ডে পিলখানায় নিহত তৎকালীন বিডিআর মহাপরিচালক হিসেবে উল্লেখিত।",
-        noteEn:
-          "Identified in the court record as the then BDR director general killed at Pilkhana."
-      },
       {
         personId: publicPersonIds.sheikhHasina,
         role: "OFFICIAL",
