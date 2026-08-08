@@ -45,6 +45,19 @@ import { sheikhFamilyPurbachalSources } from "./sheikh-family-purbachal";
 import { osmanFamilyNarayanganjSources } from "./osman-family-narayanganj";
 import { ahmedBrothersSources } from "./ahmed-brothers";
 import { mohammedSaifulAlamSources } from "./mohammed-saiful-alam";
+import {
+  bacchuSources,
+  pkHalderSources,
+  skSurChowdhurySources
+} from "./banking-accountability-2026";
+import {
+  abulKalamAzadDghsSources,
+  destinySources,
+  evalySources,
+  gkShamimSources,
+  hallmarkSources,
+  jkgSources
+} from "./hallmark-destiny-jkg-evaly";
 import { swedenAslamSources } from "./sweden-aslam";
 import { subrataBainSources } from "./subrata-bain";
 import { jisanAhmedSources } from "./jisan-ahmed";
@@ -102,6 +115,15 @@ export const publicSources = [
   ...osmanFamilyNarayanganjSources,
   ...ahmedBrothersSources,
   ...mohammedSaifulAlamSources,
+  ...bacchuSources,
+  ...pkHalderSources,
+  ...skSurChowdhurySources,
+  ...hallmarkSources,
+  ...destinySources,
+  ...jkgSources,
+  ...abulKalamAzadDghsSources,
+  ...gkShamimSources,
+  ...evalySources,
   ...swedenAslamSources,
   ...subrataBainSources,
   ...jisanAhmedSources,

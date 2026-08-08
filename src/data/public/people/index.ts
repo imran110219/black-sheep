@@ -69,6 +69,18 @@ import { harisAhmed } from "./haris-ahmed";
 import { tofailAhmedJoseph } from "./tofail-ahmed-joseph";
 import { anisAhmed } from "./anis-ahmed";
 import { mohammedSaifulAlam } from "./mohammed-saiful-alam";
+import { sheikhAbdulHyeBacchu } from "./sheikh-abdul-hye-bacchu";
+import { prashantaKumarHalder } from "./prashanta-kumar-halder";
+import { tanvirMahmudHallmark } from "./tanvir-mahmud-hallmark";
+import { jesminIslam } from "./jesmin-islam";
+import { rafiqulAmin } from "./rafiqul-amin";
+import { sabrinaArifChowdhury } from "./sabrina-arif-chowdhury";
+import { arifulHaqueChowdhury } from "./ariful-haque-chowdhury";
+import { abulKalamAzadDghs } from "./abul-kalam-azad-dghs";
+import { golamKibriaShamim } from "./golam-kibria-shamim";
+import { mohammadRasselEvaly } from "./mohammad-rassel-evaly";
+import { shamimaNasrinEvaly } from "./shamima-nasrin-evaly";
+import { skSurChowdhury } from "./sk-sur-chowdhury";
 import { swedenAslam } from "./sweden-aslam";
 import { subrataBain } from "./subrata-bain";
 import { jisanAhmed } from "./jisan-ahmed";
@@ -152,6 +164,18 @@ export const publicPeople = [
   tofailAhmedJoseph,
   anisAhmed,
   mohammedSaifulAlam,
+  sheikhAbdulHyeBacchu,
+  prashantaKumarHalder,
+  tanvirMahmudHallmark,
+  jesminIslam,
+  rafiqulAmin,
+  sabrinaArifChowdhury,
+  arifulHaqueChowdhury,
+  abulKalamAzadDghs,
+  golamKibriaShamim,
+  mohammadRasselEvaly,
+  shamimaNasrinEvaly,
+  skSurChowdhury,
   swedenAslam,
   subrataBain,
   jisanAhmed,
