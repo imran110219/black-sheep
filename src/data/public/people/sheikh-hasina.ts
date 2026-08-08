@@ -47,7 +47,15 @@ export const sheikhHasina: PersonProfile = {
     publicClaimIds.sheikhHasinaElectionControversies,
     publicClaimIds.sheikhHasinaExecutiveCentralisation
   ],
-  incidentIds: [publicIncidentIds.sheikhHasinaJulyAugustUprising],
+  incidentIds: [
+    publicIncidentIds.sheikhHasinaJulyAugustUprising,
+    publicIncidentIds.february1996ElectionCrisis,
+    publicIncidentIds.october2001ElectionAftermath,
+    publicIncidentIds.january2007ElectionPostponement,
+    publicIncidentIds.january2014ElectionViolence,
+    publicIncidentIds.december2018ElectionIrregularities,
+    publicIncidentIds.january2024ElectionBoycott
+  ],
   institutionAssociationIds: [
     publicAssociationIds.sheikhHasinaAwamiLeagueRole,
     publicAssociationIds.sheikhHasinaGovernmentRole,

@@ -73,6 +73,8 @@ import { obaidulQuaderEnrichmentSources } from "./obaidul-quader-enrichment";
 import { bdrPilkhanaSources } from "./bdr-pilkhana";
 import { julyPoliceOfficialsSources } from "./july-police-officials";
 import { roadSafetyMovement2018Sources } from "./road-safety-movement-2018";
+import { electionIncidentSources } from "./election-incidents";
+import { khaledaZiaSources } from "./khaleda-zia";
 
 export const publicSources = [
   ...sheikhHasinaSources,
@@ -143,5 +145,7 @@ export const publicSources = [
   ...obaidulQuaderEnrichmentSources,
   ...bdrPilkhanaSources,
   ...julyPoliceOfficialsSources,
-  ...roadSafetyMovement2018Sources
+  ...roadSafetyMovement2018Sources,
+  ...electionIncidentSources,
+  ...khaledaZiaSources
 ];

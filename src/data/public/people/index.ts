@@ -116,6 +116,7 @@ import { shaAlamMohammadAkhtarulIslam } from "./sha-alam-mohammad-akhtarul-islam
 import { mohammadImrul } from "./mohammad-imrul";
 import { arshadHossain } from "./arshad-hossain";
 import { ishtiaqAhmed } from "./ishtiaq-ahmed";
+import { khaledaZia } from "./khaleda-zia";
 
 export const publicPeople = [
   sheikhHasina,
@@ -235,5 +236,6 @@ export const publicPeople = [
   shaAlamMohammadAkhtarulIslam,
   mohammadImrul,
   arshadHossain,
-  ishtiaqAhmed
+  ishtiaqAhmed,
+  khaledaZia
 ];

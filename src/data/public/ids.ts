@@ -116,7 +116,8 @@ export const publicPersonIds = {
   shaAlamMohammadAkhtarulIslam: "00000000-0000-4000-8000-000000000147",
   mohammadImrul: "00000000-0000-4000-8000-000000000148",
   arshadHossain: "00000000-0000-4000-8000-000000000149",
-  ishtiaqAhmed: "00000000-0000-4000-8000-000000000150"
+  ishtiaqAhmed: "00000000-0000-4000-8000-000000000150",
+  khaledaZia: "00000000-0000-4000-8000-000000000151"
 } as const;
 
 export const publicSourceIds = {
@@ -289,7 +290,16 @@ export const publicSourceIds = {
   roadSafetyMovementRetrospective: "00000000-0000-4000-8000-000000000638",
   roadSafetyMovementPoliticalResponse: "00000000-0000-4000-8000-000000000639",
   roadSafetyMovementQuaderStatement: "00000000-0000-4000-8000-000000000640",
-  roadSafetyMovementMinisterComments: "00000000-0000-4000-8000-000000000641"
+  roadSafetyMovementMinisterComments: "00000000-0000-4000-8000-000000000641",
+  february1996ElectionHumanRightsWatch: "00000000-0000-4000-8000-000000000642",
+  october2001ElectionAmnesty: "00000000-0000-4000-8000-000000000643",
+  january2007ElectionEuropeanParliament: "00000000-0000-4000-8000-000000000644",
+  january2014ElectionHumanRightsWatch: "00000000-0000-4000-8000-000000000645",
+  december2018ElectionTime: "00000000-0000-4000-8000-000000000646",
+  january2024ElectionEuropeanUnion: "00000000-0000-4000-8000-000000000647",
+  khaledaZiaBssProfile: "00000000-0000-4000-8000-000000000648",
+  khaledaZiaBanglapediaProfile: "00000000-0000-4000-8000-000000000649",
+  december2018ElectionHomeMinister: "00000000-0000-4000-8000-000000000650"
 } as const;
 
 export const publicClaimIds = {
@@ -321,7 +331,13 @@ export const publicIncidentIds = {
   basicBankLoanScam: "00000000-0000-4000-8000-000000000346",
   destinyMoneyLaundering: "00000000-0000-4000-8000-000000000347",
   pkHalderFinancialInstitutionFraud: "00000000-0000-4000-8000-000000000348",
-  evalyConsumerPaymentFraud: "00000000-0000-4000-8000-000000000349"
+  evalyConsumerPaymentFraud: "00000000-0000-4000-8000-000000000349",
+  february1996ElectionCrisis: "00000000-0000-4000-8000-000000000350",
+  october2001ElectionAftermath: "00000000-0000-4000-8000-000000000351",
+  january2007ElectionPostponement: "00000000-0000-4000-8000-000000000352",
+  january2014ElectionViolence: "00000000-0000-4000-8000-000000000353",
+  december2018ElectionIrregularities: "00000000-0000-4000-8000-000000000354",
+  january2024ElectionBoycott: "00000000-0000-4000-8000-000000000355"
 } as const;
 
 export const publicAreaIds = {

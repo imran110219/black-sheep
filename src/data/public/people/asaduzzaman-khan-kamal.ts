@@ -1,4 +1,4 @@
-import { publicPersonIds } from "../ids";
+import { publicIncidentIds, publicPersonIds } from "../ids";
 import { createPublicPerson } from "./_person-factory";
 
 export const asaduzzamanKhanKamal = createPublicPerson({
@@ -33,5 +33,7 @@ export const asaduzzamanKhanKamal = createPublicPerson({
   overviewBn:
     "এই প্রোফাইল ICT material-কে formal-charge ও tribunal-process reporting হিসেবে রাখে; final judgment নথিভুক্ত না হলে final finding নয়।",
   patternsEn: "Reported themes: home-ministry command, policing decisions, ICT formal charges.",
-  patternsBn: "প্রতিবেদনভিত্তিক থিম: home-ministry command, policing decisions, ICT formal charges।"
+  patternsBn:
+    "প্রতিবেদনভিত্তিক থিম: home-ministry command, policing decisions, ICT formal charges।",
+  incidentIds: [publicIncidentIds.december2018ElectionIrregularities]
 });
