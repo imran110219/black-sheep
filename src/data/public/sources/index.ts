@@ -71,6 +71,7 @@ import { tokaiSagarSources } from "./tokai-sagar";
 import { shaplaChattarSources } from "./shapla-chattar";
 import { obaidulQuaderEnrichmentSources } from "./obaidul-quader-enrichment";
 import { bdrPilkhanaSources } from "./bdr-pilkhana";
+import { julyPoliceOfficialsSources } from "./july-police-officials";
 
 export const publicSources = [
   ...sheikhHasinaSources,
@@ -139,5 +140,6 @@ export const publicSources = [
   ...tokaiSagarSources,
   ...shaplaChattarSources,
   ...obaidulQuaderEnrichmentSources,
-  ...bdrPilkhanaSources
+  ...bdrPilkhanaSources,
+  ...julyPoliceOfficialsSources
 ];

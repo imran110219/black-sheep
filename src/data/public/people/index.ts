@@ -107,6 +107,15 @@ import { farzanaRupa } from "./farzana-rupa";
 import { hasanMahmudKhandaker } from "./hasan-mahmud-khandaker";
 import { akmShahidulHoque } from "./akm-shahidul-hoque";
 import { saharaKhatun } from "./sahara-khatun";
+import { rashedulIslam } from "./rashedul-islam";
+import { mashiurRahman } from "./mashiur-rahman";
+import { tarikulIslamBhuiyan } from "./tarikul-islam-bhuiyan";
+import { chanchalChandraSarkar } from "./chanchal-chandra-sarkar";
+import { sudipKumarChakraborty } from "./sudip-kumar-chakraborty";
+import { shaAlamMohammadAkhtarulIslam } from "./sha-alam-mohammad-akhtarul-islam";
+import { mohammadImrul } from "./mohammad-imrul";
+import { arshadHossain } from "./arshad-hossain";
+import { ishtiaqAhmed } from "./ishtiaq-ahmed";
 
 export const publicPeople = [
   sheikhHasina,
@@ -217,5 +226,14 @@ export const publicPeople = [
   farzanaRupa,
   hasanMahmudKhandaker,
   akmShahidulHoque,
-  saharaKhatun
+  saharaKhatun,
+  rashedulIslam,
+  mashiurRahman,
+  tarikulIslamBhuiyan,
+  chanchalChandraSarkar,
+  sudipKumarChakraborty,
+  shaAlamMohammadAkhtarulIslam,
+  mohammadImrul,
+  arshadHossain,
+  ishtiaqAhmed
 ];

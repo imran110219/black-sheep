@@ -107,7 +107,16 @@ export const publicPersonIds = {
   farzanaRupa: "00000000-0000-4000-8000-000000000136",
   hasanMahmudKhandaker: "00000000-0000-4000-8000-000000000137",
   akmShahidulHoque: "00000000-0000-4000-8000-000000000138",
-  saharaKhatun: "00000000-0000-4000-8000-000000000141"
+  saharaKhatun: "00000000-0000-4000-8000-000000000141",
+  rashedulIslam: "00000000-0000-4000-8000-000000000142",
+  mashiurRahman: "00000000-0000-4000-8000-000000000143",
+  tarikulIslamBhuiyan: "00000000-0000-4000-8000-000000000144",
+  chanchalChandraSarkar: "00000000-0000-4000-8000-000000000145",
+  sudipKumarChakraborty: "00000000-0000-4000-8000-000000000146",
+  shaAlamMohammadAkhtarulIslam: "00000000-0000-4000-8000-000000000147",
+  mohammadImrul: "00000000-0000-4000-8000-000000000148",
+  arshadHossain: "00000000-0000-4000-8000-000000000149",
+  ishtiaqAhmed: "00000000-0000-4000-8000-000000000150"
 } as const;
 
 export const publicSourceIds = {
@@ -270,7 +279,10 @@ export const publicSourceIds = {
   bdrPilkhanaCommission: "00000000-0000-4000-8000-000000000628",
   bdrPilkhanaAppeals: "00000000-0000-4000-8000-000000000629",
   bdrPilkhanaBssJustice: "00000000-0000-4000-8000-000000000630",
-  bdrPilkhanaCommissionFindings: "00000000-0000-4000-8000-000000000631"
+  bdrPilkhanaCommissionFindings: "00000000-0000-4000-8000-000000000631",
+  julyPoliceRampuraIctCharges: "00000000-0000-4000-8000-000000000632",
+  julyPoliceChankharpulIctCharges: "00000000-0000-4000-8000-000000000633",
+  ishtiaqAhmedBssIctCustody: "00000000-0000-4000-8000-000000000634"
 } as const;
 
 export const publicClaimIds = {
