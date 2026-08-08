@@ -8,7 +8,7 @@ import {
   institutionSchema
 } from "@/domain/claim";
 import { personNarrativeSchema } from "@/domain/person";
-import { areas, cases, claims, incidents, institutions, people } from "@/data";
+import { areas, cases, claims, incidents, institutions, people, sources } from "@/data";
 import { formatDate } from "@/lib/dates";
 import {
   aggregateStatuses,
@@ -74,6 +74,28 @@ describe("search utilities", () => {
     expect(
       people.map((person) => personNarrativeSchema.parse(person.narrative)).length
     ).toBeGreaterThan(0);
+  });
+
+  it("source relatedPersonIds all reference existing people", () => {
+    const personIds = new Set(people.map((person) => person.id));
+    for (const src of sources) {
+      for (const personId of src.relatedPersonIds) {
+        expect(
+          personIds.has(personId),
+          `Source "${src.slug}" references unknown personId ${personId}`
+        ).toBe(true);
+      }
+    }
+  });
+
+  it("every public person has at least one source record", () => {
+    const coveredPersonIds = new Set(sources.flatMap((src) => src.relatedPersonIds));
+    for (const person of people) {
+      expect(
+        coveredPersonIds.has(person.id),
+        `Person "${person.slug}" (${person.nameEn}) has no source records`
+      ).toBe(true);
+    }
   });
 
   it("keeps claim person links consistent with claim discovery ids", () => {
