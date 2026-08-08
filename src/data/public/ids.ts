@@ -255,7 +255,13 @@ export const publicSourceIds = {
   shaplaChattarDailyStarWarrants: "00000000-0000-4000-8000-000000000614",
   shaplaChattarBssInvestigation: "00000000-0000-4000-8000-000000000615",
   shaplaChattarHumanRightsWatch: "00000000-0000-4000-8000-000000000616",
-  shaplaChattarOdhikarReport: "00000000-0000-4000-8000-000000000617"
+  shaplaChattarOdhikarReport: "00000000-0000-4000-8000-000000000617",
+  obaidulPidBiography: "00000000-0000-4000-8000-000000000618",
+  obaidulDailyStarBiography: "00000000-0000-4000-8000-000000000619",
+  obaidulDailyStarIctCharges: "00000000-0000-4000-8000-000000000620",
+  obaidulFinancialExpressFlatCase: "00000000-0000-4000-8000-000000000621",
+  obaidulDailyStarTunnelCase: "00000000-0000-4000-8000-000000000622",
+  obaidulJagoNewsJihadAcquittal: "00000000-0000-4000-8000-000000000623"
 } as const;
 
 export const publicClaimIds = {
@@ -268,7 +274,11 @@ export const publicClaimIds = {
 
 export const publicCaseIds = {
   sheikhHasinaIctJulyUprising: "00000000-0000-4000-8000-000000000321",
-  shaplaChattarCrackdownTribunal: "00000000-0000-4000-8000-000000000322"
+  shaplaChattarCrackdownTribunal: "00000000-0000-4000-8000-000000000322",
+  obaidulQuaderJulyUprisingIct: "00000000-0000-4000-8000-000000000323",
+  obaidulQuaderExpresswayFlat: "00000000-0000-4000-8000-000000000324",
+  obaidulQuaderKarnaphuliTunnel: "00000000-0000-4000-8000-000000000325",
+  obaidulQuaderJihadMurderAcquittal: "00000000-0000-4000-8000-000000000326"
 } as const;
 
 export const publicIncidentIds = {

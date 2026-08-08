@@ -1,4 +1,4 @@
-import { publicPersonIds, publicSourceIds } from "../ids";
+import { publicCaseIds, publicPersonIds, publicSourceIds } from "../ids";
 import { source } from "./_source-factory";
 
 export const matiurBdnewsAccCaseSource = source({
@@ -20,7 +20,7 @@ export const matiurBdnewsAccCaseSource = source({
     "ACC case-filing report",
     "Wealth-beyond-means and asset-concealment allegations"
   ],
-  relatedCaseIds: [],
+  relatedCaseIds: [publicCaseIds.obaidulQuaderExpresswayFlat],
   relatedPersonIds: [publicPersonIds.mdMatiurRahmanNbr, publicPersonIds.benazirAhmed]
 });
 

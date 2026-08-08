@@ -1,4 +1,4 @@
-import { publicPersonIds, publicSourceIds } from "../ids";
+import { publicCaseIds, publicPersonIds, publicSourceIds } from "../ids";
 import { source } from "./_source-factory";
 
 export const saddamHossainBclSources = [
@@ -21,7 +21,7 @@ export const saddamHossainBclSources = [
       "BCL leadership context",
       "Formal charges are not a conviction"
     ],
-    relatedCaseIds: [],
+    relatedCaseIds: [publicCaseIds.obaidulQuaderJulyUprisingIct],
     relatedPersonIds: [
       publicPersonIds.obaidulQuader,
       publicPersonIds.saddamHossainBcl,

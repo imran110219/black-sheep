@@ -69,6 +69,7 @@ import { mollaMasudSources } from "./molla-masud";
 import { picchiHannanSources } from "./picchi-hannan";
 import { tokaiSagarSources } from "./tokai-sagar";
 import { shaplaChattarSources } from "./shapla-chattar";
+import { obaidulQuaderEnrichmentSources } from "./obaidul-quader-enrichment";
 
 export const publicSources = [
   ...sheikhHasinaSources,
@@ -135,5 +136,6 @@ export const publicSources = [
   ...mollaMasudSources,
   ...picchiHannanSources,
   ...tokaiSagarSources,
-  ...shaplaChattarSources
+  ...shaplaChattarSources,
+  ...obaidulQuaderEnrichmentSources
 ];

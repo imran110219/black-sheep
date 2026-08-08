@@ -26,10 +26,11 @@ import {
   shaplaChattarInstitutions,
   shaplaChattarNewsRecords
 } from "./public/records/shapla-chattar";
+import { obaidulQuaderCases } from "./public/records/obaidul-quader";
 export { publicPeople as people, publicSources as sources } from "./public";
 
 export const areas = [...sheikhHasinaAreas, ...shaplaChattarAreas];
-export const cases = [...sheikhHasinaCases, ...shaplaChattarCases];
+export const cases = [...sheikhHasinaCases, ...shaplaChattarCases, ...obaidulQuaderCases];
 export const claims = [...sheikhHasinaClaims, ...shaplaChattarClaims];
 export const corrections = sheikhHasinaCorrections;
 export const geographicAssociations = sheikhHasinaGeographicAssociations;
