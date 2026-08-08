@@ -2,7 +2,7 @@
 
 Black Sheep uses neutral wording, source attribution, and status separation. Being listed in a profile, source, claim, case, relationship, or incident does not by itself establish guilt.
 
-The current app has active source-backed public people, sources, and the researched Sheikh Hasina Story/Network/Evidence records. No fictional demo records are active in the application data index.
+The current app has active source-backed public people, sources, and structured Story/Network/Evidence records for researched profiles and historical events. No fictional demo records are active in the application data index.
 
 ## Inclusion Policy
 

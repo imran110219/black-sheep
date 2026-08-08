@@ -14,9 +14,9 @@ The app is a localized, frontend-only, read-only public data product with:
 - global search across people, areas, institutions, incidents, claims, cases, and dossiers in the local repository implementation
 - strict TypeScript, linting, formatting, tests, and production build checks
 
-Existing real public records remain file-backed and active for people and source discovery. The current public index contains 93 person modules and 102 source modules, including recent political, security, family-network, banking, financial, and health-sector research. The Sheikh Hasina structured record set is the current source-backed Story/Network/Evidence example.
+Existing real public records remain file-backed and active for people and source discovery. The current public index contains 118 person modules and 107 source modules, including recent political, security, family-network, banking, financial, and health-sector research. Source-backed structured examples include Sheikh Hasina, Shapla Chattar, BDR/Pilkhana, Obaidul Quader, and the 2018 Road Safety Movement.
 
-The active structured records are the source-backed Sheikh Hasina record set. Other collections are empty until source-backed records are researched and added. Fictional demo records are no longer exported by the application.
+The active structured records are source-backed public records and are expanded incrementally. Fictional demo records are no longer exported by the application.
 
 ## Phase 2 Structured Evidence Expansion
 

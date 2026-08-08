@@ -37,6 +37,26 @@ export const claimStatusSchema = z.enum([
 ]);
 export type ClaimStatus = z.infer<typeof claimStatusSchema>;
 
+export const claimPersonRoleSchema = z.enum([
+  "OFFICIAL",
+  "SUBJECT",
+  "ACCUSED",
+  "BENEFICIARY",
+  "WITNESS",
+  "RESPONDENT",
+  "RELATED_PERSON",
+  "OTHER"
+]);
+export type ClaimPersonRole = z.infer<typeof claimPersonRoleSchema>;
+
+export const claimPersonLinkSchema = z.object({
+  personId: z.string().uuid(),
+  role: claimPersonRoleSchema,
+  noteBn: z.string().optional(),
+  noteEn: z.string().optional()
+});
+export type ClaimPersonLink = z.infer<typeof claimPersonLinkSchema>;
+
 export const areaTypeSchema = z.enum([
   "COUNTRY",
   "DIVISION",
@@ -275,6 +295,7 @@ export const claimRecordSchema = z.object({
   isDemo: z.boolean(),
   slug: z.string(),
   personIds: z.array(z.string().uuid()),
+  personLinks: z.array(claimPersonLinkSchema).optional(),
   titleBn: z.string(),
   titleEn: z.string(),
   summaryBn: z.string(),

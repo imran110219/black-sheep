@@ -21,9 +21,9 @@ A court case is not required for inclusion. Many profiles will be source-backed 
 Current active data state:
 
 - Real public people and real public sources are active from `src/data/public`.
-- As of 2026-08-08, the active index contains 93 public-person modules and 102 source modules. Recent additions include public officials and security leaders, political and family networks, business and banking figures, and financial- and health-sector accountability profiles.
-- The Sheikh Hasina structured Story/Network/Evidence records in `src/data/public/records` are source-backed public data.
-- Other entity collections are empty until source-backed records are researched and added.
+- As of 2026-08-08, the active index contains 118 public-person modules and 107 source modules. Recent additions include public officials and security leaders, political and family networks, business and banking figures, and financial- and health-sector accountability profiles.
+- Active structured Story/Network/Evidence records include Sheikh Hasina, Shapla Chattar, BDR/Pilkhana, Obaidul Quader, and the 2018 Road Safety Movement.
+- Structured collections are expanded incrementally; each record must remain source-backed, status-aware, and privacy-safe.
 - Fictional fixture data is not exported by the active data index.
 - Adding a real public person from source-backed reporting is valid even when `caseIds` is empty.
 
@@ -48,6 +48,8 @@ Do not create collection files named by broad labels such as `former-regime`, `t
 Use `createPublicPerson` from `src/data/public/people/_person-factory.ts` for public person records. Use `source` from `src/data/public/sources/_source-factory.ts` for source records.
 
 When adding new fields to `PersonProfile`, update `createPublicPerson` defaults so existing public people remain schema-compatible.
+
+The local repository reverse-indexes claims and incidents for person contexts. Claims use `personIds` for discovery and may use role-aware `personLinks` when the relationship needs clarification. Incidents use `personLinks` with an explicit role. Do not assume that a linked person is a perpetrator merely because the person appears in a record.
 
 ## Web Research
 

@@ -47,7 +47,7 @@ The frontend does not render raw HTML or use `dangerouslySetInnerHTML`. Runtime 
 
 ## Data
 
-The active people and source records come from `src/data/public`. As of 2026-08-08, the active index contains 93 source-backed public-person modules and 102 source modules. The structured claims, incidents, areas, institutions, associations, impacts, cases, news, corrections, and revisions currently active in the application are the researched Sheikh Hasina record set in `src/data/public/records`; empty collections remain available for future source-backed expansion.
+The active people and source records come from `src/data/public`. As of 2026-08-08, the active index contains 118 source-backed public-person modules and 107 source modules. The active structured records include source-backed Sheikh Hasina, Shapla Chattar, BDR/Pilkhana, Obaidul Quader, and 2018 Road Safety records. Counts are a snapshot, not a schema guarantee.
 
 Current route surface:
 

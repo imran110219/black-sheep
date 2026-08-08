@@ -35,6 +35,27 @@ export const roadSafetyMovement2018Claims: ClaimRecord[] = [
       publicPersonIds.obaidulQuader,
       publicPersonIds.asaduzzamanKhanKamal
     ],
+    personLinks: [
+      {
+        personId: publicPersonIds.sheikhHasina,
+        role: "OFFICIAL",
+        noteBn: "সরকারি নীতিগত প্রতিক্রিয়ার প্রেক্ষাপটে যুক্ত; এটি ব্যক্তিগত দায়ের ফাইন্ডিং নয়।",
+        noteEn:
+          "Linked for the government policy-response context; this is not a finding of personal responsibility."
+      },
+      {
+        personId: publicPersonIds.obaidulQuader,
+        role: "OFFICIAL",
+        noteBn: "সড়ক-নিরাপত্তা ও পরিবহন নীতির প্রকাশ্য প্রতিক্রিয়ার প্রেক্ষাপটে যুক্ত।",
+        noteEn: "Linked for the public road-safety and transport-policy response context."
+      },
+      {
+        personId: publicPersonIds.asaduzzamanKhanKamal,
+        role: "OFFICIAL",
+        noteBn: "সরকারি আইনশৃঙ্খলা ও নীতিগত প্রতিক্রিয়ার প্রেক্ষাপটে যুক্ত।",
+        noteEn: "Linked for the government law-and-order and policy-response context."
+      }
+    ],
     titleBn: "২০১৮ সালের নিরাপদ সড়ক আন্দোলন ও দমন-পীড়ন প্রসঙ্গ",
     titleEn: "The 2018 Road Safety Movement and reported crackdown context",
     summaryBn:

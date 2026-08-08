@@ -3,6 +3,7 @@ import { caseRecordSchema } from "@/domain/case";
 import {
   areaSchema,
   claimRecordSchema,
+  claimPersonLinkSchema,
   incidentRecordSchema,
   institutionSchema
 } from "@/domain/claim";
@@ -73,6 +74,28 @@ describe("search utilities", () => {
     expect(
       people.map((person) => personNarrativeSchema.parse(person.narrative)).length
     ).toBeGreaterThan(0);
+  });
+
+  it("keeps claim person links consistent with claim discovery ids", () => {
+    const personIds = new Set(people.map((person) => person.id));
+    for (const claim of claims) {
+      expect(claim.personIds.every((personId) => personIds.has(personId))).toBe(true);
+      for (const link of claim.personLinks ?? []) {
+        expect(claimPersonLinkSchema.parse(link)).toEqual(link);
+        expect(claim.personIds).toContain(link.personId);
+      }
+    }
+  });
+
+  it("reverse-indexes incident roles into person story context", async () => {
+    const repo = createBlackSheepRepository();
+    const roadSafety = incidents.find((incident) => incident.slug === "road-safety-movement-2018");
+    expect(roadSafety).toBeDefined();
+    for (const link of roadSafety!.personLinks) {
+      expect(people.some((person) => person.id === link.personId)).toBe(true);
+      const context = await repo.getPersonStoryContext(link.personId);
+      expect(context?.incidents.some((incident) => incident.id === roadSafety!.id)).toBe(true);
+    }
   });
 
   it("searches across people, institutions, and incidents", async () => {

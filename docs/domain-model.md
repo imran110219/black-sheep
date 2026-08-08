@@ -23,7 +23,7 @@ The frontend model is built around bilingual, source-aware public-interest profi
 - publication and audit metadata: `publicationStatus`, `isActive`, `createdBy`, `updatedBy`, `lastVerifiedAt`, `publishedAt`, and `updatedAt`
 - `isDemo`, which is `false` for current public records
 
-Current active public people live in `src/data/public/people/<person-slug>.ts`. As of 2026-08-08, the active index contains 93 public-person modules and 102 matching source modules. Counts are a snapshot, not a schema guarantee.
+Current active public people live in `src/data/public/people/<person-slug>.ts`. As of 2026-08-08, the active index contains 118 public-person modules and 107 source modules. Counts are a snapshot, not a schema guarantee.
 
 Two existing public records are hand-authored directly; most public people use `createPublicPerson`, which supplies defaults for the newer Story/Network fields. Keep those defaults in sync when adding fields to `PersonProfile`.
 
@@ -60,9 +60,11 @@ The codebase also defines richer evidence and network entities:
 - `CorrectionRecord`
 - `RevisionRecord`
 
-`ClaimRecord` represents public-interest claims or themes that are not necessarily court cases. `CaseRecord` represents legal or official case records with legal status, authority, court, outcome, and case-specific person roles.
+`ClaimRecord` represents public-interest claims or themes that are not necessarily court cases. `CaseRecord` represents legal or official case records with legal status, authority, court, outcome, and case-specific person roles. A claim keeps the existing `personIds` field for discovery compatibility and may also provide `personLinks` when the person's documented role in the claim needs to be distinguished, such as official, subject, accused, witness, respondent, or related person.
 
 `IncidentRecord` represents historically important events separately from `CaseRecord`; an incident may link to claims, cases, people, institutions, areas, impact records, news, and sources without implying every linked person is responsible.
+
+Person claim and incident context is currently reverse-indexed by the local repository: it finds claims through `ClaimRecord.personIds` and incidents through `IncidentRecord.personLinks`. The forward `PersonProfile.claimIds` and `PersonProfile.incidentIds` fields remain available for normalized API compatibility, but file-backed public profiles may leave them empty while the repository derives current context from the canonical record collections.
 
 `InfluenceDomain` tags are navigation and coverage metadata. They are not judgments of guilt.
 
