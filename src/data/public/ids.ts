@@ -299,7 +299,9 @@ export const publicSourceIds = {
   january2024ElectionEuropeanUnion: "00000000-0000-4000-8000-000000000647",
   khaledaZiaBssProfile: "00000000-0000-4000-8000-000000000648",
   khaledaZiaBanglapediaProfile: "00000000-0000-4000-8000-000000000649",
-  december2018ElectionHomeMinister: "00000000-0000-4000-8000-000000000650"
+  december2018ElectionHomeMinister: "00000000-0000-4000-8000-000000000650",
+  august21GrenadeAttackProthomAlo: "00000000-0000-4000-8000-000000000651",
+  august21GrenadeAttackHumanRightsWatch: "00000000-0000-4000-8000-000000000652"
 } as const;
 
 export const publicClaimIds = {
@@ -337,7 +339,8 @@ export const publicIncidentIds = {
   january2007ElectionPostponement: "00000000-0000-4000-8000-000000000352",
   january2014ElectionViolence: "00000000-0000-4000-8000-000000000353",
   december2018ElectionIrregularities: "00000000-0000-4000-8000-000000000354",
-  january2024ElectionBoycott: "00000000-0000-4000-8000-000000000355"
+  january2024ElectionBoycott: "00000000-0000-4000-8000-000000000355",
+  august21DhakaGrenadeAttack2004: "00000000-0000-4000-8000-000000000356"
 } as const;
 
 export const publicAreaIds = {

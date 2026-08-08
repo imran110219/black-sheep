@@ -75,6 +75,7 @@ import { julyPoliceOfficialsSources } from "./july-police-officials";
 import { roadSafetyMovement2018Sources } from "./road-safety-movement-2018";
 import { electionIncidentSources } from "./election-incidents";
 import { khaledaZiaSources } from "./khaleda-zia";
+import { killingIncidentSources } from "./killing-incidents";
 
 export const publicSources = [
   ...sheikhHasinaSources,
@@ -147,5 +148,6 @@ export const publicSources = [
   ...julyPoliceOfficialsSources,
   ...roadSafetyMovement2018Sources,
   ...electionIncidentSources,
-  ...khaledaZiaSources
+  ...khaledaZiaSources,
+  ...killingIncidentSources
 ];
